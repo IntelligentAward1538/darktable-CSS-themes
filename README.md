@@ -1,12 +1,12 @@
 # 'Oasis' CSS theme for [darktable](https://www.darktable.org/) 5.6+
 
-## Screenshots last release : 260818-Base
+## Release : 260813-Base
 
-![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/6ffc611acc82560beb1509bd6c1a5727a05d088e/.screenshots/Oasis_260818-Base_lt.png)
+![image tab]
 
-![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/d76bef5ddea7013c26e29a35c3c3362d7ebc304f/.screenshots/Oasis_260818-Base_dr.png)
+![image tab]
 
-![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/b095a871927a7b991263b25c0ef98cbc2da9c690/.screenshots/Oasis_260818-Base_mask.png)
+![image tab]
 
 ## <b>Motivation:</b>
 
@@ -23,10 +23,6 @@ Therefore, the objectives are:
 <li>Improve mouse interactions.</li>
 <li>Use a single, unified CSS file.</li>
 </ul>
-
-## <b>Download</b>
-
-In the Release folder you can find and download all versions created so far.
 
 ## <b>Installation:</b>
 
