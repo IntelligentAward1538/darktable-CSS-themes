@@ -1,6 +1,6 @@
 # 'Oasis' CSS theme for [darktable](https://www.darktable.org/) 5.6+
 
-## Screenshots last release : 260818-Base
+## Screenshots Release : 260818-Base
 
 ![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/6ffc611acc82560beb1509bd6c1a5727a05d088e/.screenshots/Oasis_260818-Base_lt.png)
 
