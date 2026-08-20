@@ -26,7 +26,7 @@ Therefore, the objectives are:
 <li>Use a single, unified CSS file.</li>
 </ul>
 
-## <b>Download<b>
+## <b>Download:<b>
 
 In the Release folder you can find and download all versions created so far.
 
