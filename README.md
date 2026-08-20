@@ -30,7 +30,6 @@ Therefore, the objectives are:
 
 In the Release folder you can find and download all versions created so far.
 
-
 ## <b>Installation:</b>
 
 The CSS file must be in the folder where all your darktable themes are saved.
