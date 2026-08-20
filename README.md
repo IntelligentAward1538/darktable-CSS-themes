@@ -2,7 +2,7 @@
 
 ## Screenshots last release : 260818-Base
 
-![image tab]
+![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/6ffc611acc82560beb1509bd6c1a5727a05d088e/.screenshots/Oasis_260818-Base_lt.png)
 
 ![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/d76bef5ddea7013c26e29a35c3c3362d7ebc304f/.screenshots/Oasis_260818-Base_dr.png)
 
