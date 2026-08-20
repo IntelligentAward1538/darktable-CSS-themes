@@ -1,5 +1,12 @@
 # 'Oasis' CSS theme for [darktable](https://www.darktable.org/) 5.6+
 
+## News:
+- Round module activation buttons
+- Softened tone of module activation button
+- Various background gradients
+- Representative icons were added to the modules.
+- Reddish color in deactivated history stack modules
+
 ## Screenshots last release : 260818-Base
 
 ![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/6ffc611acc82560beb1509bd6c1a5727a05d088e/.screenshots/Oasis_260818-Base_lt.png)
