@@ -2,11 +2,7 @@
 
 ## Release : 260813-Base
 
-![image tab]
-
-![image tab]
-
-![image tab]
+![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/006af4390b3b0b5f4169103e8c231773965b6ffa/Oasis_260813-Base_dr.png)
 
 ## <b>Motivation:</b>
 
