@@ -1,0 +1,2530 @@
+/*   =====================
+     **     Oasis       ** 
+     =====================  
+*/
+/*  Custom theme for darktable v5.6+
+    @IntelligentAward1538
+    rev. 2026.08.18 
+*/  
+
+/*  This file is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published
+	by the Free Software Foundation, either version 3 of the License,
+	or (at your option) any later version.
+
+    This file is distributed in the hope that it will be useful, but 
+	WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+	General Public License for more details
+	<https://www.gnu.org/licenses/gpl-3.0.html#license-text>. 
+*/
+
+/*  1. Place this file in the darktable themes directory
+    2. Open the application and select the new theme
+*/  
+
+@define-color grey_00 #000000;
+@define-color grey_05 #111111;
+@define-color grey_10 #1b1b1b;
+@define-color grey_15 #262626;
+@define-color grey_20 #303030;
+@define-color grey_25 #3b3b3b;
+@define-color grey_30 #474747;
+@define-color grey_35 #525252;
+@define-color grey_40 #5e5e5e;
+@define-color grey_45 #6a6a6a;
+@define-color grey_50 #777777;
+@define-color grey_55 #848484;
+@define-color grey_60 #919191;
+@define-color grey_65 #9e9e9e;
+@define-color grey_70 #ababab;
+@define-color grey_75 #b9b9b9;
+@define-color grey_80 #c6c6c6;
+@define-color grey_85 #d4d4d4;
+@define-color grey_90 #e2e2e2;
+@define-color grey_95 #f1f1f1;
+@define-color grey_100 #ffffff;
+
+@define-color yellow_hover #ffff00;
+@define-color btn_border #50a428;
+@define-color ui_btn_border #67c7d9;
+@define-color toolbar_border #6e6e48; 
+@define-color module_headers @grey_20;
+@define-color module_btn_on #117a5e;
+@define-color focused_header #4a4741;
+@define-color history_gradient #24272b;
+@define-color header_active #206408;
+@define-color header_btn_border #a6a09c;
+@define-color header_btn_fg #d7e5f1;
+@define-color header_btn_bg #1c2d3a;
+@define-color header_text #cdd4db; 
+@define-color blending_panel_bg #302c29;
+@define-color blending_panel_border #736a62;
+@define-color blending_section_bg #47413b;
+@define-color blending_slider #ffe5cc;
+@define-color new_button_hover_fg #feffd1;
+@define-color thumbnail_star_color #fcc719;
+@define-color bg_process_border #62c5e3;
+@define-color bg_process_bg #155163;
+@define-color thumbnail_group_border #ffbb00;
+@define-color tooltip_border #2f3f4e;
+@define-color filtering_dimmed #e00000;
+@define-color filtering_checked #00f000;
+@define-color thumb_main_hover_bg #101419;
+@define-color thumb_image_hover #000f0f;
+@define-color plugin_ui_border #4d6175;
+@define-color section_label_bd #3a6c91;
+@define-color section_label_fg #f0f6fb;
+@define-color section_label_bg #244257;
+@define-color basics_box_hover #f3f9fd;
+@define-color basics_box_chck_hover #305478;
+@define-color basics_box_chck_label #f0f6fb;
+@define-color entry_border #32404d;
+@define-color dialog_sidebar #1f4515;
+@define-color ui_hover #ffc966;
+@define-color module_expanded_border #436a91;
+@define-color selected_bg_color #355f91;
+@define-color border_color @grey_05;
+@define-color bg_color #222222;
+@define-color fg_color #dce5ed;
+@define-color base_color @fg_color; /* sin uso aparente */
+@define-color text_color @grey_05;  /* sin uso aquí. Usado por dt en barras de la cinta de tiempo */
+@define-color placeholder_text_color #738191;
+@define-color disabled_fg_color #697480;
+@define-color scroll_bar_inactive #3c464d;
+@define-color scroll_bar_active #78c8ff;
+@define-color scroll_bar_bg #19212e;
+@define-color plugin_bg_color #15171a;
+@define-color section_label #fff8ff;
+@define-color plugin_label_color #b7c2cd;
+@define-color collapsible_bg_color #11161c;
+@define-color bauhaus_bg alpha(#768b99, 0.25);
+@define-color bauhaus_fill #78725c;
+@define-color bauhaus_fg #fae319;
+@define-color bauhaus_border shade(@plugin_bg_color, 0.5);
+@define-color bauhaus_indicator_border #2a343f;
+@define-color bauhaus_bg_hover #2b5878;
+@define-color bauhaus_fg_hover #ffff00; 
+@define-color bauhaus_fg_selected #eef6fc;
+@define-color bauhaus_fg_insensitive alpha(@fg_color, 0.4);
+@define-color button_bg #4d4a47;
+@define-color button_fg #cbd6e0;
+@define-color button_border #78736e;
+@define-color button_hover_bg #bab595;
+@define-color button_hover_fg #00ffff;
+@define-color field_bg #131920;
+@define-color field_fg #dce5ed;
+@define-color field_active_bg #1b232b;
+@define-color field_active_fg #f2f8fd;
+@define-color field_selected_bg #29577f;
+@define-color field_selected_fg #f7fbfe;
+@define-color field_hover_bg #00ff00;
+@define-color field_hover_fg #eef5fb;
+@define-color tooltip_bg_color @grey_20;
+@define-color tooltip_fg_color #98fad6;
+@define-color really_dark_bg_color @grey_05;
+@define-color log_fg_color #03ff1c;
+@define-color darkroom_bg_color @grey_50;
+@define-color darkroom_preview_bg_color @darkroom_bg_color;
+@define-color lighttable_bg_color #101419;
+@define-color lighttable_preview_bg_color @darkroom_bg_color;
+@define-color lighttable_bg_font_color #30d130;
+@define-color print_bg_color @lighttable_bg_color;
+@define-color culling_selected_border_color transparent;
+@define-color thumbnail_font_color #10f010;
+@define-color thumbnail_bg_color @grey_50;
+@define-color thumbnail_star_bg_color #eafc19;
+@define-color thumbnail_star_hover_color #19f1fc;
+@define-color thumbnail_localcopy #eef4fa;
+@define-color thumbnail_fg_color #edc305;
+@define-color thumbnail_selected_bg_color #fcfcfc;
+@define-color thumbnail_hover_bg_color #343630;
+@define-color thumbnail_hover_fg_color #edf5fc;
+@define-color filmstrip_bg_color #182129;
+@define-color timeline_bg_color #0f1419;
+@define-color timeline_fg_color #bed2e6;
+@define-color timeline_text_bg_color alpha(#827e58,.75);
+@define-color timeline_text_fg_color alpha(white,.92);
+@define-color range_graph_color alpha(@timeline_fg_color, 0.75);
+@define-color range_bg_color alpha(@fg_color, 0.14);
+@define-color range_cursor_color #ffc966;
+@define-color range_sel_color alpha(@bauhaus_fill, 0.65);
+@define-color range_icon_color alpha(@thumbnail_hover_fg_color, 0.35);
+@define-color brush_cursor alpha(white, .9);
+@define-color brush_trace alpha(black, .6);
+@define-color graph_bg #131920;
+@define-color graph_exterior #0f1419;
+@define-color graph_border #0b0f14;
+@define-color graph_fg #c8d2dc;
+@define-color graph_fg_active #f3f8fc;
+@define-color graph_grid @grey_35;
+@define-color graph_overlay #83909d;
+@define-color inset_histogram alpha(#bcc8d4,.45);
+@define-color graph_red #ed1e14;
+@define-color graph_green #1ceb1a;
+@define-color graph_blue #0e0ee9;
+@define-color colorlabel_red rgb(230,0,0);
+@define-color colorlabel_green rgb(0,230,0);
+@define-color colorlabel_blue rgb(40,140,255);
+@define-color colorlabel_yellow rgb(255,180,0);
+@define-color colorlabel_purple rgb(230,0,230);
+
+* {
+    background-color: @bg_color;
+    background-image: none;
+    color: @fg_color;
+    font-size: 1em;
+    font-family: "Segoe UI","Arial","Microsoft Sans Serif",sans-serif, "Arial Unicode MS";
+    font-feature-settings: "tnum";
+    font-weight: normal;
+    box-shadow: none;
+    outline-style: none;
+    text-shadow: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+combobox,combobox *,togglebutton,togglebutton *,notebook,notebook *,notebook tab,notebook tab *,table,table *,row,row *,frame,frame *,filechooser,filechooser *,filechooserdialog,filechooserdialog *,alignment,entry,entry *,textview,textview *,dialog,dialog *,colorswatch,colorswatch *,stack,stack *,scrollbar,scrollbar *,scale,scale *,button,button *,treeview,treeview *,menu,menu *,separator,eventbox,eventbox *,box,box *
+{
+  background-color: transparent;
+}
+
+*:disabled {
+    color: @disabled_fg_color;
+}
+
+.combo,.combo:disabled,.dt_accels_box treeview,.dt_ignore_fg_state:checked,.dt_module_btn,.dt_module_btn:disabled,.dt_transparent_background,.dt_transparent_background:checked,.dt_transparent_background check:selected,filechooser .sidebar-button,menuitem:hover arrow,popover #bauhaus-combobox,overshoot,undershoot,#usercss-box textview,#view-dropdown .combo {
+    background-color: transparent;
+    border: none;
+}
+
+#outer-border {
+    background-color: @border_color;
+    min-width: 1.4em;
+}
+
+decoration {
+    margin: 5px;
+}
+
+button,checkbutton check,entry,textview,#non-flat {
+    padding: 1px;
+    border: 1px solid @button_border;
+    border-radius: .21em;
+    background-color: @button_bg;
+}
+
+.combo,checkbutton check,entry,spinbutton button,textview {
+    background-color: alpha(@fg_color, 0.09);
+    margin: .07em .4em .07em .07em;
+}
+
+window entry,dialog entry {
+    margin: .07em;
+}
+
+.combo,entry,#dt-metadata-multi,textview {
+    padding: .07em .28em;
+}
+
+.combo * {
+    min-height: 1em;
+    min-width: 1em;
+}
+
+scrolledwindow textview {
+    border: none;
+}
+
+.dt_module_btn,.path-bar button,header button,.image-button,.text-button,.text-button radio,.text-button label {
+    min-height: 1.15em;
+    min-width: 1.15em;
+    margin: .07em;
+}
+
+.dt_module_btn,.dt_ignore_fg_state:checked {
+    color: @button_fg;
+}
+
+
+.dt_module_btn.dt_module_btn.dt_transparent_background:first-child:first-child {
+    color: shade(@disabled_fg_color, 0.9);
+}
+
+spinbutton>button,#top-hinter box {
+    margin: .07em;
+}
+
+button:disabled,spinbutton *:disabled,#collapsible spinbutton button:disabled,#non-flat:disabled {
+    background-color: transparent;
+    border: 0.07em solid alpha(@button_border, 0.35);
+    color: @disabled_fg_color;
+}
+
+popover spinbutton {
+    margin-left: .35em;
+}
+
+#button-canvas {
+    margin: 5px;
+}
+
+.dt_plugin_ui .dt_bauhaus_alignment,.dt_plugin_ui .dt_bauhaus_alignment #button-canvas {
+    margin: 0;
+}
+
+label selection,textview text selection {
+    background-color: @field_selected_bg;
+}
+
+entry selection {
+    background-color: shade(@field_selected_bg, 1.1);
+}
+
+separator {
+    border-left: .07em solid transparent;
+}
+
+.dt_dimmed {
+    opacity: .6;
+}
+
+.dt_dimmed:hover,.dt_dimmed:checked {
+    opacity: 1;
+}
+
+#view-label,#view-dropdown {
+    font-size: 1.5em;
+    border-radius: .14em;
+    color: @disabled_fg_color;
+}
+
+#view-label {
+	border-radius: .4em .4em 0 0;
+	border-bottom: none;
+}
+
+/* barra central superior */
+#header-toolbar {
+    background: linear-gradient(@grey_15, @grey_25);
+}
+
+/* barra central inferior */
+#footer-toolbar {
+    background: linear-gradient(@grey_25, @grey_15);
+}
+
+#header-toolbar,#footer-toolbar {
+    padding: .14em .28em;
+	border:1px dotted @toolbar_border;
+    border-radius: 3px;
+}
+
+.dt_accels_stick,#filter-colors-box .dt_module_btn,#header-toolbar .dt_module_btn,#footer-toolbar .dt_module_btn {
+    min-height: 1.7em;
+    min-width: 1.7em;
+    border: .08em solid transparent;
+}
+
+#footer-toolbar button:checked {
+    border: 0.08em solid shade(@button_border, 1.6);
+}
+
+#lib-rating-stars {
+    min-height: 1.1em;
+    min-width: 9em;
+    margin-right: 1em;
+}
+
+.dt_section_expander #button-canvas,.dt_big_btn_canvas #button-canvas,#module-header #button-canvas {
+    margin: 12px;
+}
+
+.dt_plugin_ui,
+dialog,
+dialog .sidebar row:selected,
+dialog .sidebar row:selected:hover label,
+#bauhaus-slider,#background-job-eventbox {
+    background-color: @plugin_bg_color;
+}
+
+.dt_plugin_ui_main,#blending-box,#guides-module-combobox {
+    padding: .28em .65em;
+}
+
+#blending-tabs+#blending-box {
+    margin-top: .14em;
+}
+
+.dt_plugin_ui_main,#blending-box {
+    /* interior principal de cada modulo */
+}
+
+.dt_plugin_ui #blending-box {
+    background-color: @blending_panel_bg;
+    border: 1px solid @blending_panel_border;
+    border-radius: 10px;
+    padding: 0 4px 0 2px;
+    margin: 4px 0 3px 0;
+}
+
+.dt_plugin_ui_main widget+notebook {
+    margin-top: .5em;
+}
+
+.dt_gslider,.dt_gslider_multivalue {
+    min-height: 1.7em;
+    padding: .56em;
+}
+
+.dt_duplicate_ui grid,.dt_duplicate_ui grid>label {
+    margin: .28em .14em;
+}
+
+.dt_duplicate_ui entry {
+    margin: 1em 0 1em .5em;
+}
+
+#module-header {
+    border-bottom: 1px solid shade(@plugin_bg_color, 1.05);
+    padding: .5em;
+}
+
+#iop-expander.dt_module_active #module-header
+{
+  /* ACTIVE */
+}
+
+#iop-expander.dt_module_focus #module-header
+{
+  /* FOCUSED */
+    background-color: @focused_header;
+}
+
+#iop-expander.dt_module_active.dt_module_focus #module-header
+{
+  /* FOCUSED AND ACTIVE */
+}
+
+#iop-panel-label,#lib-panel-label {
+    color: @header_text; 
+    padding: 0 .14em .14em .45em;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+#snapshot-button entry,#iop-module-name,#lib-module-name {
+    font-weight: lighter;
+    font-size: .8em;
+}
+
+#iop-module-name-error {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: .5em;
+    color: red;
+}
+
+.dt_module_focus #iop-panel-label {
+    color: shade(@plugin_label_color, 1.2);
+}
+
+.dt_section_label:not(#blending-box),#blending-box .dt_section_label label,#blending-box .dt_section_label .dt_bauhaus {
+    padding: .14em 0;
+    color: @section_label;
+    font-weight: 500;
+}
+
+#collapse-block {
+    margin: .21em 0;
+}
+
+#collapsible {
+    border: 0.07em solid shade(@collapsible_bg_color, 1.05);
+    border-top: none;
+    padding: .28em;
+}
+
+#collapsible,#collapsible #bauhaus-slider {
+    background-color: shade(@collapsible_bg_color, 1.04);
+}
+
+.dt_section_expander {
+    padding: .07em 0 .07em 1.7em;
+}
+
+.dt_section_expander,.dt_section_expander label {
+    background-color: @collapsible_bg_color;
+    border: none;
+    margin-top: .14em;
+}
+
+.dt_section_expander label {
+    padding: .07em 0;
+}
+
+#main-histogram .button_box {
+    margin: .21em;
+}
+
+#main-histogram .dt_module_btn {
+    min-height: 1em;
+    min-width: 1em;
+}
+
+#main-histogram .dt_module_btn:not(.rgb_toggle) {
+    color: alpha(@field_selected_fg, 0.56);
+    background-color: alpha(darker(@button_bg),0.8);
+    border: 0.07em solid alpha(@button_bg, 0.33);
+}
+
+#red-channel-button {
+    background-color: alpha(@graph_red, 0.2);
+}
+
+#green-channel-button {
+    background-color: alpha(@graph_green, 0.2);
+}
+
+#blue-channel-button {
+    background-color: alpha(@graph_blue, 0.2);
+}
+
+#red-channel-button:checked {
+    background-color: alpha(@graph_red, 0.66);
+}
+
+#green-channel-button:checked {
+    background-color: alpha(@graph_green, 0.66);
+}
+
+#blue-channel-button:checked {
+    background-color: alpha(@graph_blue, 0.66);
+}
+
+#red-channel-button:hover {
+    background-color: alpha(@graph_red, 0.5);
+}
+
+#green-channel-button:hover {
+    background-color: alpha(@graph_green, 0.5);
+}
+
+#blue-channel-button:hover {
+    background-color: alpha(@graph_blue, 0.5);
+}
+
+.dt_accels_window,dialog .dialog-vbox {
+    margin: .42em;
+}
+
+dialog .dialog-action-box,#shortcut-controls,#preset-controls,#ai-controls {
+    margin-top: .42em;
+}
+
+dialog .dialog-vbox .text-button:not(.toggle) {
+    margin: .21em;
+}
+
+dialog .dialog-action-box button:first-child {
+    margin-left: 0;
+}
+
+dialog .dialog-vbox button:last-child:not(.toggle) {
+    margin-right: 0;
+}
+
+dialog filechooser {
+    margin-top: -.21em;
+    margin-left: -.42em;
+}
+
+dialog headerbar {
+    background-color: @border_color;
+    padding: .2em .6em;
+}
+
+dialog headerbar entry {
+    margin: .56em;
+}
+
+.popup,context-menu,menu,menuitem>arrow,tooltip,popover,popover #bauhaus-slider,#range-current {
+    opacity: 1;
+    background-color: @tooltip_bg_color;
+    border-radius: .14em;
+    min-height: .4em;
+    min-width: .4em;
+}
+
+menu {
+    padding: .14em 0;
+}
+
+.popup,popover {
+    padding: .42em;
+}
+
+menuitem check,menuitem check:selected {
+    min-width: .7em;
+    min-height: .7em;
+    margin: 0 .35em;
+}
+
+.dt_bauhaus_popup {
+    color: shade(@fg_color, 0.9);
+    background-color: @tooltip_bg_color;
+    padding: .42em 0 0 .42em;
+	border: 1px solid @grey_60;
+    border-radius: 5px;
+}
+
+.dt_bauhaus_popup_right {
+    padding-right: .42em;
+}
+
+menuitem * {
+    padding: .05em;
+}
+
+menuitem>arrow {
+    padding-right: .42em;
+}
+
+.dt_bauhaus {
+    margin: .2em 0;
+}
+
+menuitem label,#view-dropdown button,#view-dropdown menuitem,#view-label {
+    padding: .07em .42em;
+    margin: 0;
+}
+
+tooltip {
+    border-radius: 6px;
+    border: 1px solid @tooltip_border;
+}
+
+tooltip,#range-current {
+    border: 0.07em solid shade(@tooltip_bg_color, 1.5);
+    border-radius: 0;
+}
+
+tooltip label,#range-current label {
+    color: @tooltip_fg_color;
+}
+
+tooltip separator {
+    margin: .6em 2em;
+    padding-bottom: .07em;
+    background-color: @selected_bg_color;
+}
+
+combobox label {
+    margin: 0 .35em 0 0;
+}
+
+menu separator,popover separator {
+    margin: .6em 2em;
+    padding-bottom: .07em;
+    background-color: @selected_bg_color;
+}
+
+combobox separator {
+    min-height: .07em;
+}
+
+#blending-tabs,#guides-line,#modules-tabs {
+    background-color: @field_active_bg;
+}
+
+#modules-tabs .toggle {
+    min-height: 2em;
+}
+
+/* cabecera sección de máscaras */
+.dt_plugin_ui #blending-tabs {
+    border-radius: 6px;
+    padding:.2em 0 0 0;
+    background: linear-gradient(@grey_25 10%, @grey_05 50%, @grey_20 90%);
+}
+
+/* solapas cabecera de máscaras */
+.dt_plugin_ui #blending-tabs .dt_module_btn,#guides-line .toggle {
+    min-height: 1.3em;
+}
+
+.dt_plugin_ui #blending-tabs .dt_module_btn,#guides-line .dt_module_btn,#modules-tabs .dt_module_btn {
+    border-radius: 0;
+    min-width: 1.5em;
+    margin: 0;
+}
+
+.dt_plugin_ui #blending-tabs .dt_module_btn,#modules-tabs .dt_module_btn {
+    padding: .3em;
+	border-radius: 9px 9px 0 0;
+}
+
+#blending-box .dt_section_label {
+	border: 0;
+	border-radius: 6px 6px 0 0;
+	border-bottom: 1px solid @grey_50;
+	background-color: @blending_section_bg;
+	margin: 0 0 6px 0;
+}
+
+#blending-box .dt_section_label label,
+#blending-box .dt_section_label .dt_bauhaus {
+    color: @grey_90;
+    font-weight: 600;
+    background-color: transparent;
+	border: 0;
+    padding: 0 4px 0 8px;
+}
+
+#blending-box #bauhaus-slider {
+	padding: 0 0 0 8px;
+	background-color: transparent;
+	color: @blending_slider;
+}
+
+#blending-box #bauhaus-slider:hover {
+	color: @ui_hover;
+}
+
+.dt_plugin_ui #blending-box .dt_bauhaus {
+	padding: 0 0 0 8px;
+}
+
+.dt_plugin_ui #blending-box .dt_bauhaus:hover {
+    color: @bauhaus_fg;
+}
+
+.dt_plugin_ui #blending-box .dt_gslider_multivalue {
+    color: @grey_90;
+    border: 1px solid @grey_25;
+    border-radius: 4px;
+}
+
+.dt_plugin_ui #blending-box .dt_gslider_multivalue:hover {
+    color: @yellow_hover;
+    background: shade(@blending_panel_bg, .85);
+    border-color: transparent;
+}
+
+/* cuentagotas de la sección de máscaras */
+#blending-box .dt_module_btn:checked:not(:nth-child(2)) {
+    color: yellow;
+}
+
+/* iconos de la sección de máscaras */
+#blending-box .dt_module_btn:checked:nth-child(2) {
+    color: shade(@range_cursor_color, 1.1);
+}
+
+#blending-box tab {
+	background-color: transparent;
+	border: 1px solid @blending_section_bg;
+    margin: 0 1px 1px 0; /* Solución con el hover de los tabs de máscaras */
+}
+
+/* pestañas de la sección de máscaras */
+#blending-box tab label {
+	text-shadow: 1px 1px 2px black;
+	color: @grey_80;
+	border-bottom: 1px solid shade(@blending_section_bg, 1.3);
+}
+
+#blending-box tab:nth-child(3) label {
+	color : shade(red, .9);
+}
+
+#blending-box tab:nth-child(4) label {
+	color : shade(green, 1.6);
+}
+
+#blending-box tab:nth-child(5) label {
+	color : shade(blue, 1.3);
+}
+
+#blending-box tab:nth-child(7) label {
+	color : violet;
+}
+
+#blending-box tab:nth-child(8) label {
+	color : shade(cyan, .85);
+}
+
+#blending-box tab:checked label {
+	border-bottom: 1px solid @grey_100;
+}
+
+#blending-box tab:hover {
+	background: none;
+	background-color: shade(@blending_section_bg, 1.3);     
+}
+
+#blending-box tab:checked {
+	border: 1px solid shade(@blending_section_bg, 1.6);
+	background-color: shade(@blending_section_bg, 1.1);
+}
+
+#blending-box tab:checked label {
+	border-bottom: 1px solid @grey_100;
+}
+
+/* pestañas generales */
+notebook tab {
+	border-radius: .5em .5em 0 0;
+    background-color: @grey_20;
+    border: 1px solid @grey_30;
+    border-bottom-color: transparent;
+	margin: 0 1px 1px 0; /* Solución para el hover de los tabs de modulos */
+}
+
+notebook tab:hover {
+    border: 1px solid @grey_35;
+	border-bottom-color: transparent;
+}
+
+notebook tab:checked {
+	background-color: shade(@section_label_bg, 1.05);
+	border: 1px solid shade(@section_label_bd, 1.05);
+	border-bottom-color: transparent;
+}
+
+notebook tab label {
+	border-bottom: 1px solid shade(@section_label_bd, 1.1);
+	color: shade(@field_selected_fg, 0.75);
+	padding: 0.28em 0.07em;
+}
+
+notebook tab:hover label {
+  border-bottom-color: shade(@field_selected_fg, 0.7);
+  color: shade(@field_selected_fg, 0.9);
+}
+
+notebook tab:checked label {
+	border-bottom-color: @field_selected_fg;
+	color: @field_selected_fg;
+}
+
+notebook header {
+	margin-bottom: 0.42em;
+}
+
+/* Corrects the effect that occurs in the first two tabs of the "RGB Color Balance" module */
+#right notebook tab label {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: @scroll_bar_inactive;
+    border: 1px solid @button_border;
+	margin: 0 2px;
+}
+
+scrollbar.horizontal slider {
+    min-width: 1em;
+    min-height: .45em;
+}
+
+scrollbar.vertical slider {
+    min-width: .42em;
+    min-height: 1em;
+}
+
+scale contents trough {
+    background-color: @scroll_bar_bg;
+    border-radius: .21em;
+    min-width: .5em;
+    min-height: .5em;
+}
+
+scale contents trough highlight {
+    background-color: @button_bg;
+    min-height: 0;
+    min-width: 0;
+}
+
+scale contents trough slider {
+    background-color: @scroll_bar_inactive;
+    border: 0.1em solid @border_color;
+    font-size: 1em;
+    min-height: .5em;
+    min-width: .5em;
+}
+
+scrollbar {
+    border-color: @scroll_bar_bg;
+    background: @scroll_bar_bg;
+    border-radius: .42em;
+    min-height: .5em;
+    min-width: .5em;
+    margin: .07em;
+}
+
+scrollbar slider:hover,scale contents trough slider:hover {
+    background-color: @scroll_bar_active;
+}
+
+treeview,filechooser widget treeview {
+    background-color: @field_bg;
+}
+
+treeview header label {
+    font-weight: 700;
+    padding: .14em;
+}
+
+.dt_spacing_sw scrolledwindow {
+    margin: .21em 0;
+}
+
+.dt_accels_cat_title {
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: .7em 0;
+}
+
+#dt_window2_pin_button {
+  background-color: @button_bg;
+  border: 0.08em solid transparent;
+}
+
+#dt_window2_pin_button:hover {
+  background-color: alpha(@button_hover_bg, 0.5);
+  border-color: transparent;
+}
+
+#dt_window2_pin_button:checked {
+  border: 0.08em solid @button_fg;
+}
+
+#preferences-box,#preferences-box .dialog-action-box,#quick-presets-manager box {
+    margin: 0
+}
+
+#preferences-box stack>box,#preferences-box stack>scrolledwindow {
+    padding: .7em 1.2em;
+}
+
+#usercss-box {
+    border: 0.10em inset @grey_15;
+    background-color: shade(@bg_color, 1.1);
+    margin-top: .7em;
+    padding: .7em;
+}
+
+#preferences-notebook scrolledwindow label {
+    min-height: 1.5em
+}
+
+#preferences-notebook scrolledwindow #pref_section>label {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#preferences-notebook stack widget label {
+    margin-right: 1.75em;
+}
+
+#preference_non_default {
+    font-weight: bolder;
+    margin: .07em;
+    min-width: 1em;
+}
+
+#preset-controls entry,#shortcut-controls entry {
+    min-width: 15em;
+}
+
+#shortcut-controls .search,#preferences-box #shortcut-controls check {
+    margin-right: .28em;
+}
+
+#modulegroups-top-boxes {
+    margin-right: 6em;
+}
+
+#modulegroups-groups-title label {
+    font-size: 1.1em;
+}
+
+#modulegroups-groups-title label,#modulegroups-header-center entry {
+    font-weight: 700;
+    margin-right: .28em;
+}
+
+#modulegroups-groups-title,#modulegroups-groups-box {
+    margin-top: .42em;
+}
+
+#modulegroups-groups-box {
+    border-top: 0.035em solid  @section_label;
+    padding-top: .5em;
+}
+
+#modulegroups-topbox,#modulegroups-groupbox {
+    margin: 0 .5em;
+}
+
+#modulegroups-header-center,#modulegroups-iop-header {
+    background-color: shade(@bg_color, 1.05);
+    padding: .28em;
+}
+
+#modulegroups-header-center {
+    border: 0.07em solid @bg_color;
+    border-radius: .5em .5em 0 0;
+    margin-bottom: .14em;
+}
+
+#modulegroups-iop-header:first-child {
+    border-top: 0.07em solid @bg_color;
+    border-radius: 0;
+    margin-top: .14em;
+}
+
+#modulegroups-iop-header {
+    border-left: 0.07em solid @bg_color;
+    border-right: 0.07em solid @bg_color;
+}
+
+#modulegroups-iop-header:last-child {
+    border-bottom: 0.07em solid @bg_color;
+    border-radius: 0 0 .5em .5em;
+}
+
+#modulegroups-group-icon,#modulegroups-icons-popup .dt_module_btn {
+    min-height: 1.8em;
+    min-width: 1.8em;
+    margin: 0 .7em 0 .07em;
+}
+
+filechooser .sidebar,#preferences-box .sidebar scrolledwindow {
+    padding: 0;
+    font-size: 1.1em;
+    background-color: @bg_color;
+}
+
+#preferences-box .sidebar row {
+    padding: .35em;
+}
+
+filechooser .sidebar-icon,filechooser .sidebar-label {
+    padding: .42em;
+}
+
+filechooser .sidebar-button {
+    margin-right: .28em;
+}
+
+filechooser row {
+    margin-top: -.28em;
+}
+
+#preferences-box .sidebar row,#preferences-box .sidebar row:selected {
+    border-left: 0.14em solid @bg_color;
+}
+
+filechooser row:selected .sidebar-icon,filechooser row:hover .sidebar-icon {
+    color: @button_hover_fg;
+    background-color: @field_hover_bg;
+}
+
+#preferences-box .sidebar row:selected {
+    border-left-color: @field_hover_bg;
+}
+
+#preferences-box .sidebar label {
+    padding: .14em .84em;
+}
+
+#basics-box-labels widget {
+    border-top: 0.07em solid @lighttable_bg_color;
+}
+
+#basics-header-box,#basics-module-hbox>box {
+    padding: .21em .7em;
+}
+
+#basics-box-labels widget:first-child,#basics-box-labels .dt_section_label,#thumb-localcopy:active {
+    border: none;
+}
+
+#basics-widget #toneeqgraph {
+    min-height: 18em;
+}
+
+#range-select #dt-range-band {
+    border: 0.07em solid alpha(@range_bg_color, 0.9);
+    border-radius: .21em;
+    min-height: 1.6em;
+    min-width: 9em;
+    margin: .1em 0;
+    padding: .07em;
+}
+
+#module-filtering {
+    background-color: @collapsible_bg_color;
+    padding: .28em;
+}
+
+/* cajas filtros de colección */
+#module-filtering #collect-rule-widget {
+    background-color: shade(@collapsible_bg_color, 1.1);
+    margin: .2em 0;
+    padding: .07em .28em;
+	border:1px solid @grey_20;
+    border-radius: 8px;
+}
+
+/* caja de ordenación de colección */
+#module-filtering #filter-sort-box {
+    background: linear-gradient(@grey_25, @grey_15);
+    padding: 0 .5em;
+    border-radius: 6px;
+    border:1px solid @grey_20;
+}
+
+#module-filtering .dt_module_btn.dt_dimmed {
+	color: @filtering_dimmed; 
+}
+
+#module-filtering .dt_module_btn:checked {
+    color : @filtering_checked;
+}
+
+#dt-range-date-popup box:last-child {
+    margin-top: .35em;
+}
+
+#dt-range-date-popup treeview,#dt-range-date-popup box:last-child button {
+    margin-left: .35em;
+}
+
+#dt-range-date-popup .text-button,#dt-range-date-popup entry,#dt-range-date-popup treeview {
+    background-color: alpha(@fg_color, 0.14);
+    border-color: alpha(@fg_color, 0.09);
+}
+
+.search,#dt-range-band,#header-toolbar #bauhaus-combobox:not(.dt_transparent_background) {
+    background-color: @range_bg_color;
+}
+
+.dt_quick_filter,
+#filter-sort-box label,
+#header-rule-box label,
+#header-sort-box label,
+#header-toolbar .dt_module_btn {
+    margin-right: .56em;
+}
+
+#header-toolbar .dt_module_btn {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#filter-colors-box .dt_module_btn {
+    padding: 2px 0;
+    margin: 0;
+}
+
+#range-current {
+    padding: .2em;
+}
+
+#collect-header-box button {
+    margin-right: 0;
+}
+
+#dt-range-band-graph {
+    color: @range_graph_color;
+}
+
+#dt-range-band-selection {
+    color: @range_sel_color;
+}
+
+#dt-range-band-icons {
+    color: @range_icon_color;
+}
+
+#dt-range-band-cursor {
+    color: @range_cursor_color;
+}
+
+#dt-range-rating #dt-range-band-cursor,#dt-range-rating #dt-range-band-selection {
+    color: transparent;
+}
+
+#dt-range-band-icons:active {
+    color: @bauhaus_fg;
+}
+
+#dt-range-band-icons:hover {
+    color: @bauhaus_fg_hover;
+}
+
+#dt-map-location > * {
+    margin: .14em;
+}
+
+#dt-map-location label {
+    padding: .14em;
+}
+
+#dt-map-location {
+    border-bottom: 0.07em solid alpha(@selected_bg_color, 0.75);
+}
+
+#dt-map-location:hover {
+    background-color: @field_hover_bg;
+}
+
+#dt-map-location:hover label {
+    color: @field_hover_fg;
+}
+
+#import-presets,#modulegroups-ro {
+    margin-top: 1em;
+    font-weight: 700;
+}
+
+#about-dialog scrolledwindow {
+    background: @bg_color;
+}
+
+#about-dialog grid * {
+    padding: .14em;
+}
+
+#image-info {
+    font-size: 1.1em;
+}
+
+#navigation-module {
+    background-color: @graph_bg;
+}
+
+#nav-zoom {
+    background-color: alpha(@darkroom_bg_color, 0.7);
+    color: @graph_fg_active;
+    border-top-left-radius: .21em;
+    margin: 0;
+}
+
+#nav-zoom:hover {
+    background-color: alpha(@darkroom_bg_color, 0.5);
+}
+
+#right .search {
+    margin: .14em .28em;
+}
+
+.search label {
+    margin-right: .5em;
+}
+
+.search image.left {
+    padding: 0 .4em;
+}
+
+.search image:disabled {
+    color: shade(@fg_color, 0.75);
+}
+
+#lens-module .text-button {
+    background-color: alpha(@fg_color, 0.06);
+    min-height: 1em;
+}
+
+#background-job-eventbox {
+	background-color: @bg_process_bg;
+	border: 1px solid @bg_process_border;
+	border-radius: .25em;
+}
+
+#background-job-eventbox label {
+    margin: .10em .28em;
+    color: @grey_95;
+}
+
+progressbar trough {
+    background-color: @scroll_bar_inactive;
+}
+
+progressbar progress {
+    background-color: @scroll_bar_active;
+    border-radius: .28em;
+}
+
+#brightbg {
+    min-width: 5.6em;
+    padding-left: .14em;
+}
+
+#iop-bottom-bar {
+    min-height: 1.2em;
+}
+
+.dt_messages {
+    color: @log_fg_color;
+    font-weight: 700;
+    background-color: alpha(@plugin_bg_color,0.5);
+    padding: .35em .7em;
+    border-radius: .35em;
+}
+
+.dt_warning {
+    background-color: #852a2a;
+    padding: .42em;
+}
+
+.top .dt_messages {
+    border-radius: 0 0 .56em .56em;
+}
+
+.dt_monospace {
+    font-family: "Consolas", monospace;
+}
+
+#history-ui {
+   background: linear-gradient(@history_gradient, @grey_05);
+}
+
+.dt_history_items {
+    padding: 0 .21em;
+    margin: .14em;
+}
+
+/* interruptor de módulo en histórico*/
+.dt_history_switch:disabled {
+    color: @plugin_label_color;
+    font-size: .8em;
+    margin-left: .42em;
+}
+
+#history-number {
+    padding: 0 .35em 0 0;
+}
+
+/* texto e interruptor de módulo deactivado en histórico */
+.dt_history_switch_off, .dt_history_switch_off:disabled {
+    color: shade(red, 0.85);
+}
+
+#dt-metadata-changed {
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+#dt-metadata-multi {
+    font-style: italic;
+    margin: .07em;
+}
+
+#color-picker-button {
+    min-height: 1.5em;
+    min-width: 1.5em;
+    border: 0;
+}
+
+#color-picker-area {
+    min-height: 5em;
+    margin-bottom: .14em;
+}
+
+#live-sample {
+    margin: .21em .21em .21em 0;
+    min-width: 2em;
+}
+
+#picker-black {
+    color: @grey_05;
+    border: 0;
+}
+
+#picker-grey {
+    color: @grey_50;
+    border: 0;
+}
+
+#picker-white {
+    color: @grey_95;
+    border: 0;
+}
+
+.default,.dt_history_items:active,
+.dt_history_items:checked,
+button:active,
+button:checked:not(:disabled):not(.dt_transparent_background):not(.dt_ignore_fg_state),
+button:selected,
+cell:selected,
+checkbutton check:checked,
+combobox window *:active,combobox window *:selected,
+entry:checked,filechooser *:selected,
+menuitem:active,
+menuitem:selected,treeview *:selected:not(check),
+treeview *:checked:not(check),
+#main-histogram .dt_module_btn:checked:not(.rgb_toggle) {
+    background-color: @field_selected_bg;
+    color: @field_selected_fg;
+}
+
+.dt_history_items:active *,.dt_history_items:checked *,button.dt_transparent_background:checked:not(:disabled):not(.dt_ignore_fg_state) {
+    color: @field_active_fg;
+}
+
+.dt_history_items:hover,
+.dt_transparent_background:hover,
+button:hover:not(.combo):not(.dt_no_hover),
+dialog .sidebar :hover,menuitem:hover,
+notebook tab:hover,radiobutton:hover label,
+treeview:not(#lutname) *:hover:not(check),
+#dt-range-date-popup .text-button:hover,
+#lens-module .text-button:hover,
+#main-histogram .dt_module_btn:hover:not(.rgb_toggle),
+#non-flat:hover,
+#view-label:hover,
+#view-dropdown .combo:hover {
+    background-color: alpha(@button_hover_bg, 0.5);
+    border-color: transparent;
+    color: @new_button_hover_fg;
+}
+
+button:hover:checked:not(.combo):not(.dt_no_hover) {
+    background-color: alpha(@button_hover_bg, 0.8);
+}
+
+.combo:hover,.combo:hover cellview,
+.dt_bauhaus:hover,
+combobox window *:hover,menuitem:hover>arrow {
+    color: shade(@fg_color, 1.2);
+}
+
+.dt_history_switch_off:hover {
+    color: shade(@fg_color, 0.8);
+}
+
+button:checked cellview {
+    color: shade(@button_hover_fg, 0.99);
+}
+
+menuitem:not(.dt_transparent_background) check,
+treeview check,treeview entry,treeview spinbutton {
+    background-color: @field_active_bg;
+    border-color: @border_color;
+}
+
+.changed,entry:active,filechooser :active,treeview :active {
+    background-color: @field_active_bg;
+    color: @field_active_fg;
+}
+
+#preferences-box .dt_bauhaus,treeview check:selected {
+    background-color: @button_bg;
+    border-color: @plugin_bg_color;
+}
+
+menuitem check:hover,treeview check:hover {
+    color: @bauhaus_fg_hover;
+}
+
+entry:hover {
+    color: @field_hover_fg;
+    background-color: @field_hover_bg;
+}
+
+treeview#delete-dialog,treeview#delete-dialog:selected {
+    background-color: shade(@bg_color, 0.9);
+    color: @field_active_fg;
+    padding-left: 1em;
+}
+
+.active_menu_item,.active_menu_item label {
+    font-weight: 700;
+}
+
+.dt_bauhaus_popup:selected {
+    color: @fg_color;
+}
+
+#view-label:selected {
+  background-color: @focused_header;
+  color: @grey_90;
+  border: 1px solid @grey_40;
+  border-bottom: none;
+}
+
+.dt_bauhaus_popup:disabled {
+    color: white;
+}
+
+.dt_bauhaus_popup:hover {
+    color: @bauhaus_fg_hover;
+}
+
+.module_drag_icon {
+    border: 0.07em solid @plugin_bg_color;
+    background-color: @bg_color;
+}
+
+.module_drop_before {
+    border-bottom: 2.4em solid @plugin_bg_color;
+}
+
+.module_drop_after {
+    border-top: 2.4em solid @plugin_bg_color;
+}
+
+.dt_thumbtable,.dt_fullview {
+    background-color: @lighttable_bg_color;
+}
+
+#thumb-back {
+    background-color: @thumbnail_bg_color;
+    border: 1px solid @lighttable_bg_color;
+}
+
+.dt_act_on_selection #thumb-main:active #thumb-back,
+.dt_act_on_selection #thumb-main:selected #thumb-back {
+    background-color: @thumbnail_hover_bg_color;
+}
+
+.dt_act_on_hover #thumb-main:active #thumb-back,
+.dt_act_on_hover #thumb-main:selected #thumb-back,
+.dt_act_on_selection #thumb-main:hover #thumb-back {
+    background-color: shade(@thumbnail_selected_bg_color, 1.05);
+	border-color: shade(@thumbnail_selected_bg_color, 1.15);
+}
+
+.dt_act_on_hover #thumb-main:hover #thumb-back {
+    background-color: @thumbnail_hover_bg_color;
+}
+
+#thumb-image {
+    margin: 12px 10px;
+}
+
+.dt_thumbnails_1 #thumb-image {
+    margin: 18px 16px;
+}
+
+#thumbtable-filmstrip #thumb-main:active #thumb-back {
+    border-top: 0.105em solid @border_color;
+}
+
+#thumb-bottom-label,#thumb-cursor {
+    color: transparent;
+}
+
+#thumbtable-filmstrip #thumb-main:active #thumb-cursor {
+    color: @border_color;
+}
+
+.dt_group_left #thumb-back,#thumb-main.dt_group_left:selected #thumb-back {
+    border-left: .07em solid @thumbnail_group_border;
+}
+
+.dt_group_top #thumb-back,#thumb-main.dt_group_top:selected #thumb-back {
+    border-top: .07em solid @thumbnail_group_border;
+}
+
+.dt_group_right #thumb-back,#thumb-main.dt_group_right:selected #thumb-back {
+    border-right: .07em solid @thumbnail_group_border;
+}
+
+.dt_group_bottom #thumb-back,#thumb-main.dt_group_bottom:selected #thumb-back {
+    border-bottom: .07em solid @thumbnail_group_border;
+}
+
+.dt_thumbtable_reorder #thumb-main:hover #thumb-back {
+    border-left: 4px solid @thumbnail_group_border;
+}
+
+#show-tooltip {
+    margin: .28em 0 0 .28em;
+    border-top: 0.07em dashed @button_border;
+}
+
+#thumb-bottom {
+    border: .07em solid transparent;
+}
+
+.dt_group_left #thumb-bottom {
+    border-left-width: .14em;
+}
+
+.dt_group_bottom #thumb-bottom {
+    border-bottom-width: .14em;
+}
+
+.dt_group_right #thumb-bottom {
+    border-right-width: .14em;
+}
+
+.dt_overlays_hover_extended #thumb-main:hover #thumb-bottom,
+.dt_overlays_mixed #thumb-main:hover #thumb-bottom,
+.dt_overlays_hover #thumb-main:hover #thumb-bottom {
+    background-image: none;
+    background-color: alpha(@thumb_main_hover_bg,.7)
+}
+
+.dt_overlays_hover_block #thumb-image:hover #thumb-bottom {
+	background-image: none;
+    background-color: alpha(@thumb_image_hover, 0.7);  /* preview tooltip background color */
+}
+
+#thumb-star,#thumb-reject,#thumb-colorlabels {
+    padding: 12.5px;
+}
+
+.dt_overlays_none .dt_thumb_btn,
+.dt_overlays_none #thumb-main:hover .dt_thumb_btn,
+.dt_overlays_hover #thumb-main .dt_thumb_btn,
+.dt_overlays_hover_extended #thumb-main .dt_thumb_btn,
+.dt_overlays_hover_block #thumb-main .dt_thumb_btn,#thumb-ext {
+    color: transparent;
+    background-color: transparent;
+}
+
+.dt_thumb_btn,
+.dt_overlays_always_extended #thumb-bottom-label,
+.dt_overlays_always #thumb-ext,
+.dt_overlays_always_extended #thumb-ext,
+.dt_overlays_mixed #thumb-ext {
+    color: shade(@thumbnail_font_color, 1.1);
+}
+
+.dt_overlays_always #thumb-star,
+.dt_overlays_always_extended #thumb-star,
+.dt_overlays_mixed #thumb-star,
+.dt_overlays_hover_block #thumb-star {
+    color: shade(@thumbnail_font_color, 1.4);
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-ext,
+.dt_overlays_hover #thumb-main:hover .dt_thumb_btn,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-ext,
+.dt_overlays_hover_extended #thumb-main:hover .dt_thumb_btn,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always #thumb-main:hover #thumb-ext,
+.dt_overlays_always #thumb-main:selected #thumb-ext,
+.dt_overlays_always #thumb-main:hover .dt_thumb_btn,
+.dt_overlays_always #thumb-main:selected .dt_thumb_btn,
+.dt_overlays_always_extended #thumb-main:hover #thumb-ext,
+.dt_overlays_always_extended #thumb-main:selected #thumb-ext,
+.dt_overlays_always_extended #thumb-main:hover .dt_thumb_btn,
+.dt_overlays_always_extended #thumb-main:selected .dt_thumb_btn,
+.dt_overlays_always_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended #thumb-main:selected #thumb-bottom-label,
+.dt_overlays_mixed #thumb-main:hover #thumb-ext,
+.dt_overlays_mixed #thumb-main:selected #thumb-ext,
+.dt_overlays_mixed #thumb-main:hover .dt_thumb_btn,
+.dt_overlays_mixed #thumb-main:selected .dt_thumb_btn,
+.dt_overlays_mixed #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_hover_block #thumb-image:hover .dt_thumb_btn,
+.dt_overlays_hover_block #thumb-image:hover .dt_thumb_btn:active,
+.dt_overlays_hover_block #thumb-image:hover #thumb-bottom-label {
+    color: @thumbnail_font_color;
+}
+
+.dt_overlays_always_extended.dt_fullview #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended.dt_fullview #thumb-main:selected #thumb-bottom-label {
+    color: shade(@thumbnail_font_color,.75);
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-reject:active,
+.dt_overlays_hover #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:active,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_always #thumb-reject:active,
+.dt_overlays_always #thumb-main:hover #thumb-reject:active,
+.dt_overlays_always #thumb-main:selected #thumb-reject:active,
+.dt_overlays_always #thumb-reject:hover,
+.dt_overlays_always #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_always_extended #thumb-reject:active,
+.dt_overlays_always_extended #thumb-main:hover #thumb-reject:active,
+.dt_overlays_always_extended #thumb-main:selected #thumb-reject:active,
+.dt_overlays_always_extended #thumb-reject:hover,
+.dt_overlays_always_extended #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_mixed #thumb-reject:active,
+.dt_overlays_mixed #thumb-main:hover #thumb-reject:active,
+.dt_overlays_mixed #thumb-main:selected #thumb-reject:active,
+.dt_overlays_mixed #thumb-reject:hover,
+.dt_overlays_mixed #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_hover_block #thumb-image:hover #thumb-reject:active,
+.dt_overlays_hover_block #thumb-image:hover #thumb-reject:hover {
+    color: red;
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-star:active,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-star:active,
+.dt_overlays_always #thumb-star:active,
+.dt_overlays_always_extended #thumb-star:active,
+.dt_overlays_mixed #thumb-star:active,
+.dt_overlays_hover_block #thumb-image:hover #thumb-star:active {
+    color: @thumbnail_star_color;
+    background-color: @thumbnail_star_bg_color;
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-star:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-star:hover,
+.dt_overlays_always #thumb-main:hover #thumb-star:hover,
+.dt_overlays_always_extended #thumb-main:hover #thumb-star:hover,
+.dt_overlays_mixed #thumb-main:hover #thumb-star:hover,
+.dt_overlays_hover_block #thumb-image:hover #thumb-star:hover {
+    color: @thumbnail_star_hover_color;
+    background-color: @thumbnail_star_bg_color;
+}
+
+.dt_fullview #thumb-main:hover #thumb-star:hover {
+    color: @lighttable_bg_color;
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_always #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_always_extended #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_mixed #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_hover_block #thumb-image:hover #thumb-group-audio:hover {
+    color: @thumbnail_fg_color;
+}
+
+.dt_thumbnail_rating_6 #thumb-image {
+    color: rgba(0,0,0,.35);
+}
+
+.dt_thumbnail_rating_6#thumb-main:hover #thumb-image {
+    color: #000;
+}
+
+.dt_thumbnail_rating_6 #thumb-back {
+    background-color: shade(@thumbnail_bg_color,0.75);
+    border: 1px solid shade(@lighttable_bg_color, 0.75);
+}
+
+.dt_overlays_always .dt_thumbnail_rating_6 #thumb-ext,
+.dt_overlays_always .dt_thumbnail_rating_6 #thumb-altered,
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-ext,
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-altered,
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-bottom-label,
+.dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-ext,
+.dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-altered {
+    color: rgba(0,0,0,.15);
+}
+
+#thumb-localcopy {
+    border-top: 0.07em solid @lighttable_bg_color;
+    border-right: 0.07em solid @lighttable_bg_color;
+    color: @thumbnail_localcopy;
+}
+
+.dt_group_right #thumb-localcopy {
+    border-right: .07em solid #fb0;
+}
+
+.dt_group_top #thumb-localcopy {
+    border-top: .07em solid #fb0;
+}
+
+.dt_fullview #thumb-ext,
+.dt_fullview #thumb-main:selected #thumb-ext,
+.dt_fullview #thumb-main:hover #thumb-ext,
+.dt_duplicate_ui #thumb-main:hover #thumb-group-audio,
+.dt_duplicate_ui #thumb-main:hover #thumb-altered,
+.dt_duplicate_ui #thumb-group-audio,
+.dt_duplicate_ui #thumb-altered,
+.dt_overlays_always.dt_fullview #thumb-group-audio,
+.dt_overlays_always.dt_fullview #thumb-altered,
+.dt_overlays_always_extended.dt_fullview #thumb-group-audio,
+.dt_overlays_always_extended.dt_fullview #thumb-altered,
+.dt_thumbnail_rating_6 #thumb-star {
+    color: transparent;
+}
+
+.dt_overlays_always.dt_fullview #thumb-bottom>* {
+    padding-top: .21em;
+}
+
+.dt_overlays_hover_block #thumb-image:hover #thumb-bottom-label {
+    padding-left: .28em;
+    padding-right: .28em;
+}
+
+.dt_fullview #thumb-back,
+.dt_fullview #thumb-main:selected #thumb-back,
+.dt_fullview #thumb-main:hover #thumb-back,
+.dt_fullview #thumb-main:active #thumb-back {
+    background-color: shade(@lighttable_bg_color,1.05);
+    border: 1px solid shade(@lighttable_bg_color,.95);
+}
+
+.dt_fullview #thumb-main:selected #thumb-image {
+    border: 0.14em solid @plugin_bg_color;
+}
+
+.dt_fullview.dt_act_on_hover #thumb-main:hover #thumb-image,
+.dt_fullview.dt_act_on_selection .dt_culling_selected #thumb-main #thumb-image {
+    border: 0.14em solid @thumbnail_hover_bg_color;
+}
+
+.dt_overlays_always.dt_fullview #thumb-bottom,
+.dt_overlays_always_extended.dt_fullview #thumb-bottom {
+    background-color: transparent;
+}
+
+#thumb-zoom-label {
+    color: transparent;
+    background-color: transparent;
+    border-radius: .28em;
+    padding: .07em .42em;
+}
+
+.dt_overlays_hover_block #thumb-bottom {
+    margin-top: 30px;
+    margin-left: 0;
+}
+
+.dt_overlays_hover_block #thumb-image:hover #thumb-zoom-label {
+    color: @bauhaus_fg_hover;
+    background-color: rgba(20,20,20,.5);
+}
+
+#lighttable_layouts_box,#footer-toolbar .toggle,#footer-toolbar entry,#footer-toolbar scale {
+    margin: .07em .28em;
+}
+
+#workspace {
+    background-color: @grey_20;
+    padding: .8em;
+    margin: .5em;
+}
+
+#wpdialog {
+    background-color: #852a2a;
+}
+
+#workspace .dt_module_btn {
+    background-color: #852a2a;
+}
+
+#workspace label {
+    font-size: 120%;
+    padding: .2em;
+    padding-top: 1em;
+}
+
+#workspace button label {
+    font-size: 100%;
+    padding: .3em;
+    margin: 0em;
+}
+
+#workspace checkbutton label {
+    padding-top: 0.2em;
+}
+
+#workspace .dt_workspace_template_radio_cell {
+    min-width: 1.25em;
+    min-height: 1.55em;
+    padding: 0.1em 0;
+    margin: 0.06em 0.14em 0.06em 0;
+    background-color: @grey_25;
+    border: none;
+    border-radius: 5px;
+}
+
+#workspace .dt_workspace_template_radio_cell:hover {
+    background-color: @grey_30;
+}
+
+#workspace .dt_workspace_template_radio_cell.dt_workspace_template_radio_on {
+    background-color: alpha(@grey_85, 0.15);
+}
+
+#workspace .dt_workspace_template_radio {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+#workspace .dt_workspace_template_radio check,
+#workspace .dt_workspace_template_radio radio
+{
+    min-width: 1.28em;
+    min-height: 1.28em;
+}
+ 
+#splashscreen {
+    background-color: @grey_20;
+    border: 1px solid;
+    border-radius: 0;
+    min-width: 720px;
+}
+
+#splashscreen-logo {
+	margin: 30px 25px 0px 30px;
+    min-width: 120px;
+    min-height: 120px;
+}
+
+#splashscreen-program {
+    font-size: 50pt;
+    margin-top: 25pt;
+    margin-bottom: 0;
+}
+
+#splashscreen-version {
+    color: @grey_50;
+    font-size: 22pt;
+    margin-top: 0;
+}
+
+#splashscreen-description {
+    color: @grey_60;
+    font-size: 18pt;
+    font-family: Inter,sans-serif;
+    margin-top: 30pt;
+    margin-bottom: 30pt;
+    margin-left: 30pt;
+}
+
+#splashscreen-separator {
+    background-color: @grey_40;
+    min-height: 1px;
+    border: none;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#splashscreen-progress {
+    color: @grey_70;
+    font-size: 12pt;
+    font-family: Inter, sans-serif;
+    background-color: transparent;
+    margin-left: 30pt;
+    margin-top: 10pt;
+    margin-bottom: 2em;
+}
+
+#splashscreen-remaining {
+    color: @grey_60;
+    font-size: 10pt;
+	padding-bottom: 1em;
+}
+
+#exitscreen-message {
+    font-size: 15pt;
+    margin-bottom: 10pt;
+}
+
+#welcome-page {
+    padding: 16px;
+}
+
+#welcome-page > box {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#welcome-page > box > box {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#welcome-paragraph {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#welcome-footer {
+    padding: 8px;
+}
+
+#welcome-prev,#welcome-next {
+  margin-right: .2em;
+}
+
+button#pb_off {
+    opacity: .5;
+}
+
+button#pb_on {
+    opacity: 1;
+}
+
+label#pb_label {
+    padding-left: .5em;
+}
+
+window headerbar {
+    background-color: @border_color;
+    color: #fff;
+    min-height: 0;
+    padding: 0;
+}
+
+window headerbar.title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+dialog headerbar button,window headerbar button.titlebutton {
+    border-radius: 999px;
+    padding: 3px;
+    background-color: shade(@border_color, 1.1);
+    color: #fff;
+    border: 0;
+    margin: 8px;
+}
+
+#tag-completion box {
+    background-color: @tooltip_bg_color;
+    border: 1px solid @button_border;
+}
+
+popover * {
+    background-color: @tooltip_bg_color;
+    color: @tooltip_fg_color;
+}
+
+#tag-completion *:selected {
+    background-color: @selected_bg_color;
+}
+
+popover#log-history-popover scrolledwindow
+{
+  background-color: @bg_color;
+  border: none;
+}
+
+popover#log-history-popover row
+{
+  padding: 0;
+}
+
+popover#log-history-popover label
+{
+  color: @fg_color;
+}
+
+#log-history-popover overshoot,
+#log-history-popover undershoot
+{
+  all: unset;
+}
+
+#log-history-badge
+{
+  color: @fg_color;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+#left {
+    padding: 0 4px 0 0;
+}
+
+left>:not(scrolledwindow) {
+    padding-left: 2px;
+}
+
+#left>:not(scrolledwindow):last-child .dt_module_expanded {
+    padding-left: 2px;
+}
+
+#left>box:first-child,#modules-tabs {
+    margin-bottom: 4px;
+}
+
+#right {
+    padding: 0 0 0 4px;
+}
+
+#right>:not(scrolledwindow) {
+    padding-right: 2px;
+}
+
+#right>scrolledwindow {
+    padding-right: 4px;
+}
+
+.dt_plugin_ui_main {
+	border: 2px solid @plugin_ui_border;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px
+}
+
+#plugins_vbox_left>box:not(#basics-box-labels),
+#plugins_vbox_right>box {
+    margin: 2px 0;
+}
+
+#plugins_vbox_left #module-header,
+#plugins_vbox_right #module-header,
+#left>box:nth-child(3) #module-header,
+#right>box:nth-child(3) #module-header {
+    border: 1px solid @grey_40;
+	border-bottom: 1px solid @grey_30;
+	border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: @module_headers;
+    padding: 6px 8px;
+}
+
+#basics-box-labels>widget {
+    background-color: @module_headers;
+    border: 1px solid @grey_40;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+#basics-module-hbox {
+    border-radius: 0 0 12px 12px;
+    border: 1px solid @grey_40;
+    margin: 0 0 3px 0;
+}
+
+#basics-box-labels>widget .dt_section_label {
+    color: @grey_80;
+    background-color: transparent;
+    font-weight: normal;
+    font-family: "Tahoma", "Segoe UI","Arial","Microsoft Sans Serif",sans-serif, "Arial Unicode MS";
+}
+
+#basics-box-labels>widget .dt_module_btn {
+    padding: 2px;
+    margin: 3px 1px 3px 0;
+}
+
+.dt_section_label {
+    border: 1px solid @section_label_bd;
+    border-bottom: 0;
+    background-color: alpha(@section_label_bg, .7);
+    color: @section_label_fg;
+    border-radius: 6px 6px 0 0;
+	margin: 0;
+    padding: 0;
+}
+
+#module-header .dt_module_btn,
+#basics-box-labels>widget .dt_module_btn {
+    color: @header_btn_fg;
+    background-color: @header_btn_bg;
+    border: 1px solid @header_btn_border;
+    border-radius: 6px;
+}
+
+/* botón activador de módulo */
+#module-header .dt_module_btn.dt_transparent_background,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background {
+    color: @grey_60;
+    border-color: @grey_40;
+    border-radius: 50%;
+} 
+
+#module-header .dt_module_btn.dt_transparent_background:checked,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background:checked {
+    color: white;
+    background-color: @module_btn_on;
+    border-color: @btn_border;
+} 
+
+#module-header .dt_module_btn:hover,
+#basics-box-labels>widget .dt_module_btn:hover {
+    color: @basics_box_hover;
+    background-color: @grey_05;
+    border-color: @yellow_hover;
+}
+
+#module-header .dt_module_btn:checked,
+#basics-box-labels>widget .dt_module_btn:checked {
+    color: @grey_100;
+    background-color: @header_active;
+    border-color: @btn_border;
+}
+
+#module-header .dt_module_btn:checked:hover,
+#basics-box-labels>widget .dt_module_btn:checked:hover {
+    background-color: shade(@basics_box_chck_hover, 1.08);
+	border-color: @yellow_hover;
+}
+
+#module-header .dt_module_btn:checked~* #iop-panel-label,
+#basics-box-labels>widget .dt_module_btn:checked+.dt_section_label {
+    color: @basics_box_chck_label;
+}
+
+#module-header .dt_module_btn~:nth-last-child(2),
+ #basics-box-labels>widget .dt_module_btn~:nth-last-child(3) { 
+    color: alpha(orange, .6);
+    border-color: alpha(orange, .4);
+}
+
+#module-header .dt_module_btn:checked~:nth-last-child(2):hover,
+#basics-box-labels>widget .dt_module_btn:checked~:nth-last-child(3):hover { 
+    color: alpha(red, 1);
+    background-color: black;
+}
+
+#left #module-header .dt_module_btn~:nth-last-child(2):hover { 
+    color: alpha(red, 1);
+    background-color: black;
+}
+
+entry,entry selection,combobox,button,menu {
+    border-radius: 7px;
+    border: 1px solid @entry_border;
+}
+
+button:hover,combobox:hover,entry:hover {
+    border-color: @ui_btn_border
+}
+
+dialog .sidebar row:selected,
+dialog .sidebar row:selected:hover label {
+    color: @grey_100;
+    background-color: @dialog_sidebar;
+}
+
+.dt_plugin_ui:hover,dialog:hover,
+dialog .sidebar row:selected:hover,
+#bauhaus-slider:hover,
+#background-job-eventbox:hover {
+    color: @ui_hover;
+}
+
+checkbutton check:hover {
+    box-shadow: 1px 1px 4px lightblue;
+}
+
+.dt_module_expanded {
+    border: none;
+    background-color: @plugin_bg_color;
+}
+
+.dt_module_expanded .dt_module_expanded {
+    border: 1px solid @module_expanded_border;
+    border-radius: .3em;
+    padding: .1em
+}
+
+/* =================== ICONOS ====================*/
+
+/* configuracion por defecto de iconos de módulos */
+.dt_icon
+{
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    margin-left: 0.20em;
+    min-height: 1.5em;
+    min-width: 1.5em;
+}
+
+/* carga el icono de cada módulo */
+#iop-panel-icon-ashift
+{
+    background-image: url('../pixmaps/plugins/darkroom/ashift.svg');
+}
+
+#iop-panel-icon-atrous
+{
+    background-image: url('../pixmaps/plugins/darkroom/atrous.svg');
+}
+
+#iop-panel-icon-basecurve
+{
+    background-image: url('../pixmaps/plugins/darkroom/basecurve.svg');
+}
+
+#iop-panel-icon-bilateral
+{
+    background-image: url('../pixmaps/plugins/darkroom/bilateral.svg');
+}
+
+#iop-panel-icon-bloom
+{
+    background-image: url('../pixmaps/plugins/darkroom/bloom.svg');
+}
+
+#iop-panel-icon-borders
+{
+    background-image: url('../pixmaps/plugins/darkroom/borders.svg');
+}
+
+#iop-panel-icon-cacorrect
+{
+    background-image: url('../pixmaps/plugins/darkroom/cacorrect.svg');
+}
+
+#iop-panel-icon-cacorrectrgb
+{
+    background-image: url('../pixmaps/plugins/darkroom/cacorrect.svg');
+}
+
+#iop-panel-icon-channelmixer
+{
+    background-image: url('../pixmaps/plugins/darkroom/channelmixer.svg');
+}
+
+#iop-panel-icon-clahe
+{
+    background-image: url('../pixmaps/plugins/darkroom/clahe.svg');
+}
+
+#iop-panel-icon-clipping
+{
+    background-image: url('../pixmaps/plugins/darkroom/clipping.svg');
+}
+
+#iop-panel-icon-crop
+{
+    background-image: url('../pixmaps/plugins/darkroom/clipping.svg');
+}
+
+#iop-panel-icon-colisa
+{
+    background-image: url('../pixmaps/plugins/darkroom/colisa.svg');
+}
+
+#iop-panel-icon-colorcorrection
+{
+    background-image: url('../pixmaps/plugins/darkroom/colorcorrection.svg');
+}
+
+#iop-panel-icon-colorin
+{
+    background-image: url('../pixmaps/plugins/darkroom/colorin.svg');
+}
+
+#iop-panel-icon-colormapping
+{
+    background-image: url('../pixmaps/plugins/darkroom/colormapping.svg');
+}
+
+#iop-panel-icon-colorout
+{
+    background-image: url('../pixmaps/plugins/darkroom/colorout.svg');
+}
+
+#iop-panel-icon-colorreconstruct
+{
+    background-image: url('../pixmaps/plugins/darkroom/colorreconstruct.svg');
+}
+
+#iop-panel-icon-colortransfer
+{
+    background-image: url('../pixmaps/plugins/darkroom/colortransfer.svg');
+}
+
+#iop-panel-icon-colorzones
+{
+    background-image: url('../pixmaps/plugins/darkroom/colorzones.svg');
+}
+
+#iop-panel-icon-demosaic
+{
+    background-image: url('../pixmaps/plugins/darkroom/demosaic.svg');
+}
+
+#iop-panel-icon-dither
+{
+    background-image: url('../pixmaps/plugins/darkroom/dither.svg');
+}
+
+#iop-panel-icon-exposure
+{
+    background-image: url('../pixmaps/plugins/darkroom/exposure.svg');
+}
+
+#iop-panel-icon-flip
+{
+    background-image: url('../pixmaps/plugins/darkroom/flip.svg');
+}
+
+#iop-panel-icon-gamma
+{
+    background-image: url('../pixmaps/plugins/darkroom/profile_gamma.svg');
+}
+
+#iop-panel-icon-graduatednd
+{
+    background-image: url('../pixmaps/plugins/darkroom/graduatednd.svg');
+}
+
+#iop-panel-icon-grain
+{
+    background-image: url('../pixmaps/plugins/darkroom/grain.svg');
+}
+
+#iop-panel-icon-hazeremoval
+{
+    background-image: url('../pixmaps/plugins/darkroom/hazeremoval.svg');
+}
+
+#iop-panel-icon-highlights
+{
+    background-image: url('../pixmaps/plugins/darkroom/highlights.svg');
+}
+
+#iop-panel-icon-highpass
+{
+    background-image: url('../pixmaps/plugins/darkroom/highpass.svg');
+}
+
+#iop-panel-icon-hotpixels
+{
+    background-image: url('../pixmaps/plugins/darkroom/hotpixels.svg');
+}
+
+#iop-panel-icon-invert
+{
+    background-image: url('../pixmaps/plugins/darkroom/invert.svg');
+}
+
+#iop-panel-icon-lens
+{
+    background-image: url('../pixmaps/plugins/darkroom/lens.svg');
+}
+
+#iop-panel-icon-levels
+{
+    background-image: url('../pixmaps/plugins/darkroom/levels.svg');
+}
+
+#iop-panel-icon-liquify
+{
+    background-image: url('../pixmaps/plugins/darkroom/liquify.svg');
+}
+
+#iop-panel-icon-lowlight
+{
+    background-image: url('../pixmaps/plugins/darkroom/lowlight.svg');
+}
+
+#iop-panel-icon-lowpass
+{
+    background-image: url('../pixmaps/plugins/darkroom/lowpass.svg');
+}
+
+#iop-panel-icon-monochrome
+{
+    background-image: url('../pixmaps/plugins/darkroom/monochrome.svg');
+}
+
+#iop-panel-icon-negadoctor
+{
+    background-image: url('../pixmaps/plugins/darkroom/invert.svg');
+}
+
+#iop-panel-icon-nlmeans
+{
+    background-image: url('../pixmaps/plugins/darkroom/nlmeans.svg');
+}
+
+#iop-panel-icon-overexposed
+{
+    background-image: url('../pixmaps/plugins/darkroom/overexposed.svg');
+}
+
+#iop-panel-icon-rawdenoise
+{
+    background-image: url('../pixmaps/plugins/darkroom/rawdenoise.svg');
+}
+
+#iop-panel-icon-rawimport
+{
+    background-image: url('../pixmaps/plugins/darkroom/rawimport.svg');
+}
+
+#iop-panel-icon-rawprepare
+{
+    background-image: url('../pixmaps/plugins/darkroom/rawprepare.svg');
+}
+
+#iop-panel-icon-relight
+{
+    background-image: url('../pixmaps/plugins/darkroom/relight.svg');
+}
+
+#iop-panel-icon-shadhi
+{
+    background-image: url('../pixmaps/plugins/darkroom/shadhi.svg');
+}
+
+#iop-panel-icon-sharpen
+{
+    background-image: url('../pixmaps/plugins/darkroom/sharpen.svg');
+}
+
+#iop-panel-icon-soften
+{
+    background-image: url('../pixmaps/plugins/darkroom/soften.svg');
+}
+
+#iop-panel-icon-splittoning
+{
+    background-image: url('../pixmaps/plugins/darkroom/splittoning.svg');
+}
+
+#iop-panel-icon-spots
+{
+    background-image: url('../pixmaps/plugins/darkroom/spots.svg');
+}
+
+#iop-panel-icon-temperature
+{
+    background-image: url('../pixmaps/plugins/darkroom/temperature.svg');
+}
+
+#iop-panel-icon-template
+{
+    background-image: url('../pixmaps/plugins/darkroom/template.svg');
+}
+
+#iop-panel-icon-tonecurve
+{
+    background-image: url('../pixmaps/plugins/darkroom/tonecurve.svg');
+}
+
+#iop-panel-icon-tonemap
+{
+    background-image: url('../pixmaps/plugins/darkroom/tonemap.svg');
+}
+
+#iop-panel-icon-velvia
+{
+    background-image: url('../pixmaps/plugins/darkroom/velvia.svg');
+}
+
+#iop-panel-icon-vignette
+{
+    background-image: url('../pixmaps/plugins/darkroom/vignette.svg');
+}
+
+#iop-panel-icon-watermark
+{
+    background-image: url('../pixmaps/plugins/darkroom/watermark.svg');
+}
+
+#iop-panel-icon-zonesystem
+{
+    background-image: url('../pixmaps/plugins/darkroom/zonesystem.svg');
+}
+
+/*	================== The End ================== */
