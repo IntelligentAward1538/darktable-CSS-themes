@@ -1,6 +1,6 @@
 # 'Oasis' CSS theme for [darktable](https://www.darktable.org/) 5.6+
 
-## Release : 260813-Base
+## Release : 260813-Base and 4 additional themes as tonal variations of the main one.
 
 ![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/006af4390b3b0b5f4169103e8c231773965b6ffa/Oasis_260813-Base_dr.png)
 
