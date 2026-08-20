@@ -6,7 +6,7 @@
 
 ![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/d76bef5ddea7013c26e29a35c3c3362d7ebc304f/.screenshots/Oasis_260818-Base_dr.png)
 
-![image tab](https://github.com/IntelligentAward1538/Dartable-Oasis-Theme/blob/db17c1672dc8c9007234e8956811f208fd7324bf/Screenshot_masks.png)
+![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/b095a871927a7b991263b25c0ef98cbc2da9c690/.screenshots/Oasis_260818-Base_mask.png)
 
 ## <b>Motivation:</b>
 
