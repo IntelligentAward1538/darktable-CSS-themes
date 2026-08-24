@@ -12,7 +12,7 @@
 
 ## <b>Motivation:</b>
 
-"darktable.css" (67Kb) is the only complete theme included in the distribution.The remaining options simply import this first one and make some variations, but without significant changes.
+"darktable.css" (67Kb) is the only complete theme included in the distribution. The remaining options simply import this first one and make some variations, but without significant changes.
 
 I understand the motivation behind official themes, but over the years, visual acuity declines and the field of vision narrows.
 
