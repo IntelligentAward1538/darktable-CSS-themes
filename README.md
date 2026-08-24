@@ -1,10 +1,10 @@
 # 'Oasis' CSS theme for [darktable](https://www.darktable.org/) 5.6+
 
-## News:
+## What's new in the latest release:
 - Improved hovering over history stack items.
 - Active modules display a gradient.
 
-## Screenshots last release : 260823-Base
+## Screenshots: 260823-Base
 
 <img width="2560" height="1390" alt="Lighttable" src="https://github.com/user-attachments/assets/25a2b4aa-9e09-40a4-bd89-dd406ba19360" />
 <img width="2560" height="1390" alt="Darkroom" src="https://github.com/user-attachments/assets/4a940d39-593f-4e9d-8100-c30ba405495d" />
