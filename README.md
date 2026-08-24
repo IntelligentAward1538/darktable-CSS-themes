@@ -1,19 +1,14 @@
 # 'Oasis' CSS theme for [darktable](https://www.darktable.org/) 5.6+
 
 ## News:
-- Round module activation buttons
-- Softened tone of module activation button
-- Various background gradients
-- Representative icons were added to the modules.
-- Reddish color in deactivated history stack modules
+- Improved hovering over history stack items.
+- Active modules display a gradient.
 
-## Screenshots last release : 260818-Base
+## Screenshots last release : 260823-Base
 
-![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/6ffc611acc82560beb1509bd6c1a5727a05d088e/.screenshots/Oasis_260818-Base_lt.png)
-
-![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/d76bef5ddea7013c26e29a35c3c3362d7ebc304f/.screenshots/Oasis_260818-Base_dr.png)
-
-![image tab](https://github.com/IntelligentAward1538/darktable-CSS-themes/blob/b095a871927a7b991263b25c0ef98cbc2da9c690/.screenshots/Oasis_260818-Base_mask.png)
+<img width="2560" height="1390" alt="Lighttable" src="https://github.com/user-attachments/assets/25a2b4aa-9e09-40a4-bd89-dd406ba19360" />
+<img width="2560" height="1390" alt="Darkroom" src="https://github.com/user-attachments/assets/4a940d39-593f-4e9d-8100-c30ba405495d" />
+<img width="446" height="821" alt="mask editor" src="https://github.com/user-attachments/assets/3f776a0c-6267-4f88-9cba-a168d2d8ea46" />
 
 ## <b>Motivation:</b>
 
