@@ -26,6 +26,21 @@ Therefore, the objectives are:
 <li>Use a single, unified CSS file.</li>
 </ul>
 
+## <b>Exercise of freedom:</b>
+
+When users complain about the poor visibility of default themes, developers quickly resort to their mantra: "Another aspect of the interface 'may' alter the perception during the editing process."
+
+With this argument, in my opinion, they try to silence any other reasoning. Or they fail to recognize that for others, there are needs more compelling than that 'may'.
+
+'May' implies a possibility or a percentage of occurrence. A possibility minimized by other editing programs (both free and paid).
+
+Let's all accept that some people are more sensitive, for whom the chosen theme causes a significant change in perception, while for others it is irrelevant (I include myself in the latter group). Similarly, for some it may cause fatigue or difficulty of use, and for others it may not.
+
+Let's respect everyone's reasons. Even the freedom to choose what one wants at any given moment.
+
+The existence of MORE alternatives means that everyone can find the one that best suits their requirements or desires.
+
+
 ## <b>Installation:</b>
 
 The CSS file must be in the folder where all your darktable themes are saved.
