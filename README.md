@@ -55,11 +55,15 @@ When choosing a new theme, it is recommended to restart darktable so that all ch
 
 I use some new classes that were created in version 5.6. Earlier versions won't recognize them and won't work properly.
 
-On my 15-year-old PC, running Windows 10 and darktable 5.6, it works correctly[*]. I don't know about other systems. Tell me about your experience using it.
+On my 15-year-old PC, running Windows 10 and darktable 5.6, it works correctly. I don't know about other systems. Tell me about your experience using it.
 
 If your computer has other fonts, you might need to edit the "font-family" lines.
 
-[*] In the distribution's themes, some tabs can be confusing when they light up even after the mouse has moved away. This doesn't happen here.
+## <b>Release List: </b>
+
+[Here](https://github.com/IntelligentAward1538/darktable-CSS-themes/releases) are all the versions available so far.
+
+
 
 
 
