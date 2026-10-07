@@ -34,7 +34,7 @@ The scope of personalization has also been expanded.<br>
 ## <b>Compatibility:</b>
 
 Tested on Windows 10 with darktable 5.7.0.+980 and a QHD screen.<br>
-For proper display do not activate the theme modifiers included from version 5.6.1 onwards.<br><br>
+For proper display do not activate the theme modifiers included from version 5.6.1 onwards.<br>
 If the font is not what you expect, check the font names in the font-family lines.<br>
 
 ## <b>Further information and practical tips:</b>
