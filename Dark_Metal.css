@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.05
+    rev. 2026.10.07
 */  
 
 /*  Rights:
@@ -332,6 +332,11 @@ separator {
     border-left: .07em solid transparent;
 }
 
+/* lineas brillantes en menu de preferencias */
+#preferences-box separator {
+      background: radial-gradient(circle at center, @grey_80 0%, @grey_30 100%)
+}
+
 .dt_dimmed {
     opacity: .6;
 }
@@ -384,6 +389,11 @@ separator {
 
 #footer-toolbar button:checked {
     border: 0.08em solid shade(@button_border, 1.6);
+}
+
+#lib-rating-stars {
+  min-height: 1.1em;
+  margin-right: 1em;
 }
 
 #lib-rating-stars .dt_rating_star {
@@ -472,7 +482,6 @@ dialog .sidebar row:selected:hover label,
 }
 
 #module-header {
-	background-color: @grey_20;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -497,7 +506,7 @@ dialog .sidebar row:selected:hover label,
 .dt_module_expanded .dt_module_expanded {
 	border: 1px solid @module_expanded_border;
 	border-radius: .3em;
-	padding: .1em
+	padding: .1em;
 }
 
 /* widgets de expansión de módulo en cabecera de módulo */
@@ -2282,31 +2291,31 @@ left>:not(scrolledwindow) {
 .dt_plugin_ui_main .text-button:disabled:not(checkbutton):not(.dt_history_items) {
 	background: linear-gradient(0deg, shade(@button_bg, .5) 0%, shade(@button_bg, .3) 50%, shade(@button_bg, .5) 100%);
 	border-color: @grey_25;
-        border-top-color: @grey_40;
-        border-bottom-color: @grey_15;
+    border-top-color: @grey_40;
+    border-bottom-color: @grey_15;
 }
 
 /* efecto metalizado en botones habilitados */
 .dt_plugin_ui_main .text-button:not(disabled):not(checkbutton):not(.dt_history_items) {
  	background: linear-gradient(90deg, shade(@button_bg, .7) 0%, @button_bg 20%, shade(@button_bg, .9) 80%, shade(@button_bg, .7) 100%);
 	border-color: @grey_40;
-        border-top-color: @grey_70;
-        border-bottom-color: @grey_10;
+    border-top-color: @grey_70;
+    border-bottom-color: @grey_10;
 }
 
 .dt_plugin_ui_main .text-button:not(checkbutton):not(.dt_history_items) {
-        border-radius: .2em;
-        padding: .1em .6em;
-        margin: .1em 0em .1em 0em;
+    border-radius: .2em;
+    padding: .1em .6em;
+    margin: .1em 0em .1em 0em;
 }
 
 /* botones de rotación e icono del explorador de archivos en módulo de exportación */
 .dt_plugin_ui_main .dt_module_btn#non-flat {
 	background: linear-gradient(90deg, shade(@button_bg, .7) 0%, @button_bg 20%, shade(@button_bg, .9) 80%, shade(@button_bg, .6) 100%);
-    	border-radius: .2em;
+    border-radius: .2em;
 	border-top-color: @grey_50;
-        border-bottom-color: @grey_05;
-        margin: .0em;
+    border-bottom-color: @grey_05;
+    margin: .0em;
 }
 
 .dt_plugin_ui_main .text-button:not(:disabled):not(checkbutton):not(.dt_history_items):hover {
@@ -2478,7 +2487,7 @@ left>:not(scrolledwindow) {
 	border-radius: .3em;
 	border: .1em solid @grey_15;
 	border-top-color: @grey_35;
-        background: linear-gradient(0deg, shade(@sg, .3), shade(@sg, .4));
+    background: linear-gradient(0deg, shade(@sg, .3), shade(@sg, .4));
 }
 
 /* desplegables dentro de módulos de revelado */
