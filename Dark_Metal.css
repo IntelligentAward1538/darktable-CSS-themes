@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.07
+    rev. 2026.10.10
 */  
 
 /*  Rights:
@@ -502,7 +502,7 @@ dialog .sidebar row:selected:hover label,
 	border: none;
 	background-color: @plugin_bg_color;
 }
-
+/* expansores dentro de módulo (ejem. AGX) */
 .dt_module_expanded .dt_module_expanded {
 	border: 1px solid @module_expanded_border;
 	border-radius: .3em;
@@ -708,19 +708,23 @@ menuitem>arrow {
 	margin: .2em 0;
 }
 
+.dt_guides_toggle {
+  padding-left: 0.65em;
+  padding-right: 0.65em;
+}
+
 menuitem label,#view-dropdown button,#view-dropdown menuitem,#view-label {
 	padding: .07em .42em;
 	margin: 0;
 }
 
-tooltip {
-	border-radius: 6px;
-	border: 1px solid @tooltip_border;
-}
-
-tooltip,#range-current {
+tooltip, #range-current {
 	border: 0.07em solid shade(@tooltip_bg_color, 1.5);
 	border-radius: 0;
+}
+
+tooltip {
+	border-radius: 6px;
 }
 
 tooltip label,#range-current label {
@@ -842,10 +846,21 @@ combobox separator {
 }
 
 /* pestañas de la sección de máscaras */
-#blending-box tab label {
+#blending-box notebook tab label {
+	border-radius: 6px 6px 0 0;
 	text-shadow: 1px 1px 2px black;
 	color: @grey_80;
 	border-bottom: 1px solid shade(@blending_section_bg, 1.3);
+}
+
+/* solapas de máscaras con cambios */
+#blending-box notebook tab label.changed {
+	border-color: shade(@blending_panel_border, 1.4);
+	background: linear-gradient(shade(@blending_panel_bg, 1.7) 30%, shade(@blending_panel_bg, 1.1) 90%)
+}
+
+#blending-box notebook tab:hover label.changed {
+	background: linear-gradient(shade(@blending_panel_bg, 2) 30%, shade(@blending_panel_bg, 1.4) 90%)
 }
 
 #blending-box tab:nth-child(3) label {
