@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.10
+    rev. 2026.10.11
 */  
 
 /*  Rights:
@@ -59,8 +59,6 @@
 @define-color bauhaus_indicator_border #2a343f;
 
 @define-color bg_color #222222; /* color predominante del fondo de aplicación*/
-@define-color bg_process_bg #155163;
-@define-color bg_process_border #62c5e3;
 
 @define-color blending_panel_bg #302c29;
 @define-color blending_panel_border #736a62;
@@ -1298,6 +1296,11 @@ filechooser row:selected .sidebar-icon,filechooser row:hover .sidebar-icon {
 	color: @bauhaus_fg_hover;
 }
 
+#dt-range-rating #dt-range-band-icons
+{
+  min-height: 1.1em;
+}
+
 #dt-map-location > * {
 	margin: .14em;
 }
@@ -1372,8 +1375,9 @@ filechooser row:selected .sidebar-icon,filechooser row:hover .sidebar-icon {
 }
 
 #background-job-eventbox {
-	background-color: @bg_process_bg;
-	border: 1px solid @bg_process_border;
+	background: linear-gradient(90deg, @grey_40 0%, @grey_45 50%, @grey_35 90%);
+	border: 1px solid @grey_35;
+	border-top-color: @grey_75;
 	border-radius: .25em;
 }
 
@@ -1383,12 +1387,12 @@ filechooser row:selected .sidebar-icon,filechooser row:hover .sidebar-icon {
 }
 
 progressbar trough {
-	background-color: @scroll_bar_inactive;
+	background: linear-gradient(90deg, @grey_20 0%, @grey_25 50%, @grey_15 90%);
 }
 
 progressbar progress {
-	background-color: @scroll_bar_active;
-	border-radius: .28em;
+	background: linear-gradient(90deg, shade(@scroll_bar_active, .5), @scroll_bar_active);
+	border-radius: .1em;
 }
 
 #brightbg {
