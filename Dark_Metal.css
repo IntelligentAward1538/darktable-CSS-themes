@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.11
+    rev. 2026.10.13
 */  
 
 /*  Rights:
@@ -53,8 +53,8 @@
 @define-color bauhaus_border shade(@plugin_bg_color, 0.5);
 @define-color bauhaus_fg #fae319;
 @define-color bauhaus_fg_insensitive alpha(@fg_color, 0.4);
-@define-color bauhaus_fg_hover #ffff00;
-@define-color bauhaus_fg_selected #eef6fc;
+@define-color bauhaus_fg_hover #ffc966;
+@define-color bauhaus_fg_selected #ffff00;
 @define-color bauhaus_fill #78725c;
 @define-color bauhaus_indicator_border #2a343f;
 
@@ -371,6 +371,11 @@ separator {
 /* barra central inferior */
 #footer-toolbar {
     background: linear-gradient(@grey_25, @grey_15);
+}
+
+/* atenua logo */
+#top-hinter>.horizontal>widget {
+	opacity: .6;
 }
 
 #header-toolbar,#footer-toolbar {
@@ -1602,15 +1607,17 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	font-weight: 700;
 }
 
-.dt_bauhaus_popup:selected {
-	color: @fg_color;
-}
-
+/* solapa principal de programa seleccionada */
 #view-label:selected {
 	background-color: @focused_header;
 	color: @grey_90;
 	border: 1px solid @grey_40;
 	border-bottom: none;
+}
+
+/* elemento seleccionado en listas desplegables */
+.dt_bauhaus_popup:selected {
+	color: @bauhaus_fg_selected;
 }
 
 .dt_bauhaus_popup:disabled {
