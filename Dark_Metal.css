@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.13
+    rev. 2026.10.15
 */  
 
 /*  Rights:
@@ -1629,8 +1629,8 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 }
 
 .module_drag_icon {
-	border: 0.07em solid @plugin_bg_color;
-	background-color: @bg_color;
+	background-color: @bauhaus_fg;
+	border: 1px solid @ui_hover;
 }
 
 .module_drop_before {
