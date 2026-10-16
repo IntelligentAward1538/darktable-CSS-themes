@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.15
+    rev. 2026.10.16
 */  
 
 /*  Rights:
@@ -1744,7 +1744,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 .dt_act_on_hover #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back, 
 .dt_thumbtable#thumbtable-filmstrip .dt_thumbnail_rating_6 #thumb-back {
 	background-color: shade(@thumbnail_bg_color,0.75);
-	background-image: url("../images/refused_dark.png");
+	background-image: url("../pixmaps/thematic_images/refused_dark.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
