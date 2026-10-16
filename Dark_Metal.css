@@ -488,7 +488,7 @@ dialog .sidebar row:selected:hover label,
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-image: url("../images/header.png");
+	background-image: url("../pixmaps/thematic_images/header.png");
 	padding: .5em;
 }
 
