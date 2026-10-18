@@ -8,10 +8,10 @@ The scope of personalization has also been expanded.<br>
 
 ## <b>Screenshots:</b> 
 
-<img width="820" height="602" alt="Captura_00" src="https://github.com/user-attachments/assets/96be2984-2a0a-4cab-afc2-b419d985de62" />
-<img width="2560" height="1390" alt="Captura_01" src="https://github.com/user-attachments/assets/e04c57f4-b2e2-40a8-b9d5-f72a4befad44" />
-<img width="2560" height="1390" alt="Captura_02" src="https://github.com/user-attachments/assets/07f1ec3c-8eda-4b40-8cbb-4b665e9cfe70" />
-<img width="2560" height="1390" alt="Captura_03" src="https://github.com/user-attachments/assets/96869854-af4e-4caf-957a-11e41e394129" />
+<p align="center"><img width="358" height="250" alt="Captura_1" src="https://github.com/user-attachments/assets/45b855ff-dd78-4d2d-854e-e0761a2d2df0" /></p>
+<p align="center"><img width="2560" height="1440" alt="Captura_2" src="https://github.com/user-attachments/assets/5a6b4e5a-c0cf-47b4-8a20-ce644d3a7cb2" /></p>
+<p align="center"><img width="2560" height="1440" alt="Captura_3" src="https://github.com/user-attachments/assets/cb7abca1-68e0-4659-a350-aab81741e684" /></p>
+<p align="center"><img width="287" height="600" alt="Captura_4" src="https://github.com/user-attachments/assets/e75663ea-ca2c-4ca2-a8ab-01e351123cf3" /></p>
 
 ## <b>Requirements:</b>
 
@@ -75,7 +75,8 @@ Different backgrounds and borders have also been chosen depending on the full vi
 
 The screenshots included here are intended to show what all the panels look like<sup>(2)</sup>, but if you need a development environment that is as neutral as possible, you can use the keyboard shortcuts mentioned above to maximise the development area and leave only the development modules panel visible.
 
-<img width="2560" height="1440" alt="Captura_05" src="https://github.com/user-attachments/assets/748e70d2-c5a2-4c19-8b41-47acbe6054fa" />
+<p align="center"><img width="2560" height="1440" alt="Captura_5" src="https://github.com/user-attachments/assets/1d67e610-cd1c-4ac2-822f-472a7aada6b8" /></p>
+
 
 ## <b>Release List:</b>
 
