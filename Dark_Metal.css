@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2. / V5.7.0+980
     @IntelligentAward1538
-    rev. 2026.10.16
+    rev. 2026.10.18
 */  
 
 /*  Rights:
@@ -2014,6 +2014,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	margin-left: 0;
 }
 
+/* etiqueta de ampliación en la vista completa */
 .dt_overlays_hover_block #thumb-image:hover #thumb-zoom-label {
 	color: @bauhaus_fg_hover;
 	background-color: rgba(20,20,20,.5);
@@ -2234,9 +2235,22 @@ dialog headerbar button,window headerbar button.titlebutton {
 	background-color: @selected_bg_color;
 }
 
+popover {
+	border: 1px solid @grey_40;
+	border-top-color:  @grey_60;
+	border-bottom-color:  @grey_30;
+	border-radius: 3px;
+}
+
 popover * {
 	background-color: @tooltip_bg_color;
 	color: @tooltip_fg_color;
+}
+
+/* indicador de radio en desplegables */
+popover modelbutton radio:checked {
+	margin-top: 6px;
+	color: @bauhaus_fg_selected;
 }
 
 popover.menu {
