@@ -8,7 +8,6 @@ The scope of personalization has also been expanded.<br>
 
 ## <b>Screenshots:</b> 
 
-<p align="center"><img width="358" height="250" alt="Captura_1" src="https://github.com/user-attachments/assets/45b855ff-dd78-4d2d-854e-e0761a2d2df0" /></p>
 <p align="center"><img width="2560" height="1440" alt="Captura_2" src="https://github.com/user-attachments/assets/5a6b4e5a-c0cf-47b4-8a20-ce644d3a7cb2" /></p>
 <p align="center"><img width="2560" height="1440" alt="Captura_3" src="https://github.com/user-attachments/assets/cb7abca1-68e0-4659-a350-aab81741e684" /></p>
 <p align="center"><img width="287" height="600" alt="Captura_4" src="https://github.com/user-attachments/assets/e75663ea-ca2c-4ca2-a8ab-01e351123cf3" /></p>
