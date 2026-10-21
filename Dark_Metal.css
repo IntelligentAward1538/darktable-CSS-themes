@@ -2,9 +2,9 @@
      **   Dark Metal    ** 
      =====================  
 */
-/*  Custom theme for darktable v5.6.2. / V5.7.0+980
+/*  Custom theme for darktable v5.6.2 / V5.7.0
     @IntelligentAward1538
-    rev. 2026.10.18
+    rev. 2026.10.21
 */  
 
 /*  Rights:
@@ -195,7 +195,7 @@
 @define-color thumbnail_selected_bg_color #fcfcfc;
 @define-color thumbnail_star_color #fcc719;
 @define-color thumbnail_star_bg_color #eafc19;
-@define-color thumbnail_star_hover_color #19f1fc;
+@define-color thumbnail_star_hover_color goldenrod;
 
 @define-color timeline_bg_color #0f1419;
 @define-color timeline_fg_color #bed2e6;
@@ -1663,7 +1663,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 /* vista  mesa de luz con ampliación */
 #thumbtable-filemanager #thumb-main:selected #thumb-back,
 #thumbtable-zoom #thumb-main:selected #thumb-back {	
-	background-color: @grey_75;
+	background-color: @grey_70;
 	border: 2px solid @grey_95;
 	border-radius: .7em;
 }
@@ -1741,7 +1741,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 }
 
 /* sello fotos rechazada en tira de pelicula y vista ampliada */
-.dt_act_on_hover #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back, 
+.dt_act_on_hover #thumb-main.dt_thumbnail_rating_6 #thumb-back, 
 .dt_thumbtable#thumbtable-filmstrip .dt_thumbnail_rating_6 #thumb-back {
 	background-color: shade(@thumbnail_bg_color,0.75);
 	background-image: url("../pixmaps/thematic_images/refused_dark.png");
@@ -1812,114 +1812,160 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 
 .dt_overlays_hover_block #thumb-image:hover #thumb-bottom {
 	background-image: none;
-	background-color: alpha(@thumb_image_hover, 0.7);  /* preview tooltip background color */
+	background-color: alpha(@thumb_image_hover, 0.5);  /* preview tooltip background color */
 }
 
 #thumb-star,#thumb-reject,#thumb-colorlabels {
 	padding: 12.5px;
 }
 
+/* oculta overlays */
 .dt_overlays_none .dt_thumb_btn,
 .dt_overlays_none #thumb-main:hover .dt_thumb_btn,
 .dt_overlays_hover #thumb-main .dt_thumb_btn,
 .dt_overlays_hover_extended #thumb-main .dt_thumb_btn,
-.dt_overlays_hover_block #thumb-main .dt_thumb_btn,#thumb-ext {
+.dt_overlays_hover_block #thumb-main .dt_thumb_btn,
+#thumb-ext {
 	color: transparent;
 	background-color: transparent;
 }
 
+/* color por defecto de elementos sobreimpresos */
+.dt_overlays_always_extended #thumb-main #thumb-bottom-label,
+.dt_overlays_always #thumb-main #thumb-ext,
+.dt_overlays_always_extended #thumb-main #thumb-ext,
+.dt_overlays_mixed  #thumb-main #thumb-ext {
+	color: @grey_85;
+	text-shadow: 2px 2px 2px black, 0 0 .2em darkslategrey;
+}
+
 .dt_thumb_btn,
-.dt_overlays_always_extended #thumb-bottom-label,
-.dt_overlays_always #thumb-ext,
-.dt_overlays_always_extended #thumb-ext,
-.dt_overlays_mixed #thumb-ext {
-	color: shade(@thumbnail_font_color, 1.1);
+.dt_overlays_hover #thumb-main:hover #thumb-group-audio,
+.dt_overlays_hover #thumb-main:hover #thumb-altered,
+.dt_overlays_hover #thumb-main:hover #thumb-tags,
+.dt_overlays_hover #thumb-main:hover #thumb-colorlabels,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-altered,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-tags,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-colorlabels,
+.dt_overlays_hover_block #thumb-main:hover #thumb-group-audio,
+.dt_overlays_hover_block #thumb-main:hover #thumb-altered,
+.dt_overlays_hover_block #thumb-main:hover #thumb-tags,
+.dt_overlays_hover_block #thumb-main:hover #thumb-colorlabels
+ {
+	color: darkcyan;
 }
 
-.dt_overlays_always #thumb-star,
-.dt_overlays_always_extended #thumb-star,
-.dt_overlays_mixed #thumb-star,
-.dt_overlays_hover_block #thumb-star {
-	color: shade(@thumbnail_font_color, 1.4);
+/* estrellas atenuadas */
+.dt_overlays_always #thumb-main #thumb-star,
+.dt_overlays_always_extended #thumb-main #thumb-star,
+.dt_overlays_mixed #thumb-main #thumb-star,
+.dt_overlays_hover #thumb-main:hover #thumb-star,
+.dt_overlays_hover_extended  #thumb-main:hover #thumb-star,
+.dt_overlays_hover_block #thumb-main:hover #thumb-star
+{
+	color: @grey_55;
 }
 
-.dt_overlays_hover #thumb-main:hover #thumb-ext,
-.dt_overlays_hover #thumb-main:hover .dt_thumb_btn,
-.dt_overlays_hover_extended #thumb-main:hover #thumb-ext,
-.dt_overlays_hover_extended #thumb-main:hover .dt_thumb_btn,
+/* texto sobreimpreso resaltado */
 .dt_overlays_hover_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended #thumb-main:selected #thumb-bottom-label,
+.dt_overlays_always_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_mixed #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_hover_block #thumb-image:hover #thumb-bottom-label,
+.dt_overlays_hover #thumb-main:hover #thumb-ext,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-ext,
 .dt_overlays_always #thumb-main:hover #thumb-ext,
 .dt_overlays_always #thumb-main:selected #thumb-ext,
-.dt_overlays_always #thumb-main:hover .dt_thumb_btn,
-.dt_overlays_always #thumb-main:selected .dt_thumb_btn,
 .dt_overlays_always_extended #thumb-main:hover #thumb-ext,
 .dt_overlays_always_extended #thumb-main:selected #thumb-ext,
-.dt_overlays_always_extended #thumb-main:hover .dt_thumb_btn,
-.dt_overlays_always_extended #thumb-main:selected .dt_thumb_btn,
-.dt_overlays_always_extended #thumb-main:hover #thumb-bottom-label,
-.dt_overlays_always_extended #thumb-main:selected #thumb-bottom-label,
 .dt_overlays_mixed #thumb-main:hover #thumb-ext,
-.dt_overlays_mixed #thumb-main:selected #thumb-ext,
-.dt_overlays_mixed #thumb-main:hover .dt_thumb_btn,
-.dt_overlays_mixed #thumb-main:selected .dt_thumb_btn,
-.dt_overlays_mixed #thumb-main:hover #thumb-bottom-label,
-.dt_overlays_hover_block #thumb-image:hover .dt_thumb_btn,
-.dt_overlays_hover_block #thumb-image:hover .dt_thumb_btn:active,
-.dt_overlays_hover_block #thumb-image:hover #thumb-bottom-label {
-	color: @thumbnail_font_color;
+.dt_overlays_mixed #thumb-main:selected #thumb-ext
+{
+	color: azure;
 }
 
-.dt_overlays_always_extended.dt_fullview #thumb-main:hover #thumb-bottom-label,
-.dt_overlays_always_extended.dt_fullview #thumb-main:selected #thumb-bottom-label {
-	color: shade(@thumbnail_font_color,.75);
-}
-
-.dt_overlays_hover #thumb-main:hover #thumb-reject:active,
-.dt_overlays_hover #thumb-main:hover #thumb-reject:hover,
+/* icono de rechazo sobreimpreso */
+.dt_overlays_hover #thumb-main:hover #thumb-reject, 
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject,
+.dt_overlays_always #thumb-main #thumb-reject,
+.dt_overlays_always_extended #thumb-main #thumb-reject,
+.dt_overlays_mixed #thumb-main #thumb-reject,
+.dt_overlays_hover_block #thumb-main:hover #thumb-reject, 
+.dt_overlays_hover #thumb-main:hover #thumb-reject:active, 
 .dt_overlays_hover_extended #thumb-main:hover #thumb-reject:active,
-.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:hover,
-.dt_overlays_always #thumb-reject:active,
-.dt_overlays_always #thumb-main:hover #thumb-reject:active,
-.dt_overlays_always #thumb-main:selected #thumb-reject:active,
-.dt_overlays_always #thumb-reject:hover,
-.dt_overlays_always #thumb-main:hover #thumb-reject:hover,
-.dt_overlays_always_extended #thumb-reject:active,
-.dt_overlays_always_extended #thumb-main:hover #thumb-reject:active,
-.dt_overlays_always_extended #thumb-main:selected #thumb-reject:active,
-.dt_overlays_always_extended #thumb-reject:hover,
-.dt_overlays_always_extended #thumb-main:hover #thumb-reject:hover,
-.dt_overlays_mixed #thumb-reject:active,
-.dt_overlays_mixed #thumb-main:hover #thumb-reject:active,
-.dt_overlays_mixed #thumb-main:selected #thumb-reject:active,
-.dt_overlays_mixed #thumb-reject:hover,
-.dt_overlays_mixed #thumb-main:hover #thumb-reject:hover,
-.dt_overlays_hover_block #thumb-image:hover #thumb-reject:active,
-.dt_overlays_hover_block #thumb-image:hover #thumb-reject:hover {
-	color: red;
+.dt_overlays_hover_block #thumb-main:hover #thumb-reject:active 
+{
+	color: crimson;
 }
 
+/* icono de rechazo atenuado  */
+.dt_overlays_always #thumb-main:not(:selected) #thumb-reject:active,
+.dt_overlays_always_extended #thumb-main:not(:selected) #thumb-reject:active,
+.dt_overlays_mixed #thumb-main:not(:selected) #thumb-reject:active
+{
+	color: darkred;
+}
+
+/* hover sobre elementos sobreimpresos */
+.dt_overlays_hover #thumb-main:hover #thumb-group-audio:hover, 
+.dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_always #thumb-main #thumb-group-audio:hover,
+.dt_overlays_always_extended #thumb-main #thumb-group-audio:hover,
+.dt_overlays_mixed #thumb-main #thumb-group-audio:hover,
+.dt_overlays_hover_block #thumb-main #thumb-group-audio:hover,
+.dt_overlays_hover #thumb-main:hover #thumb-altered:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-altered:hover,
+.dt_overlays_always #thumb-main #thumb-altered:hover,
+.dt_overlays_always_extended #thumb-main #thumb-altered:hover,
+.dt_overlays_mixed #thumb-main #thumb-altered:hover,
+.dt_overlays_hover_block #thumb-main #thumb-altered:hover,
+.dt_overlays_hover #thumb-main:hover #thumb-tags:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-tags:hover,
+.dt_overlays_always #thumb-main #thumb-tags:hover,
+.dt_overlays_always_extended #thumb-main #thumb-tags:hover,
+.dt_overlays_mixed #thumb-main #thumb-tags:hover,
+.dt_overlays_hover_block #thumb-main #thumb-tags:hover,
+.dt_overlays_hover #thumb-main:hover #thumb-reject:hover, 
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_always #thumb-main #thumb-reject:hover,
+.dt_overlays_always_extended #thumb-main #thumb-reject:hover,
+.dt_overlays_mixed #thumb-main #thumb-reject:hover,
+.dt_overlays_hover_block #thumb-main #thumb-reject:hover {
+
+	color: @ui_hover;
+}
+
+/* sobreimpreso extendido central en vista comparativa */
+.dt_overlays_always_extended.dt_fullview #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended.dt_fullview #thumb-main:selected #thumb-bottom-label
+{
+	color: azure;
+}
+
+/* icono de estrellas activas */
 .dt_overlays_hover #thumb-main:hover #thumb-star:active,
 .dt_overlays_hover_extended #thumb-main:hover #thumb-star:active,
-.dt_overlays_always #thumb-star:active,
-.dt_overlays_always_extended #thumb-star:active,
-.dt_overlays_mixed #thumb-star:active,
-.dt_overlays_hover_block #thumb-image:hover #thumb-star:active {
-	color: @thumbnail_star_color;
-	background-color: @thumbnail_star_bg_color;
+.dt_overlays_always #thumb-main #thumb-star:active,
+.dt_overlays_always_extended #thumb-main #thumb-star:active,
+.dt_overlays_mixed #thumb-main #thumb-star:active,
+.dt_overlays_hover_block #thumb-main #thumb-image:hover #thumb-star:active
+{
+  color: @grey_50;
+  background-color: gold;
 }
 
+/* efecto al pasar por las estrellas */
 .dt_overlays_hover #thumb-main:hover #thumb-star:hover,
 .dt_overlays_hover_extended #thumb-main:hover #thumb-star:hover,
 .dt_overlays_always #thumb-main:hover #thumb-star:hover,
 .dt_overlays_always_extended #thumb-main:hover #thumb-star:hover,
 .dt_overlays_mixed #thumb-main:hover #thumb-star:hover,
-.dt_overlays_hover_block #thumb-image:hover #thumb-star:hover {
-	color: @thumbnail_star_hover_color;
-	background-color: @thumbnail_star_bg_color;
-}
-
-.dt_fullview #thumb-main:hover #thumb-star:hover {
-	color: @lighttable_bg_color;
+.dt_overlays_hover_block #thumb-main #thumb-image:hover #thumb-star:hover
+{
+  color: gold;
+  background-color: orange;
+  
 }
 
 .dt_overlays_hover #thumb-main:hover #thumb-group-audio:hover,
@@ -1931,22 +1977,26 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	color: @thumbnail_fg_color;
 }
 
+/* transparencia para mostrar el sello de rechazada */
 .dt_thumbnail_rating_6 #thumb-image {
 	color: rgba(0,0,0,.35);
 }
 
+/* al pasar por encima se muestra la imagen sin el sello de rechazada */
 .dt_thumbnail_rating_6#thumb-main:hover #thumb-image {
 	color: #000;
 }
 
+/* atenuado de elementos en rechazadas */
 .dt_overlays_always .dt_thumbnail_rating_6 #thumb-ext,
-.dt_overlays_always .dt_thumbnail_rating_6 #thumb-altered,
+.dt_overlays_always .dt_thumbnail_rating_6 #thumb-colorlabels,
 .dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-ext,
-.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-altered,
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-colorlabels,
 .dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-bottom-label,
 .dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-ext,
-.dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-altered {
-	color: rgba(0,0,0,.15);
+.dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-colorlabels
+ {
+	opacity: .4;
 }
 
 #thumb-localcopy {
@@ -2016,7 +2066,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 
 /* etiqueta de ampliación en la vista completa */
 .dt_overlays_hover_block #thumb-image:hover #thumb-zoom-label {
-	color: @bauhaus_fg_hover;
+	color: @grey_70;
 	background-color: rgba(20,20,20,.5);
 }
 
