@@ -14,8 +14,8 @@ The scope of personalization has also been expanded.<br>
 
 ## <b>Requirements:</b>
 
-- Minimum version: darktable 5.6.0.
-- Recommended version: dakrtable 5.6.2. / 5.7.0.+980 or later
+- Minimum version: darktable 5.6.0
+- Recommended version: dakrtable 5.6.2 / 5.7.0
 - Install all files in the correct directories
 
 ## <b>Installation:</b>
@@ -32,7 +32,7 @@ The scope of personalization has also been expanded.<br>
 
 ## <b>Compatibility:</b>
 
-Tested on Windows 10 with darktable 5.7.0.+980 and a QHD screen.<br>
+Tested on Windows 10 with darktable 5.7.0+1175 and a QHD screen.<br>
 For proper display do not activate the theme modifiers included from version 5.6.1 onwards.<br>
 If the font is not what you expect, check the font names in the font-family lines.<br>
 
