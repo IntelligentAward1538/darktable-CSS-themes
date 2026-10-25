@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0
     @IntelligentAward1538
-    rev. 2026.10.21
+    rev. 2026.10.25
 */  
 
 /*  Rights:
@@ -1678,10 +1678,10 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	margin: 20px 18px;
 }
 
-/* fondo imagenes tira pelicula */ 
+/* fondo miniaturas */ 
 #thumb-back {
 	background-color: @thumbnail_bg_color;
-	border: 1px solid @lighttable_bg_color;
+	border: 1px solid @grey_25;
 }
 
 /* carrete de pelicula en tira de miniaturas */
@@ -1796,6 +1796,11 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	border: transparent;
 }
 
+/* elimina marco oscuro en rechazadas no seleccionadas de la vista comparativa */
+.dt_fullview.dt_overlays_none #thumb-main.dt_thumbnail_rating_6:not(:selected) #thumb-back {
+	background-color: @grey_55;
+}
+
 /* pone fondo si hay información superpuesta */
 .dt_overlays_hover_block.dt_fullview #thumb-back,
 .dt_overlays_always_extended.dt_fullview #thumb-back, 
@@ -1840,6 +1845,18 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 }
 
 .dt_thumb_btn,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-group-audio,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-group-audio,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-group-audio,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-altered,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-altered,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-altered,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-tags,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-tags,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-tags,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-colorlabels,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-colorlabels,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-colorlabels,
 .dt_overlays_hover #thumb-main:hover #thumb-group-audio,
 .dt_overlays_hover #thumb-main:hover #thumb-altered,
 .dt_overlays_hover #thumb-main:hover #thumb-tags,
@@ -2026,6 +2043,14 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 .dt_overlays_always_extended.dt_fullview #thumb-altered,
 .dt_thumbnail_rating_6 #thumb-star {
 	color: transparent;
+}
+
+/*corrige transparencia anterior */
+.dt_overlays_always.dt_fullview #thumb-main #thumb-ext,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-ext,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-ext
+{
+	color: @grey_85;
 }
 
 /* botón eliminar duplicado del cuarto oscuro */
