@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0
     @IntelligentAward1538
-    rev. 2026.10.25
+    rev. 2026.10.26
 */  
 
 /*  Rights:
@@ -2535,7 +2535,7 @@ left>:not(scrolledwindow) {
 } 
 
 #module-header .dt_module_btn:first-child {
-	font-size: 20px;
+	font-size: 1.15em;
 }
 
 /* botón de módulo activado */
