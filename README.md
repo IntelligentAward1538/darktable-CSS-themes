@@ -33,8 +33,16 @@ The scope of personalization has also been expanded.<br>
 ## <b>Compatibility:</b>
 
 Tested on Windows 10 with darktable 5.7.0+1175 and a QHD screen.<br>
-For proper display do not activate the theme modifiers included from version 5.6.1 onwards.<br>
+For proper display do not activate the theme modifiers included from version 5.6.2 onwards.<br>
 If the font is not what you expect, check the font names in the font-family lines.<br>
+If the interface appears distorted compared to the screenshots, check the following sections in the program's main settings:<br>
+- font size in points<br>
+- GUI controls and text DPI<br>
+
+The latter depends on your resolution and the size of your monitor in inches. <br>
+
+<img width="663" height="386" alt="Captura6" src="https://github.com/user-attachments/assets/4b9bf793-f1c3-4ef3-83db-a0652f7f0239" />
+
 
 ## <b>Further information and practical tips:</b>
 
