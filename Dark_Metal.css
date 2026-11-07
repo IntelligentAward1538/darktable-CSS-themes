@@ -2,9 +2,9 @@
      **   Dark Metal    ** 
      =====================  
 */
-/*  Custom theme for darktable v5.6.2 / V5.7.0
+/*  Custom theme for darktable v5.6.2 / V5.7.0+1175
     @IntelligentAward1538
-    rev. 2026.10.26
+    rev. 2026.11.07
 */  
 
 /*  Rights:
@@ -122,16 +122,26 @@
 @define-color graph_overlay #83909d;
 @define-color graph_red #ed1e14;
 
-@define-color grey_00 #000000; @define-color grey_05 #111111;
-@define-color grey_10 #1b1b1b; @define-color grey_15 #262626;
-@define-color grey_20 #303030; @define-color grey_25 #3b3b3b;
-@define-color grey_30 #474747; @define-color grey_35 #525252;
-@define-color grey_40 #5e5e5e; @define-color grey_45 #6a6a6a;
-@define-color grey_50 #777777; @define-color grey_55 #848484;
-@define-color grey_60 #919191; @define-color grey_65 #9e9e9e;
-@define-color grey_70 #ababab; @define-color grey_75 #b9b9b9;
-@define-color grey_80 #c6c6c6; @define-color grey_85 #d4d4d4;
-@define-color grey_90 #e2e2e2; @define-color grey_95 #f1f1f1;
+@define-color grey_00 #000000;
+@define-color grey_05 #111111;
+@define-color grey_10 #1b1b1b;
+@define-color grey_15 #262626;
+@define-color grey_20 #303030;
+@define-color grey_25 #3b3b3b;
+@define-color grey_30 #474747;
+@define-color grey_35 #525252;
+@define-color grey_40 #5e5e5e;
+@define-color grey_45 #6a6a6a;
+@define-color grey_50 #777777;
+@define-color grey_55 #848484;
+@define-color grey_60 #919191;
+@define-color grey_65 #9e9e9e;
+@define-color grey_70 #ababab;
+@define-color grey_75 #b9b9b9;
+@define-color grey_80 #c6c6c6;
+@define-color grey_85 #d4d4d4;
+@define-color grey_90 #e2e2e2;
+@define-color grey_95 #f1f1f1;
 @define-color grey_100 #ffffff;
 
 @define-color header_active #206408;
@@ -291,12 +301,11 @@ scrolledwindow textview {
     color: @button_fg;
 }
 
-
-.dt_module_btn.dt_module_btn.dt_transparent_background:first-child:first-child {
+.dt_module_btn.dt_transparent_background:first-child {
     color: shade(@disabled_fg_color, 0.9);
 }
 
-spinbutton>button,#top-hinter box {
+spinbutton>button, #top-hinter box {
     margin: .07em;
 }
 
@@ -332,7 +341,7 @@ separator {
 
 /* lineas brillantes en menu de preferencias */
 #preferences-box separator {
-      background: radial-gradient(circle at center, @grey_80 0%, @grey_30 100%)
+      background: radial-gradient(circle at center, @grey_80 0%, @grey_30 100%);
 }
 
 .dt_dimmed {
@@ -451,7 +460,7 @@ dialog .sidebar row:selected:hover label,
 	border: 1px solid @blending_panel_border;
 	border-radius: 10px;
 	padding: 0 4px 0 2px;
-	margin: 4px 0 3px 0;
+	margin: .03em 0 .03em 0;
 }
 
 .dt_plugin_ui_main widget+notebook {
@@ -493,7 +502,7 @@ dialog .sidebar row:selected:hover label,
 }
 
 #iop-expander #module-header,
-#basics-box-labels>widget .dt_module_btn+.dt_section_label {
+#basics-header-box {
 	background: linear-gradient(90deg, @grey_15 0%, @grey_25 40%, @grey_10 100%);
 }
 
@@ -505,6 +514,26 @@ dialog .sidebar row:selected:hover label,
 	border: none;
 	background-color: @plugin_bg_color;
 }
+
+/* cabecera del módulo enfocado y expandido */
+#iop-expander.dt_module_focus.dt_module_expanded #module-header {
+	background: linear-gradient(90deg, @grey_20 0%, @grey_30 40%, @grey_15 100%);
+	margin: 0 .2em 0 .2em;
+	box-shadow: 0 -.05em .2em powderblue;
+	border: 1px solid @grey_60;
+	border-top-color:@grey_80;
+	border-bottom-color: @grey_30;
+}
+
+/* cuerpo del módulo enfocado y expandido */
+#iop-expander.dt_module_focus.dt_module_expanded .dt_plugin_ui {
+	margin: 0 .2em .2em .2em;
+	box-shadow: 0px .05em .2em powderblue;
+	border-radius: 0 0 8px 8px;
+	border: 1px solid @grey_70;
+	border-top: none;
+}
+
 /* expansores dentro de módulo (ejem. AGX) */
 .dt_module_expanded .dt_module_expanded {
 	border: 1px solid @module_expanded_border;
@@ -992,7 +1021,11 @@ scrollbar {
 }
 
 scrollbar slider:hover,scale contents trough slider:hover {
-	background-color: @scroll_bar_active;
+	background: linear-gradient(steelblue, @scroll_bar_active, steelblue);
+	border: 1px solid royalblue;
+}
+scrollbar.horizontal slider:hover {
+	background: linear-gradient(90deg, steelblue, @scroll_bar_active, steelblue);
 }
 
 treeview,filechooser widget treeview {
@@ -1646,16 +1679,18 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	background: linear-gradient(180deg, shade(@field_bg, .5), @button_bg,  shade(@field_bg, .5));
 }
 
-/* fondo gestor de archivos y vista completa en mesa de luz y  XY */
+/* fondo gestor de archivos, mesa de luz con ampliación, XY y vista completa */
 #thumbtable-filemanager #thumb-main:not(.dt_thumbnail_rating_6) #thumb-back,
+#thumbtable-zoom #thumb-main:not(.dt_thumbnail_rating_6) #thumb-back,
 .dt_fullview, .dt_fullview #thumb-back {
 	background-color: @grey_55;
 }
 
-/* fondo si la foto no esta seleccionada */
-/* fondo degradado si la imagen completa está seleccionada */
+/* fondo degradado si la imagen completa no está seleccionada */
 #thumbtable-filemanager #thumb-main:not(:selected):hover #thumb-back,
-.dt_fullview #thumb-main:selected #thumb-back {
+#thumbtable-zoom #thumb-main:not(:selected):hover #thumb-back,
+#thumbtable-filmstrip #thumb-main:not(:selected):hover #thumb-back,
+.dt_fullview #thumb-main:not(:selected) #thumb-back {
 	background: radial-gradient(circle at center, @grey_70 0%, @grey_20 100%);
 }
 
@@ -1692,18 +1727,10 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	background-image: url("../pixmaps/thematic_images/fotograma3.png");
 }
 
-#thumbtable-filmstrip #thumb-main:active #thumb-back {
-	background: radial-gradient(circle at center, @grey_20 0%, @grey_75 100%);
-	border-radius: 0;
-}
-
 #thumbtable-filmstrip #thumb-main:selected #thumb-back {
+	background-color: @grey_70;
 	border: .15em solid @grey_95;
 	border-radius: .6em;
-}
-
-#thumbtable-filmstrip #thumb-main:selected:not(.dt_thumbnail_rating_6) #thumb-back {
-	background: radial-gradient(circle at center, @grey_10 0%, @grey_70 100%);
 }
 
 /* gestor de archivos: hover sobre una foto */
@@ -1715,9 +1742,9 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 }
 
 /* hover sobre imagen activa y rechazada */
-.dt_overlays_none#thumbtable-filemanager #thumb-main:hover.dt_thumbnail_rating_6 #thumb-image,
-.dt_overlays_none#thumbtable-zoom #thumb-main:hover.dt_thumbnail_rating_6 #thumb-image,
-#thumbtable-filmstrip #thumb-main:active:hover.dt_thumbnail_rating_6 #thumb-image {
+#thumbtable-filemanager #thumb-main:hover.dt_thumbnail_rating_6 #thumb-image,
+#thumbtable-zoom #thumb-main:hover.dt_thumbnail_rating_6 #thumb-image,
+#thumbtable-filmstrip #thumb-main:hover.dt_thumbnail_rating_6 #thumb-image {
 	border-image: linear-gradient(to right, red 0%, @scroll_bar_bg 25%, cyan 50%,  @scroll_bar_bg 75%, red 100%) 6 6 6 6 / 3px 2px 3px 2px;
 }
 
@@ -1735,14 +1762,20 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	padding: 8px;
 }
 
+/* '.dt_act_on_hover' clase si se eligio 'priorizar la imagen con el cursor encima' */
+/* '.dt_act_on_selection' clase si se eligio 'priorizar la imagen seleccionada' */
+
 /* borde si la foto esta seleccionada y rechazada */
-.dt_act_on_hover #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back {
+.dt_act_on_hover #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back, 
+.dt_act_on_selection #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back {
 	border: 2px dotted red;
 }
 
 /* sello fotos rechazada en tira de pelicula y vista ampliada */
 .dt_act_on_hover #thumb-main.dt_thumbnail_rating_6 #thumb-back, 
-.dt_thumbtable#thumbtable-filmstrip .dt_thumbnail_rating_6 #thumb-back {
+.dt_act_on_selection #thumb-main.dt_thumbnail_rating_6 #thumb-back, 
+.dt_thumbtable#thumbtable-filmstrip .dt_thumbnail_rating_6 #thumb-back,
+.dt_thumbtable#thumbtable-filmstrip #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back {
 	background-color: shade(@thumbnail_bg_color,0.75);
 	background-image: url("../pixmaps/thematic_images/refused_dark.png");
 	background-size: contain;
@@ -1865,10 +1898,10 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 .dt_overlays_hover_extended #thumb-main:hover #thumb-altered,
 .dt_overlays_hover_extended #thumb-main:hover #thumb-tags,
 .dt_overlays_hover_extended #thumb-main:hover #thumb-colorlabels,
-.dt_overlays_hover_block #thumb-main:hover #thumb-group-audio,
-.dt_overlays_hover_block #thumb-main:hover #thumb-altered,
-.dt_overlays_hover_block #thumb-main:hover #thumb-tags,
-.dt_overlays_hover_block #thumb-main:hover #thumb-colorlabels
+.dt_overlays_hover_block #thumb-image:hover #thumb-group-audio,
+.dt_overlays_hover_block #thumb-image:hover #thumb-altered,
+.dt_overlays_hover_block #thumb-image:hover #thumb-tags,
+.dt_overlays_hover_block #thumb-image:hover #thumb-colorlabels
  {
 	color: darkcyan;
 }
@@ -1879,7 +1912,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 .dt_overlays_mixed #thumb-main #thumb-star,
 .dt_overlays_hover #thumb-main:hover #thumb-star,
 .dt_overlays_hover_extended  #thumb-main:hover #thumb-star,
-.dt_overlays_hover_block #thumb-main:hover #thumb-star
+.dt_overlays_hover_block #thumb-image:hover #thumb-star
 {
 	color: @grey_55;
 }
@@ -1902,16 +1935,23 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	color: azure;
 }
 
-/* icono de rechazo sobreimpreso */
+/* icono de rechazo */
 .dt_overlays_hover #thumb-main:hover #thumb-reject, 
 .dt_overlays_hover_extended #thumb-main:hover #thumb-reject,
 .dt_overlays_always #thumb-main #thumb-reject,
 .dt_overlays_always_extended #thumb-main #thumb-reject,
 .dt_overlays_mixed #thumb-main #thumb-reject,
-.dt_overlays_hover_block #thumb-main:hover #thumb-reject, 
+.dt_overlays_hover_block #thumb-image:hover #thumb-reject {
+	color: seagreen;
+}
+
+/* icono de rechazo activo */
+.dt_overlays_always #thumb-main #thumb-reject:active,
+.dt_overlays_always_extended #thumb-main #thumb-reject:active,
+.dt_overlays_mixed #thumb-main #thumb-reject:active,
 .dt_overlays_hover #thumb-main:hover #thumb-reject:active, 
 .dt_overlays_hover_extended #thumb-main:hover #thumb-reject:active,
-.dt_overlays_hover_block #thumb-main:hover #thumb-reject:active 
+.dt_overlays_hover_block #thumb-image:hover #thumb-reject:active 
 {
 	color: crimson;
 }
@@ -1927,10 +1967,10 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 /* hover sobre elementos sobreimpresos */
 .dt_overlays_hover #thumb-main:hover #thumb-group-audio:hover, 
 .dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio:hover,
-.dt_overlays_always #thumb-main #thumb-group-audio:hover,
-.dt_overlays_always_extended #thumb-main #thumb-group-audio:hover,
-.dt_overlays_mixed #thumb-main #thumb-group-audio:hover,
-.dt_overlays_hover_block #thumb-main #thumb-group-audio:hover,
+.dt_overlays_always #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_always_extended #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_mixed #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_hover_block #thumb-main:hover #thumb-group-audio:hover,
 .dt_overlays_hover #thumb-main:hover #thumb-altered:hover,
 .dt_overlays_hover_extended #thumb-main:hover #thumb-altered:hover,
 .dt_overlays_always #thumb-main #thumb-altered:hover,
@@ -1948,8 +1988,7 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 .dt_overlays_always #thumb-main #thumb-reject:hover,
 .dt_overlays_always_extended #thumb-main #thumb-reject:hover,
 .dt_overlays_mixed #thumb-main #thumb-reject:hover,
-.dt_overlays_hover_block #thumb-main #thumb-reject:hover {
-
+.dt_overlays_hover_block #thumb-image:hover #thumb-reject:hover {
 	color: @ui_hover;
 }
 
@@ -1982,16 +2021,6 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 {
   color: gold;
   background-color: orange;
-  
-}
-
-.dt_overlays_hover #thumb-main:hover #thumb-group-audio:hover,
-.dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio:hover,
-.dt_overlays_always #thumb-main:hover #thumb-group-audio:hover,
-.dt_overlays_always_extended #thumb-main:hover #thumb-group-audio:hover,
-.dt_overlays_mixed #thumb-main:hover #thumb-group-audio:hover,
-.dt_overlays_hover_block #thumb-image:hover #thumb-group-audio:hover {
-	color: @thumbnail_fg_color;
 }
 
 /* transparencia para mostrar el sello de rechazada */
@@ -2016,10 +2045,21 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
 	opacity: .4;
 }
 
-#thumb-localcopy {
-	border-top: 0.07em solid @lighttable_bg_color;
-	border-right: 0.07em solid @lighttable_bg_color;
-	color: @thumbnail_localcopy;
+/* icono localcopy */
+.dt_overlays_none #thumb-main #thumb-localcopy {
+	border: transparent;
+	color: transparent;
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-localcopy,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-localcopy,
+.dt_overlays_always #thumb-main #thumb-localcopy,
+.dt_overlays_always_extended #thumb-main #thumb-localcopy,
+.dt_overlays_mixed  #thumb-main #thumb-localcopy,
+.dt_overlays_hover_block #thumb-image:hover #thumb-localcopy {
+  border-top : 0.07em solid cyan;
+  border-right : 0.07em solid cyan;
+  color: darkcyan;
 }
 
 .dt_group_right #thumb-localcopy {
@@ -2165,6 +2205,9 @@ treeview#delete-dialog,treeview#delete-dialog:selected {
  
 #splashscreen {
 	color: white;
+    border: 1px solid @grey_30;
+	border-top-color: @grey_60;
+	border-bottom-color: @grey_20;
 	border-radius:2%;
 	background-color: @grey_30;
 	background-repeat: repeat;
@@ -2398,8 +2441,9 @@ left>:not(scrolledwindow) {
 .dt_plugin_ui_main {
 	border: 2px solid @plugin_ui_border;
 	border-top: none;
-	border-bottom-left-radius: 12px;
-	border-bottom-right-radius: 12px
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 
 /* efecto metalizado en botones deshabilitados */
@@ -2457,9 +2501,9 @@ left>:not(scrolledwindow) {
 	padding: 6px 8px;
 }
 
-#basics-box-labels>widget {
-	background-color: @module_headers;
+#basics-header-box {
 	border: 1px solid @grey_40;
+	border-top-color: @grey_50;
 	border-bottom: none;
 	border-radius: 12px 12px 0 0;
 }
@@ -2467,6 +2511,7 @@ left>:not(scrolledwindow) {
 #basics-module-hbox {
 	border-radius: 0 0 12px 12px;
 	border: 1px solid @grey_40;
+	border-top-color: @grey_30;
 	margin: 0 0 3px 0;
 }
 
