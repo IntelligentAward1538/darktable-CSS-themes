@@ -8,8 +8,8 @@ The scope of personalization has also been expanded.<br>
 
 ## <b>Screenshots:</b> 
 
-<p align="center"><img width="2560" height="1440" alt="Captura_3" src="https://github.com/user-attachments/assets/cb7abca1-68e0-4659-a350-aab81741e684" /></p>
-<p align="center"><img width="2560" height="1440" alt="Captura de pantalla 2026-10-21 182247" src="https://github.com/user-attachments/assets/5d379e11-36d9-4f9d-b27a-03aba00b8755" /></p>
+<p align="center"><img width="2560" height="1440" alt="Captura_01" src="https://github.com/user-attachments/assets/96a3d0a0-ecf3-46fb-b7d3-1a91e1795997" /></p>
+<p align="center"><img width="2560" height="1440" alt="Captura_02" src="https://github.com/user-attachments/assets/46f91b95-a38e-49f9-91c7-f5476248c698" /></p>
 <p align="center"><img width="287" height="600" alt="Captura_4" src="https://github.com/user-attachments/assets/e75663ea-ca2c-4ca2-a8ab-01e351123cf3" /></p>
 
 ## <b>Requirements:</b>
@@ -32,7 +32,7 @@ The scope of personalization has also been expanded.<br>
 
 ## <b>Compatibility:</b>
 
-Tested on Windows 10 with darktable 5.7.0+1175 and a QHD screen.<br>
+Tested on Windows 10 with darktable 5.7.0+1175<sup>(2)</sup> and a QHD screen.<br>
 For proper display do not activate the theme modifiers included from version 5.6.2 onwards.<br>
 If the font is not what you expect, check the font names in the font-family lines.<br>
 If the interface appears distorted compared to the screenshots, check the following sections in the program's main settings:<br>
@@ -60,7 +60,7 @@ To make the most of this feature, it is important to be familiar with some of da
 ```F11``` full/normal window<br>
 
 A different appearance has been intentionally defined depending on the states of the elements:<br>
-- Photo selected/not selected<br>
+- Photo selected/not selected.<br>
 - Photo rejected/not rejected.<br>
 - Show some type of overlay / no overlay.<br>
 - A "refused" stamp can be superimposed on rejected photos.<br>
@@ -69,21 +69,20 @@ It probably took you a while to get used to darktable. Take some time to familia
 
 Different backgrounds and borders have also been chosen depending on the full view being used.<br>
 1. In the darkroom:<br>
-  - the main background and second view are 50% grey <br>
+  - the main background and second view are 50% grey.<br>
   - Pressing ```w``` switches to a white background.<br>
   - The top-left thumbnail has an almost black background.<br>
 2. In lighttable mode:<br>
   - using the ```w``` or ```f``` keys:<br>
-		- 50% grey background if the image is not selected<br>
-		- Grey gradient if the image is selected.<br>
-		- Red border if the image is rejected<br>
+		- 50% grey background if the image is selected.<br>
+		- Grey gradient if the image is not selected.<br>
+		- Red border if the image is rejected & selected.<br>
   - With ```s```:<br>
-		- Black background<br>
+		- Black background.<br>
 
-The screenshots included here are intended to show what all the panels look like<sup>(2)</sup>, but if you need a development environment that is as neutral as possible, you can use the keyboard shortcuts mentioned above to maximise the development area and leave only the development modules panel visible.
+The screenshots included here are intended to show what all the panels look like<sup>(3)</sup>, but if you need a development environment that is as neutral as possible, you can use the keyboard shortcuts mentioned above to maximise the development area and leave only the development modules panel visible.
 
-<p align="center"><img width="2560" height="1440" alt="Captura_5" src="https://github.com/user-attachments/assets/1d67e610-cd1c-4ac2-822f-472a7aada6b8" /></p>
-
+<p align="center"><img width="2560" height="1440" alt="Captura_04" src="https://github.com/user-attachments/assets/525c24a9-21cd-44a9-bb55-10fbc0b74c65" /></p>
 
 ## <b>Release List:</b>
 
@@ -92,4 +91,6 @@ The screenshots included here are intended to show what all the panels look like
 ---
 <b>Notes</b>:<br>
 (1)  High-contrast themes can highlight visual flaws in the programme, which largely go unnoticed with plain, neutral themes.<br>
-(2)  The screenshots may not include all the latest modifications.<br>
+(2)  Some definitions are not yet in effect in version 5.6.2 because it does not yet include those classes. They only take effect in later nightly builds.<br>
+(3)  The screenshots may not include all the latest modifications.<br>
+
