@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0+1175
     @IntelligentAward1538
-    rev. 2026.11.07
+    rev. 2026.11.09
 */  
 
 /*  Rights:
@@ -2458,7 +2458,6 @@ left>:not(scrolledwindow) {
 	border-top: none;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
-	border-bottom-right-radius: 8px;
 }
 
 /* efecto metalizado en botones deshabilitados */
@@ -2563,18 +2562,25 @@ left>:not(scrolledwindow) {
 /* desplegables de módulos generales */
 #right #bauhaus-combobox,
 #left #bauhaus-combobox {
-    color: shade(@sg, 1.4);
+	color: shade(@sg, .8);
 	padding: 0em 0em .1em .5em;
-    border-radius: .2em  1em .2em .1em;
+	border-radius: .2em  1em .2em .1em;
 	border: 1px solid @grey_30;
 	border-left-color: @grey_40;
-    border-top-color: @grey_15;
+	border-top-color: @grey_25;
+	border-bottom-color: @grey_25;
+	background: linear-gradient(shade(@sg, .45) 70%, shade(@sg, .35) 98%);
+}
+
+#right #bauhaus-combobox:not(:disabled),
+#left #bauhaus-combobox:not(:disabled) {
+	color: shade(@sg, 1.45);
 	border-bottom-color: @grey_35;
 	background: linear-gradient(shade(@sg, .4) 70%, shade(@sg, .3) 98%);
 }
 
-#right #bauhaus-combobox:hover,
-#left #bauhaus-combobox:hover {
+#right #bauhaus-combobox:not(:disabled):hover,
+#left #bauhaus-combobox:not(:disabled):hover {
 	color: @ui_hover;
 }
 
