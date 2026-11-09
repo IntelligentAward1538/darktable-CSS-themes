@@ -2584,12 +2584,21 @@ left>:not(scrolledwindow) {
 	color: @ui_hover;
 }
 
+/* botones en cabeceras de módulos */
 #module-header .dt_module_btn,
 #basics-box-labels>widget .dt_module_btn {
 	color: @header_btn_fg;
 	background-color: @header_btn_bg;
 	border: 1px solid @header_btn_border;
 	border-radius: 6px;
+}
+
+/* botones en cabeceras de módulos deshabilitados */
+#module-header .dt_module_btn:disabled,
+#basics-box-labels>widget .dt_module_btn:disabled {
+	border: none;
+	background: transparent;
+	opacity: .4;
 }
 
 /* botón activador de módulo */
