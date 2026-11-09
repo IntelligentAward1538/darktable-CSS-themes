@@ -19,7 +19,7 @@ The scope of personalization has also been expanded.<br>
 - Install all files in the correct directories
 
 ## <b>Installation:</b>
-
+To enjoy the latest version, download the files from the main branch.<br>
 1. Place the CSS file in the darktable themes directory:<br>
    ```[installation directory]\share\darktable\themes\```<br>
   
@@ -85,7 +85,7 @@ The screenshots included here are intended to show what all the panels look like
 <p align="center"><img width="2560" height="1440" alt="Captura_04" src="https://github.com/user-attachments/assets/525c24a9-21cd-44a9-bb55-10fbc0b74c65" /></p>
 
 ## <b>Release List:</b>
-
+The 'releases' are snapshots of a specific moment in the project. These can be useful if you want to revert to a previous version.<br>
 [Here](https://github.com/IntelligentAward1538/darktable-CSS-themes/releases) are all the versions available so far.<br>
 
 ---
