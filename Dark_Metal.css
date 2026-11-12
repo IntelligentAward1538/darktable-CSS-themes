@@ -506,7 +506,6 @@ dialog .sidebar row:selected:hover label,
 	background: linear-gradient(90deg, @grey_15 0%, @grey_25 40%, @grey_10 100%);
 }
 
-
 #iop-expander.dt_module_focus #module-header {
 	background-color: @focused_header;
 }
@@ -564,10 +563,11 @@ dialog .sidebar row:selected:hover label,
 	font-size: .8em;
 }
 
-/* nombre personalizado de módulo */
+/* nombre preset de módulo */
+#plugins_vbox_left #module-header #lib-module-name,
 #iop-expander #module-header label#iop-module-name {
 	font-family: "Arial", "Microsoft Sans Serif", "Segoe UI", sans-serif, "Arial Unicode MS";
-	color: @c_23;
+	color: azure;
 	text-shadow: 1px 1px 2px @grey_10;
 }
 
