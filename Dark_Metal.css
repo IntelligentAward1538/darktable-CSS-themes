@@ -567,7 +567,7 @@ dialog .sidebar row:selected:hover label,
 /* nombre personalizado de módulo */
 #iop-expander #module-header label#iop-module-name {
 	font-family: "Arial", "Microsoft Sans Serif", "Segoe UI", sans-serif, "Arial Unicode MS";
-	color: @c_23;
+	color: azure;
 	text-shadow: 1px 1px 2px @grey_10;
 }
 
