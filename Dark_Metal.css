@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0+1175
     @IntelligentAward1538
-    rev. 2026.11.09
+    rev. 2026.11.12
 */  
 
 /*  Rights:
@@ -506,6 +506,7 @@ dialog .sidebar row:selected:hover label,
 	background: linear-gradient(90deg, @grey_15 0%, @grey_25 40%, @grey_10 100%);
 }
 
+
 #iop-expander.dt_module_focus #module-header {
 	background-color: @focused_header;
 }
@@ -561,6 +562,13 @@ dialog .sidebar row:selected:hover label,
 #snapshot-button entry,#iop-module-name,#lib-module-name {
 	font-weight: lighter;
 	font-size: .8em;
+}
+
+/* nombre personalizado de módulo */
+#iop-expander #module-header label#iop-module-name {
+	font-family: "Arial", "Microsoft Sans Serif", "Segoe UI", sans-serif, "Arial Unicode MS";
+	color: @c_23;
+	text-shadow: 1px 1px 2px @grey_10;
 }
 
 #iop-module-name-error {
@@ -2730,8 +2738,18 @@ dialog .sidebar row:selected:hover,
 	color: @ui_hover;
 }
 
+/* dialogos */
+entry:focus,
+#preferences-notebook widget:hover,
 checkbutton check:hover {
-	box-shadow: 1px 1px 4px lightblue;
+	color: @ui_hover;
+	box-shadow: 1px 1px 4px @ui_hover;
+}
+
+/* entradas de texto y botones */
+text:focus,
+#preferences-notebook button:hover label {
+	color: @ui_hover;
 }
 
 /* configuracion por defecto de iconos de módulos */
