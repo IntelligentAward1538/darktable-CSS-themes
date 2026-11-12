@@ -15,7 +15,7 @@ The scope of personalization has also been expanded.<br>
 ## <b>Requirements:</b>
 
 - Minimum version: darktable 5.6.0
-- Recommended version: dakrtable 5.6.2 / 5.7.0
+- Recommended version: darktable 5.6.2 / 5.7.0
 - Install all files in the correct directories
 
 ## <b>Installation:</b>
