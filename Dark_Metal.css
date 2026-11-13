@@ -2780,6 +2780,18 @@ text:focus,
 	background-image: url("../pixmaps/thematic_images/balance_rgb.svg");
 }
 
+#iop-panel-icon-channelmixerrgb {
+	background-image: url("../pixmaps/thematic_images/channelmixerrgb.svg");
+}
+
+#iop-panel-icon-colorharmonizer {
+	background-image: url("../pixmaps/thematic_images/colorharmonizer.svg");
+}
+
+#iop-panel-icon-colorequal {
+	background-image: url("../pixmaps/thematic_images/colorequal.svg");
+}
+
 /* iconos de darktable */
 #iop-panel-icon-ashift {
 	background-image: url('../pixmaps/plugins/darkroom/ashift.svg');
