@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="200"
+     height="200"
+     viewBox="0 0 200 200">
+  <g id="darktable-agx-icon"
+     fill="none"
+     stroke="#bebebe"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    
+    <!-- Outer frame (matching darktable minimalist module aesthetic) -->
+    <rect x="20" y="20" width="160" height="160" rx="22" ry="22" stroke-width="11"/>
+    
+    <!-- Subtle diagonal dynamic range reference line -->
+    <line x1="40" y1="154" x2="160" y2="46" stroke-width="5" stroke-opacity="0.35" stroke-dasharray="8 8"/>
+    
+    <!-- AgX Film-like S-Curve (Toe, Linear Midtones, Shoulder) -->
+    <path d="M 38 158 C 76 158, 76 116, 100 100 C 124 84, 124 42, 162 42" stroke-width="13"/>
+    
+    <!-- Pivot point node representing middle-grey / exposure pivot -->
+    <circle cx="100" cy="100" r="9" fill="#bebebe" stroke="none"/>
+    
+    <!-- Subtle highlight / shadow roll-off markers -->
+    <circle cx="154" cy="43" r="4.5" fill="#bebebe" stroke="none" fill-opacity="0.7"/>
+    <circle cx="46" cy="157" r="4.5" fill="#bebebe" stroke="none" fill-opacity="0.7"/>
+  </g>
+</svg>

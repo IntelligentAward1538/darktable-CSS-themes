@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0+1175
     @IntelligentAward1538
-    rev. 2026.11.12
+    rev. 2026.11.13
 */  
 
 /*  Rights:
@@ -2763,7 +2763,24 @@ text:focus,
 	min-width: 1.5em;
 }
 
-/* carga el icono de cada módulo */
+/* iconos del tema */
+#iop-panel-icon-spektrafilm {
+	background-image: url("../pixmaps/thematic_images/spektrafilm.svg");
+}
+
+#iop-panel-icon-contrastntexture {
+	background-image: url("../pixmaps/thematic_images/contrast_n_texture.svg");
+}
+
+#iop-panel-icon-agx {
+	background-image: url("../pixmaps/thematic_images/agx.svg");
+}
+
+#iop-panel-icon-colorbalancergb {
+	background-image: url("../pixmaps/thematic_images/balance_rgb.svg");
+}
+
+/* iconos de darktable */
 #iop-panel-icon-ashift {
 	background-image: url('../pixmaps/plugins/darkroom/ashift.svg');
 }
@@ -2986,5 +3003,6 @@ text:focus,
 #iop-panel-icon-zonesystem {
 	background-image: url('../pixmaps/plugins/darkroom/zonesystem.svg');
 }
+
 /*	================== The End ================== */
 

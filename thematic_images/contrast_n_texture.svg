@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+  <!-- Marco exterior sólido compatible con GTK 3 -->
+  <path fill="#b3b3b3" d="M5 3.2C3.46 3.2 2.2 4.46 2.2 6v12c0 1.54 1.26 2.8 2.8 2.8h14c1.54 0 2.8-1.26 2.8-2.8V6c0-1.54-1.26-2.8-2.8-2.8H5zm0 1.6h14c.67 0 1.2.53 1.2 1.2v12c0 .67-.53 1.2-1.2 1.2H5c-.67 0-1.2-.53-1.2-1.2V6c0-.67.53-1.2 1.2-1.2z"/>
+  
+  <!-- Mitad izquierda: Contraste (círculo partido luz/sombra) -->
+  <path fill="#b3b3b3" d="M8.5 7.2A4.8 4.8 0 0 0 8.5 16.8V7.2z"/>
+  <path fill="none" stroke="#b3b3b3" stroke-width="1.3" d="M8.5 7.2A4.8 4.8 0 0 1 8.5 16.8"/>
+  
+  <!-- Mitad derecha: Textura / microcontraste (patrón de frecuencia de detalle) -->
+  <path fill="none" stroke="#4d8be0" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" d="M12.2 13.8 L13.8 8.4 L15.5 15.6 L17.2 9.4 L18.8 13.8"/>
+  <circle fill="#52b765" cx="15.5" cy="6.6" r="1.1"/>
+  <circle fill="#e05252" cx="15.5" cy="17.4" r="1.1"/>
+</svg>
