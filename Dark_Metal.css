@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0+1175
     @IntelligentAward1538
-    rev. 2026.11.13
+    rev. 2026.11.14
 */  
 
 /*  Rights:
@@ -1451,9 +1451,10 @@ progressbar progress {
 }
 
 .dt_messages {
-	color: @log_fg_color;
+	color: @grey_95;
 	font-weight: 700;
-	background-color: alpha(@plugin_bg_color,0.5);
+	background-color: alpha(@plugin_bg_color,0.3);
+	text-shadow: 2px 2px 0 black, 0 0 4px green;
 	padding: .35em .7em;
 	border-radius: .35em;
 }
@@ -2750,6 +2751,17 @@ checkbutton check:hover {
 text:focus,
 #preferences-notebook button:hover label {
 	color: @ui_hover;
+}
+
+.text-button:hover label,
+#modulegroups-btn:hover {
+	color: @ui_hover;
+}
+
+#modulegroups-header-center .dt_module_btn:hover,
+#modulegroups-iop-header .dt_module_btn:hover {
+	color: crimson;
+	background-color: transparent;
 }
 
 /* configuracion por defecto de iconos de módulos */

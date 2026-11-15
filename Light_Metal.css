@@ -1,0 +1,1800 @@
+/*
+	=========================
+	***    Light Metal    ***
+	=========================
+
+	Custom theme for darktable v5.6.2 / V5.7.0+1175
+	@IntelligentAward1538
+	rev. 2026.11.15
+
+	Rights:
+	This file is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published
+	by the Free Software Foundation, either version 3 of the License,
+	or (at your option) any later version.
+
+	This file is distributed in the hope that it will be useful, but 
+	WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+	General Public License for more details
+	<https://www.gnu.org/licenses/gpl-3.0.html#license-text>. 
+
+	Instructions:
+    1. Place this file in the darktable themes directory:
+              [installation directory]\share\darktable\themes\
+  
+    2.  This theme uses its own images which must be placed in:
+              [installation directory]\share\darktable\pixmaps\thematic_images\
+		If the directory does not exist, create it first.
+
+        It also uses images from darktable located in:
+              [installation directory]\share\darktable\pixmaps\plugins\darkroom\
+		  
+    3. Open the application and select the new theme
+	4. For proper display, do not activate the theme modifiers included from version 5.6.1 onwards.
+	
+*/ 
+
+@import url("darktable.css");
+@import url("chunk-fonts.css");
+
+@define-color ui_hover #ffc966;			/* naranja claro */
+@define-color filtering_dimmed #f0b000;	/* dorado */
+@define-color filtering_checked #00e000;/* verde */
+@define-color c_01 #b7b6b4; 			/* gris amarillento */
+@define-color c_02 #807163; 			/* marrón grisáceo medio */
+@define-color c_03 #a88a6d; 			/* marrón claro apagado */
+
+/* ==========================================================================
+   Paleta estandar CSS:
+   neutros y acromáticos (ordenados por luminosidad de claro a oscuro)
+   ========================================================================== */
+@define-color c_10 white; 		/* #FFFFFF */
+@define-color c_11 snow; 		/* #FFFAFA */
+@define-color c_12 seashell; 	/* #FFF5EE */
+@define-color c_13 floralwhite; /* #FFFAF0 */
+@define-color c_14 ivory; 		/* #FFFFF0 */
+@define-color c_15 honeydew; 	/* #F0FFF0 */
+@define-color c_16 mintcream; 	/* #F5FFFA */
+@define-color c_17 azure; 		/* #F0FFFF */
+@define-color c_18 aliceblue; 	/* #F0F8FF */
+@define-color c_19 ghostwhite; 	/* #F8F8FF */
+@define-color c_20 lavenderblush; /* #FFF0F5 */
+@define-color c_21 oldlace; 	/* #FDF5E6 */
+@define-color c_22 linen; 		/* #FAF0E6 */
+@define-color c_23 lavender; 	/* #E6E6FA */
+@define-color c_24 whitesmoke; 	/* #F5F5F5 */
+@define-color c_25 beige; 		/* #F5F5DC */
+@define-color c_26 gainsboro; 	/* #DCDCDC */
+@define-color c_27 lightgrey; 	/* #D3D3D3 */
+@define-color c_28 silver; 		/* #C0C0C0 */
+@define-color c_29 darkgrey; 	/* #A9A9A9 */
+@define-color c_30 grey; 		/* #808080 */
+@define-color c_31 dimgrey; 	/* #696969 */
+@define-color c_32 black; 		/* #000000 */
+
+/* ==========================================================================
+   rojos (matices iniciales y finales del círculo)
+   ========================================================================== */
+@define-color c_33 lightcoral; 	/* #F08080 */
+@define-color c_34 rosybrown; 	/* #BC8F8F */
+@define-color c_35 indianred; 	/* #CD5C5C */
+@define-color c_36 red; 		/* #FF0000 */
+@define-color c_37 maroon; 		/* #800000 */
+@define-color c_38 brown; 		/* #A52A2A */
+@define-color c_39 darkred; 	/* #8B0000 */
+@define-color c_40 firebrick; 	/* #B22222 */
+@define-color c_41 mistyrose; 	/* #FFE4E1 */
+@define-color c_42 salmon; 		/* #FA8072 */
+@define-color c_43 tomato; 		/* #FF6347 */
+@define-color c_44 darksalmon; 	/* #E9967A */
+@define-color c_45 coral; 		/* #FF7F50 */
+@define-color c_46 orangered; 	/* #FF4500 */
+@define-color c_47 lightsalmon; /* #FFA07A */
+@define-color c_48 sienna; 		/* #A0522D */
+@define-color c_49 palevioletred; /* #DB7093 */
+@define-color c_50 crimson; 	/* #DC143C */
+@define-color c_51 pink; 		/* #FFC0CB */
+@define-color c_52 lightpink; 	/* #FFB6C1 */
+
+/* ==========================================================================
+   naranjas y marrones (De 20° a 45° en la rueda)
+   ========================================================================== */
+@define-color c_53 chocolate; 	/* #D2691E */
+@define-color c_54 saddlebrown; /* #8B4513 */
+@define-color c_55 sandybrown; 	/* #F4A460 */
+@define-color c_56 peachpuff; 	/* #FFDAB9 */
+@define-color c_57 peru;		/* #CD853F */
+@define-color c_58 bisque; 		/* #FFE4C4 */
+@define-color c_59 darkorange; 	/* #FF8C00 */
+@define-color c_60 burlywood; 	/* #DEB887 */
+@define-color c_61 antiquewhite; /* #FAEBD7 */
+@define-color c_62 tan; 		/* #D2B48C */
+@define-color c_63 navajowhite; /* #FFDEAD */
+@define-color c_64 blanchedalmond; /* #FFEBCD */
+@define-color c_65 papayawhip; 	/* #FFEFD5 */
+@define-color c_66 moccasin; 	/* #FFE4B5 */
+@define-color c_67 orange; 		/* #FFA500 */
+@define-color c_68 wheat; 		/* #F5DEB3 */
+@define-color c_69 darkgoldenrod; /* #B8860B */
+@define-color c_70 goldenrod; 	/* #DAA520 */
+
+/* ==========================================================================
+   amarillos (De 45° a 65° en la rueda)
+   ========================================================================== */
+@define-color c_71 cornsilk; 	/* #FFF8DC */
+@define-color c_72 gold; 		/* #FFD700 */
+@define-color c_73 lemonchiffon; /* #FFFACD */
+@define-color c_74 khaki; 		/* #F0E68C */
+@define-color c_75 palegoldenrod; /* #EEE8AA */
+@define-color c_76 darkkhaki; 	/* #BDB76B */
+@define-color c_77 olive; 		/* #808000 */
+@define-color c_78 yellow; 		/* #FFFF00 */
+@define-color c_79 lightyellow; /* #FFFFE0 */
+@define-color c_80 lightgoldenrodyellow; /* #FAFAD2 */
+
+/* ==========================================================================
+   verdes (De 65° a 165° en la rueda)
+   ========================================================================== */
+@define-color c_81 olivedrab; 	/* #6B8E23 */
+@define-color c_82 yellowgreen; /* #9ACD32 */
+@define-color c_83 darkolivegreen; /* #556B2F */
+@define-color c_84 greenyellow; /* #ADFF2F */
+@define-color c_85 chartreuse; 	/* #7FFF00 */
+@define-color c_86 lawngreen; 	/* #7CFC00 */
+@define-color c_87 limegreen; 	/* #32CD32 */
+@define-color c_88 darkgreen; 	/* #006400 */
+@define-color c_89 lime; 		/* #00FF00 */
+@define-color c_90 green; 		/* #008000 */
+@define-color c_91 forestgreen; /* #228B22 */
+@define-color c_92 darkseagreen; /* #8FBC8F */
+@define-color c_93 lightgreen; 	/* #90EE90 */
+@define-color c_94 palegreen; 	/* #98FB98 */
+@define-color c_95 seagreen; 	/* #2E8B57 */
+@define-color c_96 mediumseagreen; /* #3CB371 */
+@define-color c_97 springgreen; /* #00FF7F */
+@define-color c_98 mediumspringgreen; /* #00FA9A */
+@define-color c_99 mediumaquamarine; /* #66CDAA */
+@define-color c_100 aquamarine; /* #7FFFD4 */
+
+/* ==========================================================================
+   cianes y azules (De 165° a 260° en la rueda)
+   ========================================================================== */
+@define-color c_101 turquoise; 	/* #40E0D0 */
+@define-color c_102 lightseagreen; /* #20B2AA */
+@define-color c_103 mediumturquoise; /* #48D1CC */
+@define-color c_104 darkslategrey; /* #2F4F4F */
+@define-color c_105 teal; 		/* #008080 */
+@define-color c_106 aqua; 		/* #00FFFF */
+@define-color c_107 darkcyan; 	/* #008B8B */
+@define-color c_108 cyan; 		/* #00FFFF */
+@define-color c_109 lightcyan; 	/* #E0FFFF */
+@define-color c_110 paleturquoise; /* #AFEEEE */
+@define-color c_111 darkturquoise; /* #00CED1 */
+@define-color c_112 cadetblue; 	/* #5F9EA0 */
+@define-color c_113 powderblue; /* #B0E0E6 */
+@define-color c_114 lightblue; 	/* #ADD8E6 */
+@define-color c_115 deepskyblue; /* #00BFFF */
+@define-color c_116 skyblue; 	/* #87CEEB */
+@define-color c_117 lightskyblue; /* #87CEFA */
+@define-color c_118 steelblue; 	/* #4682B4 */
+@define-color c_119 dodgerblue; /* #1E90FF */
+@define-color c_120 lightslategrey; /* #778899 */
+@define-color c_121 slategrey; 	/* #708090 */
+@define-color c_122 lightsteelblue; /* #B0C4DE */
+@define-color c_123 cornflowerblue; /* #6495ED */
+@define-color c_124 royalblue; 	/* #4169E1 */
+@define-color c_125 midnightblue; /* #191970 */
+@define-color c_126 navy; 		/* #000080 */
+@define-color c_127 blue; 		/* #0000FF */
+@define-color c_128 darkblue; 	/* #00008B */
+@define-color c_129 mediumblue; /* #0000CD */
+@define-color c_130 slateblue; 	/* #6A5ACD */
+@define-color c_131 darkslateblue; /* #483D8B */
+@define-color c_132 mediumslateblue; /* #7B68EE */
+@define-color c_133 mediumpurple; /* #9370DB */
+
+/* ==========================================================================
+   violetas, púrpuras y rosas (De 260° a 340° en la rueda)
+   ========================================================================== */
+@define-color c_134 rebeccapurple; /* #663399 */
+@define-color c_135 blueviolet; /* #8A2BE2 */
+@define-color c_136 indigo; 	/* #4B0082 */
+@define-color c_137 darkorchid; /* #9932CC */
+@define-color c_138 darkviolet; /* #9400D3 */
+@define-color c_139 mediumorchid; /* #BA55D3 */
+@define-color c_140 thistle; 	/* #D8BFD8 */
+@define-color c_141 plum; 		/* #DDA0DD */
+@define-color c_142 magenta; 	/* #FF00FF */
+@define-color c_143 violet; 	/* #EE82EE */
+@define-color c_144 purple; 	/* #800080 */
+@define-color c_145 darkmagenta; /* #8B008B */
+@define-color c_146 orchid; 	/* #DA70D6 */
+@define-color c_147 mediumvioletred; /* #C71585 */
+@define-color c_148 deeppink; 	/* #FF1493 */
+@define-color c_149 hotpink; 	/* #FF69B4 */
+
+/* ==========================================================================
+   definiciones darktable 
+   ========================================================================== */
+
+/* General */
+@define-color selected_bg_color @grey_55;
+@define-color border_color @grey_40;
+@define-color bg_color @grey_45;      
+@define-color fg_color @grey_95;
+@define-color text_color @grey_35;
+@define-color placeholder_text_color @grey_70;
+@define-color disabled_fg_color @grey_65;
+
+@define-color lighttable_bg_color @grey_60;
+@define-color range_bg_color alpha(@fg_color, 0.05);
+
+/* Pickers */
+@define-color bauhaus_fg shade(@fg_color, 0.95);
+@define-color bauhaus_fg_hover @c_10;
+@define-color bauhaus_fg_insensitive alpha(@bauhaus_fg, 0.5);
+@define-color bauhaus_fg_selected @c_78;
+
+/* Sliders */
+@define-color bauhaus_bg #515457;
+@define-color bauhaus_fill #bbc3c7;
+
+/* Scroll bars (sliders) */
+@define-color scroll_bar_inactive @grey_60;
+@define-color scroll_bar_active @grey_80;
+@define-color scroll_bar_bg @grey_40;
+
+/* Modules box (plugins) */
+@define-color plugin_bg_color shade(@darkroom_bg_color, 0.95);
+@define-color plugin_label_color @grey_80;
+@define-color collapsible_bg_color @grey_55;
+
+/* GTK Buttons and tabs */
+@define-color button_bg shade(@grey_55,0.95);
+@define-color button_hover_bg #adafb3;
+
+/* thumbnail */
+@define-color thumbnail_font_color @grey_40;
+@define-color thumbnail_star_bg_color #eafc19;
+@define-color thumbnail_star_hover_color @ui_hover;
+
+/* text fields */
+@define-color field_bg @grey_45;
+@define-color field_active_bg @grey_50;
+@define-color field_active_fg @grey_95;
+@define-color field_selected_bg @grey_60;
+@define-color field_selected_fg @c_10;
+
+/* Tooltips and contextual helpers */
+@define-color tooltip_bg_color @grey_40;
+@define-color tooltip_fg_color alpha(aquamarine, .85);
+@define-color log_fg_color @grey_95;
+
+/* Graphs : histogram, navigation thumbnail and some items on tone curve */
+@define-color graph_bg @grey_40;
+@define-color graph_border @grey_15;
+@define-color graph_grid @grey_30;
+@define-color graph_fg @grey_100;
+@define-color inset_histogram alpha(@grey_95, 0.50);
+
+
+/* ventana de lanzamiento de la aplicación */
+#splashscreen {
+	color: @c_10;
+    border: 1px solid @grey_30;
+	border-top-color: @grey_60;
+	border-bottom-color: @grey_20;
+	border-radius:2%;
+	background-color: @grey_30;
+	background-repeat: repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url("../pixmaps/thematic_images/header.png");
+}
+
+window {
+	background-repeat: repeat;
+	background-size: 30%, 30%;
+	background-image: url("../pixmaps/thematic_images/hexagonal_hd1.png");
+}
+
+/* hover effect on combo and bauhaus */
+.combo:hover, .combo:hover cellview, .dt_bauhaus:hover, combobox window *:hover
+{
+  color: shade(@ui_hover, 0.94);
+}
+
+/* lineas brillantes en menu de preferencias */
+#preferences-box separator {
+	background: radial-gradient(circle at center, @grey_80 0%, @grey_30 100%)
+}
+
+/* iluminación barra lateral de configuración */
+#preferences-box .sidebar row:selected {
+	border-left-color: @c_10;
+}
+
+/* barra central superior e inferior */
+#header-toolbar, #footer-toolbar {
+	border:.1em solid @grey_35;
+	border-radius: 3px;
+	border-top-color: @grey_55;
+}
+
+#header-toolbar {
+	background: linear-gradient(@grey_45, @grey_50 80%);
+}
+
+#footer-toolbar {
+	background: linear-gradient(@grey_50 20%, @grey_45);
+}
+
+/* atenua texto de nº de elementos seleccionados en barra superior */
+#header-toolbar box>label:last-child {
+	color: @grey_85;
+}
+
+/* atenua logo */
+#top-hinter>box.horizontal:first-child>widget {
+	opacity: .4;
+}
+
+/* solapas principales */
+#view-label:nth-child(2n+1), #view-dropdown {
+	border: 3px double @grey_40;
+	border-top: 2px solid @grey_60;
+	border-bottom:2px solid @grey_35;
+	border-radius: 8px;
+	background: @grey_45;
+}
+
+#view-dropdown .combo:hover {
+  background-color: @grey_40;
+  color: @c_10;
+}
+
+/* solapa principal seleccionada */
+#view-label:selected {
+	border: 3px double @grey_60;
+	border-top: 2px solid @grey_65;
+	border-bottom:2px solid @grey_30;
+	border-radius: 8px;
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url("../pixmaps/thematic_images/header_light.png");
+}
+
+/* solapa principal de programa seleccionada */
+#plugins_vbox_left>box {
+	padding: .1em;
+}
+
+scrollbar {
+	border:1px solid @grey_35;
+	margin: 2px;
+}
+
+scrollbar slider {
+	border: 1px solid @grey_45;
+	border-radius: 6px;
+}
+
+scrollbar.vertical slider {
+	margin: 1px;
+	background: linear-gradient(@scroll_bar_inactive, shade(@scroll_bar_inactive, 1.1), @scroll_bar_inactive);
+}
+
+scrollbar.horizontal slider {
+	background: linear-gradient(90deg, @scroll_bar_inactive, shade(@scroll_bar_inactive, 1.1), @scroll_bar_inactive);
+}
+
+scrollbar.vertical:hover slider {
+	background: @grey_80;
+	background: linear-gradient(@grey_75, shade(@ui_hover, 1.15), @grey_75);
+}
+
+scrollbar.horizontal:hover slider {
+	background: @grey_80;
+	background: linear-gradient(90deg, @grey_75,  shade(@ui_hover, 1.15), @grey_75);
+}
+
+#usercss-box {
+	background: @grey_45;
+}
+
+popover {
+	border: 1px solid @grey_40;
+	border-top-color:  @grey_60;
+	border-bottom-color:  @grey_30;
+	border-radius: 3px;
+}
+
+/* texto en desplegables de 3 rayas de cabeceras de módulos */
+popover label {
+	color: @c_109;
+}
+
+/* indicador de radio en desplegables */
+popover modelbutton radio:checked {
+	margin-top: 6px;
+	color: @bauhaus_fg_selected;
+	background-color: @grey_55;
+}
+
+/* cabeceras de módulos */
+#module-header {
+	padding: .45em;
+	border: 1px solid @grey_35;
+	border-top-color: @grey_60;
+	border-bottom-color: @grey_30;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	font-family: "Segoe UI","Arial","Microsoft Sans Serif",sans-serif, "Arial Unicode MS";
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url("../pixmaps/thematic_images/header_light.png");
+}
+
+#module-header label {
+	color: @grey_85;
+	text-shadow: 2px 2px 3px @grey_10;
+}
+
+/* cabeceras de módulos cuarto oscuro */
+#iop-expander #module-header {
+	padding: .4em;
+	border: 1px solid @grey_35;
+	border-top-color: @grey_65;
+	border-bottom-color: @grey_30;
+	background: linear-gradient(90deg, @grey_40 0%, @grey_45 40%, @grey_35 100%);
+}
+
+/* texto cabecera módulo de módulo de revelado */
+#iop-expander #module-header label:first-child {
+	font-family: "Arial", "Microsoft Sans Serif", "Segoe UI", sans-serif, "Arial Unicode MS";
+}
+
+/* cabecera módulo expandido cuarto oscuro */
+#iop-expander.dt_module_expanded #module-header {
+	border-top-color: @grey_75;
+	border-bottom: none;
+	background: linear-gradient(90deg, @grey_45 0%, @grey_50 40%, @grey_40 100%);
+}
+
+/* texto cabecera módulo expandido */
+#iop-expander.dt_module_expanded #module-header label {
+	color: @c_113;
+}
+
+/* cuerpo de módulo de revelado expandido */
+#iop-expander.dt_module_expanded .dt_plugin_ui {
+	border: 1px solid @grey_65;
+	border-top-color: @grey_40;
+	border-bottom-left-radius: .5em;
+	border-bottom-right-radius: .5em;
+}
+
+/* módulo expandido y enfocado */
+#iop-expander.dt_module_expanded.dt_module_focus #module-header {
+	border-top-color: @grey_80;
+	background: linear-gradient(90deg, @grey_50 0%, @grey_55 40%, @grey_45 100%);
+	margin: 0 .2em 0 .2em;
+	box-shadow: 0 -.05em .2em @grey_80;
+	opacity: 1;
+}
+
+/* texto cabecera módulo expandido y enfocado */
+#iop-expander.dt_module_expanded.dt_module_focus #module-header label {
+	color: @c_25;
+}
+
+/* cuerpo del módulo expandido y enfocado */
+#iop-expander.dt_module_focus.dt_module_expanded .dt_plugin_ui {
+	margin: 0 .2em .2em .2em;
+	box-shadow: 0px .05em .2em @c_17;
+	border-radius: 0 0 8px 8px;
+}
+
+/* botón eliminar duplicado del cuarto oscuro */
+/* para versiones superiores a dt5.6.2 */
+.dt_duplicate_ui .dt_duplicate_delete_slot .dt_duplicate_delete:hover {
+	color: @c_50;
+}
+
+/* módulo general expandido */
+.dt_module_expanded {
+	border: 1px solid @grey_65;
+	border-top-color: @grey_25;
+	border-radius:.5em;
+	background-color: transparent;
+}
+
+.dt_module_expanded #module-header {
+	background-position: right;
+	color: @grey_75;
+	border-top-color: @grey_70;
+}
+
+.dt_module_expanded #module-header label {
+	color: @grey_90;
+	text-shadow: 2px 2px 3px @c_32;
+}
+
+/* solapas de módulos */
+.dt_module_expanded notebook tab:hover label {
+	color: @ui_hover;
+	background-color: @grey_60;
+}
+
+/* cuerpo principal de módulo expandido */
+.dt_plugin_ui_main {
+	border: 1px solid @grey_10;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+/* efecto en botones deshabilitados */
+.dt_plugin_ui_main .text-button:disabled:not(checkbutton):not(.dt_history_items),
+.dt_plugin_ui_main .dt_module_btn#non-flat:disabled  {
+ 	background: linear-gradient(90deg, shade(@grey_50, .85) 0%, shade(@grey_50, .9) 20%, shade(@grey_50, .9) 80%, shade(@grey_50, .85) 100%);
+	border: 1px solid @grey_45;
+	border-top-color: @grey_55;
+	border-bottom-color: @grey_20;
+}
+
+/* efecto metalizado en botones habilitados */
+.dt_plugin_ui_main .text-button:not(:disabled):not(checkbutton):not(.dt_history_items),
+.dt_plugin_ui_main .dt_module_btn#non-flat:not(:disabled) {
+ 	color: @grey_95;
+	background: linear-gradient(90deg, shade(@grey_50, .78) 0%, @grey_50 20%, shade(@grey_50, .9) 80%, shade(@grey_50, .78) 100%);
+	border: 1px solid @grey_35;
+	border-top-color: @grey_70;
+	border-bottom-color: @grey_10;
+}
+
+.dt_plugin_ui_main .text-button:not(checkbutton):not(.dt_history_items) {
+	border-radius: .2em;
+	padding: .1em .6em;
+	margin: .1em 0em .1em 0em;
+}
+
+/* botones de rotación e icono del explorador de archivos en módulo de exportación */
+.dt_plugin_ui_main .dt_module_btn#non-flat:disabled {
+	margin: .0em;
+}
+
+/* hover sobre botones principales */
+.dt_plugin_ui_main .text-button:not(:disabled):not(checkbutton):not(.dt_history_items):hover,
+.dt_plugin_ui_main .dt_module_btn#non-flat:not(:disabled):hover  {
+ 	background: linear-gradient(90deg, shade(@c_120, .80) 0%, shade(@c_120, 1.05) 20%, shade(@c_120, .95) 80%, shade(@c_120, .80) 100%);
+	border-top-color: @grey_85;
+    border-bottom-color: @grey_25;
+  	transition: background 500ms ease; 
+}
+
+.dt_plugin_ui_main .text-button:not(:disabled):not(checkbutton):not(.dt_history_items):hover label,
+.dt_plugin_ui_main .dt_module_btn#non-flat:not(:disabled):hover {
+	color: @c_18;
+  	transition: color 1000ms ease; 
+}
+
+/* módulo general: expandido dentro de módulo */
+.dt_module_expanded .dt_module_expanded {
+	padding: 0em;
+	border-radius: 0;
+	background-color: @grey_65;
+}
+
+/* widget de expansión de módulo general */
+#module-header .dt_module_btn:not(.dt_transparent_background):first-child {
+	background: linear-gradient(0deg, @grey_45 0%, @grey_50 100%);
+	border: 1px solid @grey_55;
+	border-top-color: @grey_65;
+	border-bottom-color: @grey_35;
+}
+
+.dt_module_expanded #module-header .dt_module_btn:not(.dt_transparent_background):first-child {
+	background: linear-gradient(0deg, @grey_55, shade(@c_120, 1.15) 75%);
+	border-top-color: @grey_75;
+	color: @grey_90;
+}
+
+#module-header .dt_module_btn:not(.dt_transparent_background):first-child:hover {
+	border: 1px solid @ui_hover;
+}
+
+/* desplegables de módulos generales */
+#right #bauhaus-combobox,
+#left #bauhaus-combobox {
+	color: shade(@c_01, .95);
+	padding: 0 .1em .1em .5em;
+	border-radius: .2em  1em .2em .1em;
+	border: 1px solid @grey_60;
+	border-left-color: @grey_45;
+	border-bottom-color: @grey_45;
+	background: shade(@c_01, .75);
+}
+
+#right #bauhaus-combobox:not(:disabled),
+#left #bauhaus-combobox:not(:disabled) {
+	color: shade(@c_01, 1.25);
+	border: 1px solid @grey_70;
+	border-left-color: @grey_30;
+	border-bottom-color: @grey_30;
+	background: linear-gradient(shade(@c_01, .7) 70%, shade(@c_01, .5) 98%);
+}
+
+#right #bauhaus-combobox:not(:disabled):hover,
+#left #bauhaus-combobox:not(:disabled):hover {
+	color: @ui_hover;
+}
+
+.module_drag_icon {
+	background-color: @bauhaus_fg;
+	border: 1px solid @ui_hover;
+}
+
+/* efecto de arrastre de módulos */
+.module_drop_before {
+	border-bottom: 2.4em solid @grey_70;
+}
+
+.module_drop_after {
+	border-top: 2.4em solid @grey_70;
+}
+
+.dt_bauhaus_popup {
+	color: shade(@fg_color, 0.75);
+	border: 1px solid @grey_65;
+	border-radius: 5px;
+}
+
+/* elemento seleccionado en listas desplegables */
+.dt_bauhaus_popup:selected {
+	color: @bauhaus_fg_selected;
+}
+
+.dt_bauhaus_popup:disabled {
+	color: @c_10;
+}
+
+.dt_bauhaus_popup:hover {
+	color: @ui_hover;
+}
+
+tooltip {
+	border-radius: 6px;
+	border: 2px ridge @tooltip_bg_color;
+}
+
+/* posición de la superposicion informativa de las imagenes */
+#thumb-image {
+	margin: 14px 12px;
+}
+
+/* posición de la superposicion informativa de las miniaturas */
+.dt_thumbnails_1 #thumb-image {
+	margin: 20px 18px;
+}
+
+/* ========================================= */
+/* carrete de pelicula en tira de miniaturas */
+#thumbtable-filmstrip {
+	background-repeat: repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url("../pixmaps/thematic_images/fotograma4.png");
+}
+
+/* imagen activa tira de pelicula */
+#thumbtable-filmstrip #thumb-main:active:not(.dt_thumbnail_rating_6) #thumb-back {
+	background: radial-gradient(circle at center, @grey_90, @grey_60);
+}
+
+/* tira de miniaturas hover */
+#thumbtable-filmstrip #thumb-main:hover #thumb-image {
+	border-image: linear-gradient(to right, @c_57 0%, @grey_20 25%, @ui_hover 50%,  @grey_20 75%, @c_57 100%) 6 6 6 6 / 3px 2px 3px 2px;
+}
+
+/* borde si la foto esta seleccionada y rechazada */
+.dt_act_on_hover #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back,
+.dt_act_on_selection #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back {
+	border: 2px dotted @c_50;
+	border-radius: .6em;
+}
+
+/* sello fotos rechazada en tira de pelicula y vista ampliada */
+.dt_act_on_hover #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back,
+.dt_act_on_selection #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back,
+.dt_thumbtable#thumbtable-filmstrip .dt_thumbnail_rating_6 #thumb-back,
+.dt_thumbtable#thumbtable-filmstrip #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back {
+	background-color: shade(@thumbnail_bg_color,0.75);
+	background-image: url("../pixmaps/thematic_images/refused_dark.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* imagenes seleccionadas en la tira de pelicula */
+.dt_thumbtable#thumbtable-filmstrip #thumb-main:selected #thumb-back,
+.dt_thumbtable#thumbtable-filmstrip #thumb-main:selected.dt_thumbnail_rating_6 #thumb-back {
+	background-color: @grey_65;
+	border: 2px solid @grey_95;
+	border-radius: .6em;
+}
+
+#thumbtable-filmstrip #thumb-reject {
+	padding: .2em;
+}
+
+/* triangulo indicador de imagen activa en la tira de pelicula */
+#thumbtable-filmstrip #thumb-main:active #thumb-cursor {
+	color: @bg_color;  /* <-- pendiente de corregir bug para ajustar color */
+}
+
+/* =============================================*/
+/* barra de selectores de módulos cuarto oscuro */
+#modules-tabs {
+	background: linear-gradient(@grey_65 0%, @grey_55 5%, @grey_45 55%, @grey_40 60%, @grey_50 60%);
+	border-radius: 8px 8px 0 0;
+	border: 1px solid @grey_35;
+	border-bottom-color: @grey_40;
+	padding:  0;
+}
+
+/* selectores de módulos */
+#modules-tabs .toggle {
+	border-radius: 6px 6px 0 0;
+	border: 1px solid @grey_50;
+	border-top-color: @grey_65;
+	border-bottom: none;
+}
+
+/* buscador de módulos */
+#modules-tabs .search {
+	border-color: @grey_60;
+}
+
+/* tabuladores dentro de módulo */
+notebook tabs {
+	border: 1px solid @grey_40;
+	border-top-color: @grey_55;
+	border-radius: 6px 6px 0 0;
+}
+
+/* ==================== */
+/* apartado de máscaras */
+.dt_plugin_ui #blending-box {
+	background-color: @grey_45;
+	border: 1px solid @grey_35;
+	border-top-color: @grey_55;
+	border-radius: .5em;
+	padding: 0 .5em 0 .3em;
+	margin: .3em .3em .2em .3em;
+}
+
+/* cabecera sección de máscaras */
+.dt_plugin_ui #blending-tabs {
+	background: linear-gradient(@grey_55 10%, @grey_45 50%, @grey_50 90%);
+	border-radius: 8px;
+	border: 1px solid @grey_35;
+	border-top-color: @grey_65;
+	padding: .1em 0 .1em 0;
+}
+
+.dt_plugin_ui #blending-tabs .dt_module_btn {
+	border: 1px solid transparent;
+	border-top: none;
+	border-bottom: 2px solid transparent;
+}
+
+.dt_plugin_ui #blending-tabs .dt_module_btn:checked {
+	border-left-color: @grey_40;
+	border-right-color: @grey_70;
+	border-bottom-color: @grey_85;
+}
+
+#notebook tab label {
+	border-top: 1px solid @grey_50;
+	border-right: 1px solid @grey_40;
+	border-radius: 6px 6px 0 0;
+}
+
+#notebook tab:checked label {
+	border-top-color:  @grey_70;
+	border-bottom-color:  @grey_90;
+	background: shade(@grey_55, .97);
+}
+
+#notebook tab label.changed {
+	background: linear-gradient(180deg, @grey_55 20%, @grey_45);
+}
+
+#blending-box notebook tab label {
+	border-top: 1px solid transparent;
+}
+
+#blending-box notebook tab:hover label {
+	color: @ui_hover;
+	border-top: 1px solid @ui_hover;
+}
+
+/* atenua texto de deslizadores */
+#bauhaus-slider,
+#basics-widget #bauhaus-slider {
+	color: @grey_80;
+}
+
+#bauhaus-slider:hover {
+	color: alpha(@ui_hover, .85);
+}
+
+.dt_plugin_ui #blending-box .dt_bauhaus:hover {
+	color: @ui_hover;
+}
+
+/* deslizador cuadruple de mascaras */
+.dt_plugin_ui #blending-box .dt_gslider_multivalue {
+	border: 1px solid @grey_55;
+	background: linear-gradient(@grey_35 5%, @grey_50, @grey_35 95%);
+}
+
+.dt_plugin_ui #blending-box .dt_gslider_multivalue:hover {
+	color: @ui_hover;
+}
+
+/* iconos de la sección de máscaras */
+#blending-box .dt_module_btn:checked:nth-child(2) {
+	color: @c_10;
+	background-color: @grey_55;
+	border: 1px solid @grey_65;
+	border-top-color: @grey_80;
+	border-bottom-color: @grey_55;
+}
+
+/* cuentagotas de la sección de máscaras */
+#blending-box .dt_module_btn:checked:not(:nth-child(2)) {
+	color: @c_78;
+}
+
+/* ================= */
+/* filtrado de fotos */
+#module-filtering {
+	padding: .1em .28em;
+}
+
+/* cajas filtros de colección */
+#module-filtering #collect-rule-widget {
+	background-color: @grey_50;
+	border:1px solid @grey_35;
+	border-top-color: @grey_60;
+	border-radius: 8px;
+}
+
+/* caja de ordenación de colección */
+#module-filtering #filter-sort-box {
+	background: linear-gradient(@grey_50, @grey_40);
+	padding: 0 .5em;
+	margin: .2em 0 .2em 0;
+	border-radius: 6px;
+	border:1px solid @grey_35;
+	border-top-color: @grey_60;
+}
+
+/* filtros sin pin */
+#module-filtering .dt_module_btn:checked {
+	color : @filtering_checked;
+}
+
+/* pin  de filtro */
+#module-filtering .dt_module_btn.dt_dimmed:checked {
+	color: @filtering_checked;
+	opacity: .7;
+}
+
+/* pin de filtro activo */
+#module-filtering .dt_module_btn.dt_dimmed:checked+.dt_module_btn {
+	color : @filtering_dimmed;
+}
+
+/* pin de filtro inactivo */
+#module-filtering .dt_module_btn.dt_dimmed:not(:checked)+.dt_module_btn:checked {
+	color : @filtering_checked;
+}
+
+/* ==================== */
+/* progreso exportación */
+#background-job-eventbox {
+	background: linear-gradient(90deg, @grey_50 0%, @grey_55 50%, @grey_45 90%);
+	border: 1px solid @grey_35;
+	border-top-color: @grey_75;
+	border-radius: .3em;
+}
+
+#background-job-eventbox label {
+	margin: .10em .28em;
+	color: @grey_90;
+}
+
+progressbar trough {
+	background-color: @grey_35;
+}
+
+progressbar progress {
+	background: linear-gradient(90deg, @c_104 40%, @c_103);
+	border-radius: 0;
+}
+
+.dt_monospace {
+	font-family: "Consolas", monospace;
+}
+
+/* ================================== */
+/* módulo historial del cuarto oscuro */
+.dt_history_items {
+	padding: 0 .21em;
+	margin: .14em;
+}
+
+/* interruptor de módulo en histórico*/
+.dt_history_switch:disabled {
+	color: @grey_80;
+	font-size: .8em;
+	margin-right: .2em;
+}
+
+/* interruptor de módulo deactivado en histórico */
+.dt_history_switch_off:disabled {
+	color: @c_39;
+}
+
+/* pila del historial al pasar */
+#history-ui .dt_transparent_background.dt_history_items:hover>:not(.dt_history_switch_off)  {
+	color: @c_10;
+}
+
+/* pila del historial al pasar sobre activo */
+#history-ui .dt_transparent_background.dt_history_items:checked:hover>:not(.dt_history_switch_off) {
+	color: @c_10;
+}
+
+/* módulo apagado en pila del historial */
+#history-ui .dt_transparent_background.dt_history_items>.dt_history_switch_off {
+	color: alpha(@c_39, .8);
+	text-shadow: 0 1px 0 @grey_40;
+}
+
+/* sobre módulo apagado en pila del historial */
+#history-ui .dt_transparent_background.dt_history_items:hover>.dt_history_switch_off,
+#history-ui .dt_transparent_background.dt_history_items:checked>.dt_history_switch_off {
+	color: @c_39;
+	text-shadow: none;
+}
+
+/* ======================== */
+/* cabecera módulos basicos */
+#basics-header-box {
+	border: 1px solid @grey_35;
+	border-top-color:@grey_65;
+	background: linear-gradient(90deg, @grey_45 0%, @grey_50 40%, @grey_40 100%);
+}
+
+/* cuerpo módulos basicos */
+#basics-module-hbox>box {
+	background-color: @grey_50;
+	border: 1px solid @grey_35;
+}
+
+/* deslizadores de ajustes basicos */
+#basics-widget #bauhaus-slider,
+#basics-widget #keep-active {
+	padding: 4px;
+	border: 1px solid @grey_60;
+	border-top-color:@grey_40;
+	background-color:@grey_55;
+	color: @grey_90;
+} 
+
+#basics-widget #bauhaus-slider:hover,
+#basics-widget #keep-active:hover {
+	color: @ui_hover;
+}
+
+/* marco de seleccionada en vista completa */
+.dt_fullview.dt_overlays_hover_block #thumb-main:selected:not(.dt_thumbnail_rating_6) #thumb-back {
+	border: 2px solid @c_10;
+	border-radius: .8em;
+}
+
+/* quita el borde de la imagen en vista completa */
+.dt_fullview #thumb-main #thumb-image#thumb-image {
+	border:none;
+}
+
+/* limpia bordes en la comparación de imagenes */
+.dt_overlays_none.dt_fullview #thumb-main #thumb-back {
+	background-color: transparent;
+	border: none;
+}
+
+/* borde de color alrededor de grupo de imagenes */
+#thumb-main.dt_group_left #thumb-back {
+  border-left: 0.07em solid @c_72;
+}
+
+#thumb-main.dt_group_top #thumb-back {
+  border-top: 0.07em solid @c_72;
+}
+
+#thumb-main.dt_group_right #thumb-back
+{
+  border-right: 0.07em solid @c_72;
+}
+
+#thumb-main.dt_group_bottom #thumb-back {
+  border-bottom: 0.07em solid @c_72;
+}
+
+/* fondo gestor de archivos y  mesa de luz con ampliación */
+#thumbtable-filemanager, #thumbtable-zoom {
+	background: linear-gradient(180deg, shade(@field_bg, .65), @grey_50,  shade(@field_bg, .65));
+}
+
+/* fondo por defecto de fotos */
+#thumbtable-filemanager #thumb-main #thumb-back,
+#thumbtable-zoom #thumb-main #thumb-back {	
+	background-color: @grey_50;
+}
+
+/* si la foto esta seleccionada */
+#thumbtable-filemanager #thumb-main:selected #thumb-back,
+#thumbtable-zoom #thumb-main:selected #thumb-back {	
+	background-color: @grey_65;
+	border: .1em solid @grey_95;
+	border-radius: .7em
+}
+
+/* hover sobre una foto */
+#thumbtable-filemanager #thumb-main:not(:selected):hover #thumb-back,
+#thumbtable-filemanager #thumb-main:selected:hover #thumb-back, 
+#thumbtable-zoom #thumb-main:not(:selected):hover #thumb-back,
+#thumbtable-zoom #thumb-main:selected:hover #thumb-back,
+.dt_thumbtable#thumbtable-filmstrip #thumb-main:hover #thumb-back {
+	background: radial-gradient(circle at center, shade(@ui_hover, 1.1), @grey_70 70%);
+}
+
+/* hover sobre una foto */
+#thumbtable-filemanager #thumb-main:hover #thumb-image,
+#thumbtable-zoom #thumb-main:hover #thumb-image {
+	border-image: linear-gradient(to right, @c_57 0%, @grey_20 25%, @ui_hover 50%,  @grey_20 75%, @c_57 100%) 6 6 6 6 / 3px 2px 3px 2px;
+}
+
+/* hover sobre una foto rechazada */
+#thumbtable-filemanager #thumb-main.dt_thumbnail_rating_6:hover #thumb-image,
+#thumbtable-zoom #thumb-main.dt_thumbnail_rating_6:hover #thumb-image,
+#thumbtable-filmstrip #thumb-main:hover.dt_thumbnail_rating_6 #thumb-image {
+	border-image: linear-gradient(to right, @c_57 0%, @grey_20 25%, @c_36 50%,  @grey_20 75%, @c_57 100%) 6 6 6 6 / 3px 2px 3px 2px;
+}
+
+/* color por defecto de elementos sobreimpresos */
+.dt_overlays_mixed #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_hover #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended #thumb-main #thumb-bottom-label,
+.dt_overlays_hover_block #thumb-image:hover #thumb-bottom-label,
+.dt_overlays_always #thumb-main #thumb-ext,
+.dt_overlays_always_extended #thumb-main #thumb-ext,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-ext,
+.dt_overlays_mixed  #thumb-main #thumb-ext,
+.dt_overlays_mixed  #thumb-main:hover #thumb-ext {
+	text-shadow: 1px 1px 1px @c_32, 0 0 .3em @c_32;
+	color: @grey_85;
+}
+
+.dt_thumb_btn,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-group-audio,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-group-audio,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-group-audio,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-altered,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-altered,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-altered,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-tags,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-tags,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-tags,
+.dt_overlays_always.dt_fullview #thumb-main #thumb-colorlabels,
+.dt_overlays_always_extended.dt_fullview #thumb-main #thumb-colorlabels,
+.dt_overlays_mixed.dt_fullview  #thumb-main #thumb-colorlabels,
+.dt_overlays_hover #thumb-main:hover #thumb-group-audio,
+.dt_overlays_hover #thumb-main:hover #thumb-altered,
+.dt_overlays_hover #thumb-main:hover #thumb-tags,
+.dt_overlays_hover #thumb-main:hover #thumb-colorlabels,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-altered,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-tags,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-colorlabels,
+.dt_overlays_hover_block #thumb-image:hover #thumb-group-audio,
+.dt_overlays_hover_block #thumb-image:hover #thumb-altered,
+.dt_overlays_hover_block #thumb-image:hover #thumb-tags,
+.dt_overlays_hover_block #thumb-image:hover #thumb-colorlabels
+ {
+	color: @grey_35;
+}
+
+/* estrellas atenuadas */
+.dt_overlays_always #thumb-main #thumb-star,
+.dt_overlays_always_extended #thumb-main #thumb-star,
+.dt_overlays_mixed #thumb-main #thumb-star,
+.dt_overlays_hover #thumb-main:hover #thumb-star,
+.dt_overlays_hover_extended  #thumb-main:hover #thumb-star,
+.dt_overlays_hover_block #thumb-main #thumb-image:hover #thumb-star
+{
+	color: @grey_50;
+}
+
+/* texto sobreimpreso resaltado */
+.dt_overlays_hover_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended #thumb-main:selected #thumb-bottom-label,
+.dt_overlays_always_extended #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_mixed #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_hover_block #thumb-image:hover #thumb-bottom-label,
+.dt_overlays_hover #thumb-main:hover #thumb-ext,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-ext,
+.dt_overlays_always #thumb-main:hover #thumb-ext,
+.dt_overlays_always #thumb-main:selected #thumb-ext,
+.dt_overlays_always_extended #thumb-main:hover #thumb-ext,
+.dt_overlays_always_extended #thumb-main:selected #thumb-ext,
+.dt_overlays_mixed #thumb-main:hover #thumb-ext,
+.dt_overlays_mixed #thumb-main:selected #thumb-ext
+{
+	color: @c_17;
+}
+
+/* icono de rechazo sobreimpreso */
+.dt_overlays_hover #thumb-main:hover #thumb-reject, 
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject,
+.dt_overlays_always #thumb-main #thumb-reject,
+.dt_overlays_always_extended #thumb-main #thumb-reject,
+.dt_overlays_mixed #thumb-main #thumb-reject,
+.dt_overlays_hover_block #thumb-image:hover #thumb-reject
+{
+	color:@grey_35;
+}
+
+/* icono de rechace */
+.dt_overlays_hover #thumb-main:hover #thumb-reject:not(:active),
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:not(:active),
+.dt_overlays_always #thumb-main:hover #thumb-reject:not(:active),
+.dt_overlays_always #thumb-main:selected #thumb-reject:not(:active),
+.dt_overlays_always_extended #thumb-reject:not(:active),
+.dt_overlays_always_extended #thumb-main:hover #thumb-reject:not(:active),
+.dt_overlays_always_extended #thumb-main:selected #thumb-reject:not(:active),
+.dt_overlays_mixed #thumb-reject:not(:active),
+.dt_overlays_mixed #thumb-main:hover #thumb-reject:not(:active),
+.dt_overlays_mixed #thumb-main:selected #thumb-reject:not(:active),
+.dt_overlays_hover_block #thumb-main:hover #thumb-image:hover #thumb-reject:not(:active) {
+ color: @c_88;
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-reject:active,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:active,
+.dt_overlays_always #thumb-main:hover #thumb-reject:active,
+.dt_overlays_always #thumb-main:selected #thumb-reject:active,
+.dt_overlays_always_extended #thumb-reject:active,
+.dt_overlays_always_extended #thumb-main:hover #thumb-reject:active,
+.dt_overlays_always_extended #thumb-main:selected #thumb-reject:active,
+.dt_overlays_mixed #thumb-reject:active,
+.dt_overlays_mixed #thumb-main:hover #thumb-reject:active,
+.dt_overlays_mixed #thumb-main:selected #thumb-reject:active,
+.dt_overlays_hover_block #thumb-main:hover #thumb-image:hover #thumb-reject:active
+ {
+ color: @c_39;
+}
+
+/* hover sobre elementos sobreimpresos  */
+.dt_overlays_hover #thumb-main:hover #thumb-group-audio:hover, 
+.dt_overlays_hover_extended #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_always #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_always_extended #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_mixed #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_hover_block #thumb-main:hover #thumb-group-audio:hover,
+.dt_overlays_hover #thumb-main:hover #thumb-altered:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-altered:hover,
+.dt_overlays_always #thumb-main #thumb-altered:hover,
+.dt_overlays_always_extended #thumb-main #thumb-altered:hover,
+.dt_overlays_mixed #thumb-main #thumb-altered:hover,
+.dt_overlays_hover_block #thumb-main #thumb-altered:hover,
+.dt_overlays_hover #thumb-main:hover #thumb-tags:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-tags:hover,
+.dt_overlays_always #thumb-main #thumb-tags:hover,
+.dt_overlays_always_extended #thumb-main #thumb-tags:hover,
+.dt_overlays_mixed #thumb-main #thumb-tags:hover,
+.dt_overlays_hover_block #thumb-main #thumb-tags:hover,
+.dt_overlays_hover #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_always  #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_always_extended  #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_mixed  #thumb-main:hover #thumb-reject:hover,
+.dt_overlays_hover_block #thumb-main:hover #thumb-image:hover #thumb-reject:hover {
+	color: @ui_hover;
+}
+
+/* sobreimpreso extendido central en vista comparativa */
+.dt_overlays_always_extended.dt_fullview #thumb-main:hover #thumb-bottom-label,
+.dt_overlays_always_extended.dt_fullview #thumb-main:selected #thumb-bottom-label
+{
+	color: @c_17;
+}
+
+/* icono de estrellas activas */
+.dt_overlays_hover #thumb-main:hover #thumb-star:active,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-star:active,
+.dt_overlays_always #thumb-main #thumb-star:active,
+.dt_overlays_always_extended #thumb-main #thumb-star:active,
+.dt_overlays_mixed #thumb-main #thumb-star:active,
+.dt_overlays_hover_block #thumb-main #thumb-image:hover #thumb-star:active
+{
+  color: @grey_50;
+  background-color: @c_72;
+}
+
+/* efecto al pasar por las estrellas */
+.dt_overlays_hover #thumb-main:hover #thumb-star:hover,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-star:hover,
+.dt_overlays_always #thumb-main:hover #thumb-star:hover,
+.dt_overlays_always_extended #thumb-main:hover #thumb-star:hover,
+.dt_overlays_mixed #thumb-main:hover #thumb-star:hover,
+.dt_overlays_hover_block #thumb-main #thumb-image:hover #thumb-star:hover
+{
+  color: @c_72;
+  background-color: @c_67;
+  
+}
+
+/* icono localcopy */
+.dt_overlays_none #thumb-main #thumb-localcopy {
+	border: transparent;
+	color: transparent;
+}
+
+.dt_overlays_hover #thumb-main:hover #thumb-localcopy,
+.dt_overlays_hover_extended #thumb-main:hover #thumb-localcopy,
+.dt_overlays_always #thumb-main #thumb-localcopy,
+.dt_overlays_always_extended #thumb-main #thumb-localcopy,
+.dt_overlays_mixed  #thumb-main #thumb-localcopy,
+.dt_overlays_hover_block #thumb-main #thumb-image:hover #thumb-localcopy {
+  border-top : 0.07em solid @c_108;
+  border-right : 0.07em solid @c_108;
+  color: @c_107;
+}
+
+/* transparencia para mostrar el sello de rechazada */
+.dt_thumbnail_rating_6 #thumb-image {
+	color: rgba(0,0,0,.6);
+}
+
+/* al pasar por encima se muestra la imagen sin el sello de rechazada */
+.dt_thumbnail_rating_6#thumb-main:hover #thumb-image {
+	color: @c_32;
+}
+
+/* atenuado de elementos en rechazadas */
+.dt_overlays_always .dt_thumbnail_rating_6 #thumb-ext,
+.dt_overlays_always .dt_thumbnail_rating_6 #thumb-colorlabels,
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-ext,
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-colorlabels,
+.dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-ext,
+.dt_overlays_mixed .dt_thumbnail_rating_6 #thumb-colorlabels
+ {
+	opacity: .4;
+}
+
+.dt_overlays_always_extended .dt_thumbnail_rating_6 #thumb-bottom-label {
+	opacity: .8;
+}
+
+/* ====>>> Clase no implementada en dt 5.6.2 Solo en versiones Nightly */
+/* botón eliminar duplicado del cuarto oscuro */
+.dt_duplicate_ui .dt_duplicate_delete {
+	color: shade(@c_36, 0.6);
+	margin: 0;
+}
+
+.dt_duplicate_ui button:hover.dt_duplicate_delete {
+	color: shade(@c_36, 0.9);
+}
+
+/* botones de cabeceras */
+#module-header .dt_module_btn,
+#basics-box-labels>widget .dt_module_btn {
+	color: @grey_80;
+	border: 1px solid transparent;
+	border-radius: 6px;
+}
+
+/* botones de cabeceras deshabilitados */ 
+#module-header .dt_module_btn:disabled {
+	color: @grey_30;
+}
+
+/* botones de cabeceras de módulos basicos */ 
+#basics-box-labels>widget .dt_module_btn {
+	font-size: 1.1em;
+	background-color: @grey_45;
+}
+
+/* botón de activador de módulo y botón de máscara */
+#module-header .dt_module_btn.dt_transparent_background,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background {
+	color: @grey_75;
+}
+
+/* botón de botón de máscara activa */
+#module-header .dt_module_btn.dt_transparent_background:checked,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background:checked {
+	color: alpha(@c_78, .8);
+}
+
+/* perfilado de nombre nombre de módulo */
+#iop-expander #module-header label {
+	text-shadow: 0 1px 1px @grey_05, 1px 1px 2px @grey_10;
+}
+
+/* nombre preset de módulo */
+#plugins_vbox_left #module-header #lib-module-name,
+#iop-expander #module-header #iop-module-name {
+	font-family: "Arial", "Microsoft Sans Serif", "Segoe UI", sans-serif, "Arial Unicode MS";
+	color: @c_23;
+	text-shadow: 1px 1px 2px @grey_10;
+}
+
+/* botón de activador de módulo */
+#iop-expander #module-header .dt_module_btn:first-child,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background:first-child {
+	border: 1px solid transparent;
+	font-size: 1.2em;
+	border-radius: 50%;
+}
+
+/* botón de módulo activado */
+#iop-expander #module-header .dt_module_btn.dt_transparent_background:first-child:checked,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background:first-child:checked {
+	color: @c_02;
+	border: 1px solid @c_03;
+	background-image: url('../pixmaps/thematic_images/metal.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#iop-expander #module-header .dt_module_btn.dt_transparent_background:first-child:checked {
+	color: alpha(@ui_hover, .6);
+}
+
+/* botón de módulos siempre activos */
+#iop-expander #module-header .dt_module_btn.dt_transparent_background:first-child:checked:disabled {
+	color: darkolivegreen;
+}
+
+/* efecto al pasar por el botón de módulo desactivado */
+#iop-expander #module-header .dt_module_btn.dt_transparent_background:first-child:not(:checked):hover,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background:first-child:not(:checked):hover {
+	color: @ui_hover;
+}
+
+/* efecto al pasar por el botón de módulo activado y otros */
+#iop-expander  #module-header .dt_module_btn:not(:first-child):hover,
+#iop-expander #module-header .dt_module_btn.dt_transparent_background:first-child:checked:hover,
+#basics-box-labels>widget .dt_module_btn.dt_transparent_background:first-child:checked:hover {
+	border: 1px solid @ui_hover;
+	box-shadow: 0 0 2px @ui_hover;
+}
+
+#basics-box-labels>widget .dt_module_btn:hover {
+	background-color: @grey_55;
+	border: 1px solid @ui_hover;
+}
+
+/* botón de reinicio de módulo general */
+#left #module-header .dt_module_btn~:nth-last-child(2):hover,
+#right #module-header .dt_module_btn~:nth-last-child(2):hover {
+	color: @c_39;
+}
+
+/* reinicio de módulos de revelado */
+#iop-expander #module-header .dt_module_btn:nth-last-child(2):not(:disabled):hover,
+#basics-box-labels>widget .dt_module_btn~#quick-reset:not(:disabled):hover { 
+	color: @c_39;
+	border-color: @c_39;
+}
+
+/* interruptores dentro de módulos de revelado */
+#iop-expander .dt_plugin_ui_main #bauhaus-toggle {
+	padding: 0em .4em .2em;
+	border-radius: .3em;
+	border: 1px solid @grey_30;
+	border-top-color: @grey_75;
+	border-bottom-color: @grey_35;
+	padding: .1em 0 .1em .5em;
+	background: linear-gradient(90deg, @grey_50 10%, @grey_55 70%, @grey_45 95%);
+}
+
+#iop-expander .dt_plugin_ui_main #bauhaus-toggle:hover {
+	color: @ui_hover;
+}
+
+#blending-box .dt_section_label .dt_bauhaus,
+#blending-box .dt_section_label label,
+#blending-box .dt_section_label .dt_bauhaus {
+	padding: .14em 0;
+	color: @c_23;
+	font-weight: 500;
+	text-shadow: 1px 1px 1px @c_32;
+}
+
+#collapsible {
+	border: 1px solid @grey_20;
+	border-top-color: @grey_35;
+}
+
+#collapse-block .dt_section_expander {
+	border: 1px solid @grey_30;
+	border-top-color: @grey_70;
+	background: linear-gradient(@grey_55, @grey_50);
+}
+
+#collapse-block .dt_section_expander label {
+	background: transparent;
+}
+
+#collapse-block.dt_module_expanded .dt_section_expander {
+	margin: 0;
+}
+
+#collapse-block.dt_module_expanded .dt_section_expander label {
+	color: @c_25;
+}
+
+.dt_plugin_ui_main #bauhaus-slider,
+#collapsible #bauhaus-slider {
+	padding: 0 0 0 .4em;
+	background-color:  @grey_50;
+	border: 1px solid @grey_65;
+	border-top-color: @grey_40;
+	border-radius: .3em;
+}
+
+#iop-expander .dt_plugin_ui_main .dt_section_label {
+	color: @c_15;
+}
+
+/* Adjust middle grey picker on levels and rgb levels modules */
+#picker-grey {
+  color: @grey_70;
+}
+
+/* dialogos y preferencias */
+entry:not(:disabled) {
+	border: 1px solid @grey_40;
+}
+
+entry:focus,
+checkbutton check:hover,
+#preferences-notebook widget:hover,
+spinbutton button:not(:disabled):not(.dt_transparent_background):hover {
+	color: @ui_hover;
+	box-shadow: 1px 1px 4px @ui_hover;
+}
+
+.dt_messages {
+	text-shadow: 2px 2px 0 black, 0 0 4px @c_88;
+	background-color: alpha(@plugin_bg_color,0.3);
+}
+
+#preferences-notebook button:hover label {
+	color: @ui_hover;
+}
+
+/* entradas de texto */
+text:focus{
+	color: @ui_hover;
+	background-color: @grey_35;
+}
+
+.flat:hover label,
+treeview:not(#lutname) *:hover:not(check){
+	color: @ui_hover;
+}
+
+.dt_plugin_ui_main button.dt_module_btn:hover {
+	color: @ui_hover;
+}
+
+.dt_guides_toggle {
+	border-radius: 5px;
+}
+
+.text-button:hover label,
+#modulegroups-btn:hover {
+	color: @ui_hover;
+}
+
+#modulegroups-header-center .dt_module_btn:hover,
+#modulegroups-iop-header .dt_module_btn:hover {
+	color: @c_50;
+	background-color: transparent;
+}
+
+/* configuracion por defecto de iconos de módulos */
+.dt_icon {
+	background-image: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 0;
+	margin-left: 0.20em;
+	min-height: 1.5em;
+	min-width: 1.5em;
+	opacity: .9;
+}
+
+/* iconos del tema */
+#iop-panel-icon-spektrafilm {
+	background-image: url("../pixmaps/thematic_images/spektrafilm.svg");
+}
+
+#iop-panel-icon-contrastntexture {
+	background-image: url("../pixmaps/thematic_images/contrast_n_texture.svg");
+}
+
+#iop-panel-icon-agx {
+	background-image: url("../pixmaps/thematic_images/agx.svg");
+}
+
+#iop-panel-icon-colorbalancergb {
+	background-image: url("../pixmaps/thematic_images/balance_rgb.svg");
+}
+
+#iop-panel-icon-channelmixerrgb {
+	background-image: url("../pixmaps/thematic_images/channelmixerrgb.svg");
+	opacity: .6;
+}
+
+#iop-panel-icon-colorharmonizer {
+	background-image: url("../pixmaps/thematic_images/colorharmonizer.svg");
+	opacity: .8;
+}
+
+#iop-panel-icon-colorequal {
+	background-image: url("../pixmaps/thematic_images/colorequal.svg");
+	opacity: .8;
+}
+
+/* iconos de darktable */
+#iop-panel-icon-ashift {
+	background-image: url('../pixmaps/plugins/darkroom/ashift.svg');
+}
+
+#iop-panel-icon-atrous {
+	background-image: url('../pixmaps/plugins/darkroom/atrous.svg');
+}
+
+#iop-panel-icon-basecurve  {
+	background-image: url('../pixmaps/plugins/darkroom/basecurve.svg');
+}
+
+#iop-panel-icon-bilateral {
+	background-image: url('../pixmaps/plugins/darkroom/bilateral.svg');
+}
+
+#iop-panel-icon-bloom {
+	background-image: url('../pixmaps/plugins/darkroom/bloom.svg');
+}
+
+#iop-panel-icon-borders {
+	background-image: url('../pixmaps/plugins/darkroom/borders.svg');
+}
+
+#iop-panel-icon-cacorrect,
+#iop-panel-icon-cacorrectrgb {
+	background-image: url('../pixmaps/plugins/darkroom/cacorrect.svg');
+	opacity: .7;
+}
+
+#iop-panel-icon-channelmixer {
+	background-image: url('../pixmaps/plugins/darkroom/channelmixer.svg');
+}
+
+#iop-panel-icon-clahe {
+	background-image: url('../pixmaps/plugins/darkroom/clahe.svg');
+}
+
+#iop-panel-icon-clipping,
+#iop-panel-icon-crop {
+	background-image: url('../pixmaps/plugins/darkroom/clipping.svg');
+}
+
+#iop-panel-icon-colisa {
+	background-image: url('../pixmaps/plugins/darkroom/colisa.svg');
+}
+
+#iop-panel-icon-colorcorrection {
+	background-image: url('../pixmaps/plugins/darkroom/colorcorrection.svg');
+}
+
+#iop-panel-icon-colorin {
+	background-image: url('../pixmaps/plugins/darkroom/colorin.svg');
+}
+
+#iop-panel-icon-colormapping {
+	background-image: url('../pixmaps/plugins/darkroom/colormapping.svg');
+}
+
+#iop-panel-icon-colorout {
+	background-image: url('../pixmaps/plugins/darkroom/colorout.svg');
+}
+
+#iop-panel-icon-colorreconstruct {
+	background-image: url('../pixmaps/plugins/darkroom/colorreconstruct.svg');
+}
+
+#iop-panel-icon-colortransfer {
+	background-image: url('../pixmaps/plugins/darkroom/colortransfer.svg');
+}
+
+#iop-panel-icon-colorzones {
+	background-image: url('../pixmaps/plugins/darkroom/colorzones.svg');
+}
+
+#iop-panel-icon-demosaic {
+	background-image: url('../pixmaps/plugins/darkroom/demosaic.svg');
+	opacity: .7;
+}
+
+#iop-panel-icon-dither {
+	background-image: url('../pixmaps/plugins/darkroom/dither.svg');
+}
+
+#iop-panel-icon-exposure {
+	background-image: url('../pixmaps/plugins/darkroom/exposure.svg');
+}
+
+#iop-panel-icon-flip {
+	background-image: url('../pixmaps/plugins/darkroom/flip.svg');
+}
+
+#iop-panel-icon-gamma {
+	background-image: url('../pixmaps/plugins/darkroom/profile_gamma.svg');
+}
+
+#iop-panel-icon-graduatednd {
+	background-image: url('../pixmaps/plugins/darkroom/graduatednd.svg');
+}
+
+#iop-panel-icon-grain {
+	background-image: url('../pixmaps/plugins/darkroom/grain.svg');
+}
+
+#iop-panel-icon-hazeremoval {
+	background-image: url('../pixmaps/plugins/darkroom/hazeremoval.svg');
+}
+
+#iop-panel-icon-highlights {
+	background-image: url('../pixmaps/plugins/darkroom/highlights.svg');
+}
+
+#iop-panel-icon-highpass {
+	background-image: url('../pixmaps/plugins/darkroom/highpass.svg');
+}
+
+#iop-panel-icon-hotpixels {
+	background-image: url('../pixmaps/plugins/darkroom/hotpixels.svg');
+}
+
+#iop-panel-icon-invert,
+#iop-panel-icon-negadoctor {
+	background-image: url('../pixmaps/plugins/darkroom/invert.svg');
+}
+
+#iop-panel-icon-lens {
+	background-image: url('../pixmaps/plugins/darkroom/lens.svg');
+}
+
+#iop-panel-icon-levels {
+	background-image: url('../pixmaps/plugins/darkroom/levels.svg');
+}
+
+#iop-panel-icon-liquify {
+    background-image: url('../pixmaps/plugins/darkroom/liquify.svg');
+}
+
+#iop-panel-icon-lowlight {
+	background-image: url('../pixmaps/plugins/darkroom/lowlight.svg');
+}
+
+#iop-panel-icon-lowpass {
+	background-image: url('../pixmaps/plugins/darkroom/lowpass.svg');
+}
+
+#iop-panel-icon-monochrome {
+	background-image: url('../pixmaps/plugins/darkroom/monochrome.svg');
+}
+
+#iop-panel-icon-nlmeans {
+	background-image: url('../pixmaps/plugins/darkroom/nlmeans.svg');
+}
+
+#iop-panel-icon-overexposed {
+	background-image: url('../pixmaps/plugins/darkroom/overexposed.svg');
+}
+
+#iop-panel-icon-rawdenoise {
+	background-image: url('../pixmaps/plugins/darkroom/rawdenoise.svg');
+}
+
+#iop-panel-icon-rawimport {
+	background-image: url('../pixmaps/plugins/darkroom/rawimport.svg');
+}
+
+#iop-panel-icon-rawprepare {
+	background-image: url('../pixmaps/plugins/darkroom/rawprepare.svg');
+}
+
+#iop-panel-icon-relight {
+	background-image: url('../pixmaps/plugins/darkroom/relight.svg');
+}
+
+#iop-panel-icon-shadhi {
+	background-image: url('../pixmaps/plugins/darkroom/shadhi.svg');
+}
+
+#iop-panel-icon-sharpen {
+	background-image: url('../pixmaps/plugins/darkroom/sharpen.svg');
+}
+
+#iop-panel-icon-soften {
+	background-image: url('../pixmaps/plugins/darkroom/soften.svg');
+}
+
+#iop-panel-icon-splittoning {
+	background-image: url('../pixmaps/plugins/darkroom/splittoning.svg');
+}
+
+#iop-panel-icon-spots {
+	background-image: url('../pixmaps/plugins/darkroom/spots.svg');
+}
+
+#iop-panel-icon-temperature {
+	background-image: url('../pixmaps/plugins/darkroom/temperature.svg');
+}
+
+#iop-panel-icon-template {
+	background-image: url('../pixmaps/plugins/darkroom/template.svg');
+}
+
+#iop-panel-icon-tonecurve {
+	background-image: url('../pixmaps/plugins/darkroom/tonecurve.svg');
+}
+
+#iop-panel-icon-tonemap {
+	background-image: url('../pixmaps/plugins/darkroom/tonemap.svg');
+}
+
+#iop-panel-icon-velvia {
+	background-image: url('../pixmaps/plugins/darkroom/velvia.svg');
+}
+
+#iop-panel-icon-vignette {
+	background-image: url('../pixmaps/plugins/darkroom/vignette.svg');
+}
+
+#iop-panel-icon-watermark {
+	background-image: url('../pixmaps/plugins/darkroom/watermark.svg');
+}
+
+#iop-panel-icon-zonesystem {
+	background-image: url('../pixmaps/plugins/darkroom/zonesystem.svg');
+}
+
+/*	================== The End ================== */
