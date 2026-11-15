@@ -1,4 +1,4 @@
-# Theme Collection for darktable 5.6+
+# Metal Pack: theme Collection for darktable 5.6+
 
 ## <b>Requirements:</b>
 
