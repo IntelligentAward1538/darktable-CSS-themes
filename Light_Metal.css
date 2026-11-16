@@ -5,7 +5,7 @@
 
 	Custom theme for darktable v5.6.2 / V5.7.0+1175
 	@IntelligentAward1538
-	rev. 2026.11.15
+	rev. 2026.11.16
 
 	Rights:
 	This file is free software: you can redistribute it and/or modify
@@ -44,6 +44,11 @@
 @define-color c_01 #b7b6b4; 			/* gris amarillento */
 @define-color c_02 #807163; 			/* marrón grisáceo medio */
 @define-color c_03 #a88a6d; 			/* marrón claro apagado */
+@define-color c_04 #dedb43;				/* amarillo apagado */
+@define-color c_05 #515457;				/* gris oscuro azulado */
+@define-color c_06 #bbc3c7;				/* gris azulado claro */
+@define-color c_07 #adafb3;				/* gris azulado claro */
+@define-color c_08 #eafc19;				/* amarillo neón */
 
 /* ==========================================================================
    Paleta estandar CSS:
@@ -231,14 +236,14 @@
 @define-color range_bg_color alpha(@fg_color, 0.05);
 
 /* Pickers */
-@define-color bauhaus_fg shade(@fg_color, 0.95);
-@define-color bauhaus_fg_hover @c_10;
-@define-color bauhaus_fg_insensitive alpha(@bauhaus_fg, 0.5);
+@define-color bauhaus_fg @c_04;
+@define-color bauhaus_fg_hover @ui_hover;
+@define-color bauhaus_fg_insensitive @grey_75;
 @define-color bauhaus_fg_selected @c_78;
 
 /* Sliders */
-@define-color bauhaus_bg #515457;
-@define-color bauhaus_fill #bbc3c7;
+@define-color bauhaus_bg @c_05;
+@define-color bauhaus_fill @c_06;
 
 /* Scroll bars (sliders) */
 @define-color scroll_bar_inactive @grey_60;
@@ -252,11 +257,11 @@
 
 /* GTK Buttons and tabs */
 @define-color button_bg shade(@grey_55,0.95);
-@define-color button_hover_bg #adafb3;
+@define-color button_hover_bg @c_07;
 
 /* thumbnail */
 @define-color thumbnail_font_color @grey_40;
-@define-color thumbnail_star_bg_color #eafc19;
+@define-color thumbnail_star_bg_color @c_08;
 @define-color thumbnail_star_hover_color @ui_hover;
 
 /* text fields */
@@ -1419,6 +1424,11 @@ progressbar progress {
 	border-bottom-color: @grey_35;
 	padding: .1em 0 .1em .5em;
 	background: linear-gradient(90deg, @grey_50 10%, @grey_55 70%, @grey_45 95%);
+}
+
+/* cuentagotas de algunos módulos de revelado */
+#iop-expander .dt_plugin_ui_main .dt_module_btn.dt_transparent_background:not(.dt_ignore_fg_state).toggle:checked {
+	color: @c_08;
 }
 
 #iop-expander .dt_plugin_ui_main #bauhaus-toggle:hover {
