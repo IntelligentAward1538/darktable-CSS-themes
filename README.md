@@ -102,7 +102,7 @@ The 'releases' are snapshots of a specific moment in the project. These can be u
 ---
 >[!NOTE]<br>
 > (1) High-contrast themes can highlight visual flaws in the programme, which largely go unnoticed with plain, neutral themes<br>
-> (2)  Some declarations have no effect in version 5.6.2, since this version does not yet include those CSS elements. They will only be enabled in later nightly builds <br>
+> (2) Some declarations have no effect in version 5.6.2, since this version does not yet include those CSS elements. They will only be enabled in later nightly builds <br>
 > (3) The screenshots may not include all the latest modifications<br>
 
 
