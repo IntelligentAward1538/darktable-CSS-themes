@@ -5,7 +5,7 @@
 
 	Custom theme for darktable v5.6.2 / V5.7.0+1175
 	@IntelligentAward1538
-	rev. 2026.11.16
+	rev. 2026.11.17
 
 	Rights:
 	This file is free software: you can redistribute it and/or modify
@@ -444,8 +444,8 @@ popover modelbutton radio:checked {
 }
 
 #module-header label {
-	color: @grey_85;
-	text-shadow: 2px 2px 3px @grey_10;
+	color: @grey_90;
+	text-shadow: 0 2px 0 black, 0 2px 4px alpha(@grey_10, .7);
 }
 
 /* cabeceras de módulos cuarto oscuro */
@@ -524,8 +524,7 @@ popover modelbutton radio:checked {
 }
 
 .dt_module_expanded #module-header label {
-	color: @grey_90;
-	text-shadow: 2px 2px 3px @c_32;
+	text-shadow: 0 2px 0 black, 0 2px 2px alpha(@c_32, .7);
 }
 
 /* solapas de módulos */
