@@ -5,7 +5,7 @@
 
 	Custom theme for darktable v5.6.2 / V5.7.0+1175
 	@IntelligentAward1538
-	rev. 2026.11.17
+	rev. 2026.11.22
 
 	Rights:
 	This file is free software: you can redistribute it and/or modify
@@ -37,6 +37,11 @@
 
 @import url("darktable.css");
 @import url("chunk-fonts.css");
+
+@keyframes hide_Logo {
+	from { opacity: 1; }
+	to   { opacity: 0; }
+}
 
 @define-color ui_hover #ffc966;			/* naranja claro */
 @define-color filtering_dimmed #f0b000;	/* dorado */
@@ -340,9 +345,9 @@ window {
 	color: @grey_85;
 }
 
-/* atenua logo */
-#top-hinter>box.horizontal:first-child>widget {
-	opacity: .4;
+/* oculta Logo X segundos despues de dibujarse */
+#top-hinter>.horizontal:first-child>widget {
+	animation: hide_Logo 8s ease 8s forwards;
 }
 
 /* solapas principales */
@@ -570,19 +575,20 @@ popover modelbutton radio:checked {
 	margin: .0em;
 }
 
-/* hover sobre botones principales */
+/* hover sobre botones principales: fondo */
 .dt_plugin_ui_main .text-button:not(:disabled):not(checkbutton):not(.dt_history_items):hover,
 .dt_plugin_ui_main .dt_module_btn#non-flat:not(:disabled):hover  {
  	background: linear-gradient(90deg, shade(@c_120, .80) 0%, shade(@c_120, 1.05) 20%, shade(@c_120, .95) 80%, shade(@c_120, .80) 100%);
 	border-top-color: @grey_85;
     border-bottom-color: @grey_25;
-  	transition: background 500ms ease; 
+  	transition: background 250ms ease; 
 }
 
+/* hover sobre botones principales: texto */
 .dt_plugin_ui_main .text-button:not(:disabled):not(checkbutton):not(.dt_history_items):hover label,
 .dt_plugin_ui_main .dt_module_btn#non-flat:not(:disabled):hover {
 	color: @c_18;
-  	transition: color 1000ms ease; 
+  	transition: color 700ms ease; 
 }
 
 /* módulo general: expandido dentro de módulo */
@@ -611,24 +617,34 @@ popover modelbutton radio:checked {
 }
 
 /* desplegables de módulos generales */
+#bauhaus-combobox,
+#iop-expander #bauhaus-combobox {
+	margin: .2em .1em .2em .1em;
+	padding: 0 0 .1em .4em;
+	border-radius: .2em  1em .2em .1em;
+}
+
+#bauhaus-combobox:not(:disabled) {
+	box-shadow: 1px -1px 3px @grey_25;
+}
+
 #right #bauhaus-combobox,
 #left #bauhaus-combobox {
 	color: shade(@c_01, .95);
-	padding: 0 .1em .1em .5em;
-	border-radius: .2em  1em .2em .1em;
 	border: 1px solid @grey_60;
 	border-left-color: @grey_45;
 	border-bottom-color: @grey_45;
 	background: shade(@c_01, .75);
 }
 
+#preferences-box #bauhaus-combobox:not(:disabled),
 #right #bauhaus-combobox:not(:disabled),
 #left #bauhaus-combobox:not(:disabled) {
 	color: shade(@c_01, 1.25);
 	border: 1px solid @grey_70;
 	border-left-color: @grey_30;
 	border-bottom-color: @grey_30;
-	background: linear-gradient(shade(@c_01, .7) 70%, shade(@c_01, .5) 98%);
+	background: linear-gradient(shade(@c_01, .7) 70%, shade(@c_01, .6) 98%);
 }
 
 #right #bauhaus-combobox:not(:disabled):hover,
@@ -771,13 +787,16 @@ notebook tabs {
 
 /* ==================== */
 /* apartado de máscaras */
+
+/* cajeado de ajustes de mascaras */
 .dt_plugin_ui #blending-box {
 	background-color: @grey_45;
-	border: 1px solid @grey_35;
-	border-top-color: @grey_55;
+	border: 1px solid @grey_65;
+	border-top-color: @grey_30;
 	border-radius: .5em;
 	padding: 0 .5em 0 .3em;
 	margin: .3em .3em .2em .3em;
+	box-shadow: inset 0px 2px 2px @grey_40, 0 0 4px @grey_60;
 }
 
 /* cabecera sección de máscaras */
@@ -826,10 +845,10 @@ notebook tabs {
 	border-top: 1px solid @ui_hover;
 }
 
-/* atenua texto de deslizadores */
+/* brillo de deslizadores */
 #bauhaus-slider,
 #basics-widget #bauhaus-slider {
-	color: @grey_80;
+	color: @grey_95;
 }
 
 #bauhaus-slider:hover {
@@ -1276,7 +1295,7 @@ progressbar progress {
 
 /* transparencia para mostrar el sello de rechazada */
 .dt_thumbnail_rating_6 #thumb-image {
-	color: rgba(0,0,0,.6);
+	color: rgba(0,0,0,.5);
 }
 
 /* al pasar por encima se muestra la imagen sin el sello de rechazada */
@@ -1440,7 +1459,7 @@ progressbar progress {
 	padding: .14em 0;
 	color: @c_23;
 	font-weight: 500;
-	text-shadow: 1px 1px 1px @c_32;
+	text-shadow: 0px 1px 2px @c_32;
 }
 
 #collapsible {
@@ -1487,6 +1506,24 @@ progressbar progress {
 /* dialogos y preferencias */
 entry:not(:disabled) {
 	border: 1px solid @grey_40;
+}
+
+entry,
+spinbutton button:not(:disabled):not(.dt_transparent_background) {
+	box-shadow:  0px 2px 2px @grey_40;
+}
+
+checkbutton check {
+	background: linear-gradient(135deg, @grey_55, @grey_50);
+	border: .05em outset @grey_40;
+}
+
+checkbutton:checked check {
+	color: @c_12;
+}
+
+checkbutton:checked:hover check {
+	color: @ui_hover;
 }
 
 entry:focus,

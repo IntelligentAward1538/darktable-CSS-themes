@@ -4,7 +4,7 @@
 */
 /*  Custom theme for darktable v5.6.2 / V5.7.0+1175
     @IntelligentAward1538
-    rev. 2026.11.14
+    rev. 2026.11.22
 */  
 
 /*  Rights:
@@ -36,6 +36,10 @@
 	
 */  
 
+@keyframes hide_Logo {
+	from { opacity: 1; }
+	to   { opacity: 0; }
+}
 
 @define-color accent_blue #9fbfe2;
 @define-color accent_green #c1e1c5;
@@ -382,9 +386,9 @@ separator {
     background: linear-gradient(@grey_25, @grey_15);
 }
 
-/* atenua logo */
-#top-hinter>.horizontal>widget {
-	opacity: .6;
+/* oculta Logo X segundos despues de dibujarse */
+#top-hinter>.horizontal:first-child>widget {
+	animation: hide_Logo 8s ease 8s forwards;
 }
 
 #header-toolbar,#footer-toolbar {
