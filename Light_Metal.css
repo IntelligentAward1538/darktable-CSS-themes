@@ -5,7 +5,7 @@
 
 	Custom theme for darktable v5.6.2 / V5.7.0+1175
 	@IntelligentAward1538
-	rev. 2026.11.22
+	rev. 2026.11.23
 
 	Rights:
 	This file is free software: you can redistribute it and/or modify
@@ -618,13 +618,15 @@ popover modelbutton radio:checked {
 
 /* desplegables de módulos generales */
 #bauhaus-combobox,
-#iop-expander #bauhaus-combobox {
+#iop-expander #bauhaus-combobox,
+#preferences-notebook #preferences-box .dt_bauhaus {
 	margin: .2em .1em .2em .1em;
 	padding: 0 0 .1em .4em;
 	border-radius: .2em  1em .2em .1em;
 }
 
-#bauhaus-combobox:not(:disabled) {
+#bauhaus-combobox:not(:disabled),
+#preferences-notebook #preferences-box .dt_bauhaus:not(:disabled) {
 	box-shadow: 1px -1px 3px @grey_25;
 }
 
@@ -637,7 +639,7 @@ popover modelbutton radio:checked {
 	background: shade(@c_01, .75);
 }
 
-#preferences-box #bauhaus-combobox:not(:disabled),
+#preferences-notebook #preferences-box .dt_bauhaus:not(:disabled),
 #right #bauhaus-combobox:not(:disabled),
 #left #bauhaus-combobox:not(:disabled) {
 	color: shade(@c_01, 1.25);
@@ -647,6 +649,7 @@ popover modelbutton radio:checked {
 	background: linear-gradient(shade(@c_01, .7) 70%, shade(@c_01, .6) 98%);
 }
 
+#preferences-notebook #preferences-box .dt_bauhaus:not(:disabled):hover,
 #right #bauhaus-combobox:not(:disabled):hover,
 #left #bauhaus-combobox:not(:disabled):hover {
 	color: @ui_hover;
